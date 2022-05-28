@@ -21,10 +21,16 @@ En la carpeta de diseño.
 **Páginas referentes**
 
 https://www.passline.com/home
+https://tuboleta.com/
+https://www.eventbrite.com.ar/
+https://www.livepass.com.ar/
+https://www.ticketek.com.ar/
 
+**INTEGRANTES**
 
-
------INTEGRANTES-----
-
-Lautaro Gonzalez Lujan
+Lautaro Gonzalez Lujan:
+Diego Franco:
+Sebastian Perez:
+Nicolas Del Giovannino:
+Luis Garza:
 
