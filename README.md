@@ -20,11 +20,7 @@ En la carpeta de diseño.
 
 **Páginas referentes**
 
-https://www.passline.com/home
-https://tuboleta.com/
-https://www.eventbrite.com.ar/
-https://www.livepass.com.ar/
-https://www.ticketek.com.ar/
+------------agregar links e integrantes
 
 **INTEGRANTES**
 
