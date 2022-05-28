@@ -20,7 +20,11 @@ En la carpeta de diseño.
 
 **Páginas referentes**
 
-------------agregar links e integrantes
+https://www.u2.com/
+https://www.metallica.com/
+https://www.hernancattaneo.com/
+https://redhotchilipeppers.com/
+https://rollingstones.com/
 
 **INTEGRANTES**
 
