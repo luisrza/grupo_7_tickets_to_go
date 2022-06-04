@@ -29,6 +29,7 @@ https://rollingstones.com/
 **INTEGRANTES**
 
 Lautaro Gonzalez Lujan: Me gusta producir eventos musicales.
+
 Diego Franco: Aguante Colón y Los Palmeras.
 Sebastian Perez: Me gusta las tractomulas y los videojuegos.
 Nicolas Del Giovannino: Jugar al Apex escuchando Xzarkhan es mi vida.
