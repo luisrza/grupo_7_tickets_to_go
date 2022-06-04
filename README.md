@@ -21,9 +21,13 @@ En la carpeta de diseño.
 **Páginas referentes**
 
 https://www.u2.com/
+
 https://www.metallica.com/
+
 https://www.hernancattaneo.com/
+
 https://redhotchilipeppers.com/
+
 https://rollingstones.com/
 
 **INTEGRANTES**
