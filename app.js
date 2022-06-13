@@ -5,6 +5,8 @@ const path = require('path');
 /*TODO: necesitamos bajar express para correr el app.js,
 pero no me acuerdo como bajarlo*/
 
+/*npm install express --save <---para bajar express */
+
 app.use(express.static(path.resolve(__dirname, 'public'))
 );
 
