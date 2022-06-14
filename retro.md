@@ -1,23 +1,18 @@
 **Comenzar a hacer**
 
--crear el tablero de trabajo (asana), Link al documento o plataforma que utilicen para organizar el trabajo. Agregarlo en el archivo README.md.
-
--crear el package.JSON e instalar Express y Nodemon.
-
--deberiamos agregar una seccion para el merchandising (en el index.html)
-
--faltan: productDetail.html / productCart.html / register.html
+Comenzar a laburar en código por equipos, especializandonos en lo que mas les gusta a cada uno.
 
 **Hacer más**
 
+Trabajar el finde semana con las tareas asignadas al día martes antes de la clase.
 
 **Continuar haciendo**
 
--completar el RETRO.MD
-
+Seguir juntandonos todos los sábados para ver como estamos, reasignar tareas y evaluar nuevas ideas.
 
 **Hacer menos**
 
+No demorar las tareas individuales que retrasan el inicio de otro compañero.
 
 **Dejar de hacer**
 
