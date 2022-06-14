@@ -1,4 +1,4 @@
-1. Comenzar a hacer
+**Comenzar a hacer**
 -crear el tablero de trabajo (asana), Link al documento o plataforma que utilicen para organizar el trabajo. Agregarlo en el archivo README.md.
 
 -crear el package.JSON e instalar Express y Nodemon
@@ -7,16 +7,16 @@
 
 -faltan: productDetail.html / productCart.html / register.html
 
-2. Hacer más.
+**Hacer más**
 
 
-3. Continuar haciendo.
+**Continuar haciendo**
 -completar el RETRO.MD
 
 
-4. Hacer menos.
+**Hacer menos**
 
 
-5. Dejar de hacer.
+**Dejar de hacer**
 
 
