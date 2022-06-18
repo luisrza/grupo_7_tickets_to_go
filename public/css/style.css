@@ -4,134 +4,40 @@
     --secundario2: #FFF9E8;
     --secundario3: #E6E6FF;
     --fondo: #020236;
-    --barra: rgba(2, 2, 54, 85%);
+    --barra: rgba(2, 2, 54, 93%);
 }
 
-
-/*Tamano de fuente general, y call a 
-box-sizing*/
-html {
-    font-size: 62.5%;
+* {
     box-sizing: border-box;
-} 
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-body header {
-    display: flexbox;
-    width: 100%;
-}
-
-body {
-    font-size: 16px;
-    background-color: var(--fondo);
-}
-
-h1 {
-    text-align: center;
-    font-size: 3.8rem;
-}
-
-h2 {
-    font-size: 2.8rem;
-    text-align: center;
-    
-}
-
-h3 {
-    color: var(--secundario);
-    text-align: center;
-    font-size: 1.8rem;
-}
-
-
-body {
-    background-color: var(--secundario3);
 }
 
 .logo {
     display: flex;
-    flex-direction: row-reverse;
     justify-content: flex-end;
-    width: 50rem;
+    width: 100%;
     margin: 0 auto;
 }
 
-.titulo span {
-    font-size: 2rem;
-    color: var(--principal);
-}
-
-.nav-bg {
-    color: var(red);
-}
-
-.navegacion-principal {
-    display: flex;
+/*se agrego el ul para que list-style funcionara*/
+.nav-bar ul{
+    display: flexbox;
     flex-direction: column;
-    background-color: var(--barra);
-    justify-content: space-evenly;
-    font-style: none;
+    list-style: none;
 }
 
-/*modificla directamente a los links de la barra de navegacion*/
-.navegacion-principal a {
-    /*colorea el area del link*/
-    padding: 1rem;
-    font-size: 2rem;
-    /*modifica la fuente */
-    font-weight: bold;
-    color: var(--secundario2);
-    /*Elimina las lineas de los hipervinculos*/
+.navegacion-principal a,
+.navegacion-usuario a{
+    color: red;
     text-decoration: none;
 }
 
+
+/*ESTO PARA MEDIA QUERIE
 .navegacion-principal a:hover {
-    /*Cuando el cursor pase cambia de color*/
+    /*Cuando el cursor pase cambia de color
     background-color: var(--principal);
     color: var(--secundario4);
 }
-
-.conciertos {
-    max-width: 800px;
-    margin: 0 auto;
-    /* padding-left: 10px;*/
-    background-color: var(--barra);
-}
-
-
-.grid {
-    display:grid;
-    padding-left: 25px;
-    width: 750px;
-    grid-template-columns: 35rem 35rem;
-    column-gap: 50px;
-    row-gap: 1.5rem; 
-    grid-auto-rows: min-content; 
-    }
-
-
-.fechas {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-}
-
-.grid .fotos img{
-    align-content: center;
-
-}
-
-
-.conciertos h3{
-    color: var(--principal);
-}
-.conciertos .texto {
-    text-align: justify;
-    color: var(--secundario3);
-}
+*/
 
 
