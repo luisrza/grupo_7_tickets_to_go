@@ -14,17 +14,25 @@ const indexLogin= path.resolve(__dirname,'./views/login.html');
 
 app.use(express.static(publicPath));
 
+//Inicio
 app.get('/', (req, res) => {
     res.sendFile(indexPath);
 });
 
+//Register
 app.get('/register', (req,res)=>{
     res.sendFile(indexRegister);
 });
 
+//Login
 app.get('/login', (req,res)=>{ 
     res.sendFile(indexLogin);
-}); //esto funciona pero hay que reemplazarlo en el header
+}); 
+
+//404
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/404.html'));
+}); 
 
 app.listen(port, () => {
     console.log('listening on http://localhost:'+port);
