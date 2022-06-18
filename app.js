@@ -7,6 +7,7 @@ const port = 4000;
 
 const indexPath= path.resolve(__dirname,'./views/index.html');
 const publicPath= path.resolve(__dirname,'./public');
+const indexRegister= path.resolve(__dirname,'./views/register.html');
 
 /*npm install express --save <---para bajar express */
 
@@ -17,7 +18,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/register', (req,res)=>{
-    res.sendFile(__dirname + '/views/register.html');
+    res.sendFile(indexRegister);
 });
 
 app.listen(port, () => {
