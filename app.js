@@ -16,6 +16,10 @@ app.get('/', (req, res) => {
     res.sendFile(indexPath);
 });
 
+app.get('/register', (req,res)=>{
+    res.sendFile(__dirname + '/views/register.html');
+});
+
 app.listen(port, () => {
     console.log('listening on http://localhost:'+port);
 });
