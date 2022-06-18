@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Register</title>
+</head>
+<body>
+
+    <header>
+<!--TODO: aca va el header de index.html-->
+    </header>
+
+    <main>
+
+        <div> <!--si se dificulta para el css, borrá el div-->
+            <img src="#" alt="Aca va una imagen">
+        </div>
+
+        <h2>Registrate:</h2>
+
+        <form action="/" method="POST">
+                <label>Nombre y Apellido:</label>
+                <input type="text" name="nombre" placeholder="nombre" required>
+                <br>
+                <br>
+                <label>Nombre de usuario:</label>
+                <input type="text" name="user" placeholder="nombre de usuario" required>
+                <br>
+                <br>
+                <label for="nacimiento">Fecha de nacimiento:</label>
+                <input type="date" name="nacimiento" id="fechaNacimiento" required>
+                <br>
+                <br>
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="email" required>
+                <br>
+                <br>
+                <label for="avatar">Foto de perfil:</label>
+                <input type="file" name="avatar" id="avatar" accept="image/png, image/jpeg">
+                <br>
+                <br>
+<!--no estoy seguro de si esta bien lo de la contraseña-->
+                <label>Contraseña:</label>
+                <input type="password" name="pass" placeholder="Elegí tu contraseña" required>
+                <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña" required>
+                <br>
+                <br>
+                <input type="checkbox" name="TerminosYCondiciones" value="si" id="si" required>
+                <label for="si">Aceptar terminos y condiciones</label>
+                <br>
+                <br>
+                <input type="reset" value="Borrar">
+                <input type="submit" value="Enviar">
+        </form>
+    
+    </main>
+
+    <footer>
+        <!--TODO: meter el footer ya completo, si es q nuestra pag va a tener uno-->
+    </footer>
+
+</body>
+</html>
