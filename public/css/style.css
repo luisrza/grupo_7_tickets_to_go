@@ -4,7 +4,8 @@
     --secundario2: #FFF9E8;
     --secundario3: #E6E6FF;
     --fondo: #020236;
-    --barra: rgba(2, 2, 54, 93%);
+    --barra: #23395d
+    ;
 }
 
 * {
@@ -12,10 +13,7 @@
 }
 
 .logo {
-    display: flex;
-    justify-content: flex-end;
     width: 100%;
-    margin: 0 auto;
 }
 
 /*se agrego el ul para que list-style funcionara*/
@@ -23,12 +21,26 @@
     display: flexbox;
     flex-direction: column;
     list-style: none;
+    text-decoration: none;
 }
 
-.navegacion-principal a,
-.navegacion-usuario a{
-    color: red;
+header ul li a{
+    color: var(--principal);
     text-decoration: none;
+    font-weight: bold;
+    
+}
+
+body {
+    background-color: var(--barra);
+}
+
+h1 {
+    color: var(--principal);
+}
+
+h2 {
+    color: var(--principal);
 }
 
 
@@ -39,5 +51,9 @@
     color: var(--secundario4);
 }
 */
-
+footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
