@@ -19,11 +19,14 @@ html {
     box-sizing: inherit;
 }
 
-
+body header {
+    display: flexbox;
+    width: 100%;
+}
 
 body {
     font-size: 16px;
-    background-color: var(--barra);
+    background-color: var(--fondo);
 }
 
 h1 {
@@ -45,9 +48,7 @@ h3 {
 
 
 body {
-
-    background-color: var(--barra);
-    background-image: "https://images3.alphacoders.com/621/621682.jpg";
+    background-color: var(--secundario3);
 }
 
 .logo {
@@ -69,9 +70,10 @@ body {
 
 .navegacion-principal {
     display: flex;
+    flex-direction: column;
     background-color: var(--barra);
-    flex-direction: row;
     justify-content: space-evenly;
+    font-style: none;
 }
 
 /*modificla directamente a los links de la barra de navegacion*/
