@@ -1,19 +1,20 @@
 const express = require('express');
 const app = express();
+
 const path = require('path');
 
-/*TODO: necesitamos bajar express para correr el app.js,
-pero no me acuerdo como bajarlo*/
+const port = 4000;
 
+const indexPath= path.resolve(__dirname,'./views/index.html');
+const publicPath= path.resolve(__dirname,'./public');
 /*npm install express --save <---para bajar express */
 
-app.use(express.static(path.resolve(__dirname, 'public'))
-);
+app.use(express.static(publicPath));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/index.html'));
+    res.sendFile(indexPath);
 });
 
-app.listen(4000, () => {
-    console.log('listening on http://localhost:4000');
+app.listen(port, () => {
+    console.log('listening on http://localhost:'+port);
 });
