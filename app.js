@@ -7,6 +7,7 @@ const port = 4000;
 
 const indexPath= path.resolve(__dirname,'./views/index.html');
 const publicPath= path.resolve(__dirname,'./public');
+
 /*npm install express --save <---para bajar express */
 
 app.use(express.static(publicPath));
