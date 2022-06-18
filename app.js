@@ -8,6 +8,7 @@ const port = 4000;
 const indexPath= path.resolve(__dirname,'./views/index.html');
 const publicPath= path.resolve(__dirname,'./public');
 const indexRegister= path.resolve(__dirname,'./views/register.html');
+const indexLogin= path.resolve(__dirname,'./views/login.html');
 
 /*npm install express --save <---para bajar express */
 
@@ -20,6 +21,10 @@ app.get('/', (req, res) => {
 app.get('/register', (req,res)=>{
     res.sendFile(indexRegister);
 });
+
+app.get('/login', (req,res)=>{ 
+    res.sendFile(indexLogin);
+}); //esto funciona pero hay que reemplazarlo en el header
 
 app.listen(port, () => {
     console.log('listening on http://localhost:'+port);

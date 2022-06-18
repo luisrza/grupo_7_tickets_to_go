@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Login</title>
+  </head>
+
+  <body>
+    <header>
+      <!--las paginas de referencia lo tenian, copiar y pegar el header terminado-->
+    </header>
+
+    <main>
+      <h2>Entrar a mi sesion:</h2>
+      <br />
+      <form action="/" method="POST">
+        <label>Email:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="email"
+          required
+        />
+        <br />
+        <br />
+        <label>Constraseña:</label>
+        <input
+          type="password"
+          name="pass"
+          placeholder="Inserte su contraseña"
+          required
+        />
+        <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+        <!--No vimos como hacer esto-->
+        <input
+          type="checkbox"
+          name="RecordarMiUsuario"
+          value="si"
+          id="si"
+          required
+        />
+        <label for="si">Recordar mi usuario</label>
+        <br />
+        <br />
+        <input type="submit" value="Login" />
+      </form>
+
+      <p><a href="/register">¿Sos nuevo? Crea tu cuenta aca</a></p>
+    </main>
+
+    <footer>
+      <!--las paginas de referencia incluian un footer, pegar el footer terminado-->
+    </footer>
+
+  </body>
+
+</html>
