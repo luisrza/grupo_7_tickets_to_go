@@ -1,84 +1,111 @@
 :root {
-    --principal: #AC881C;
-    --secundario: #010010;
-    --secundario2: #FFF9E8;
-    --secundario3: #E6E6FF;
-    --fondo: #020236;
-    --barra: #23395d
-    ;
+  --principal: #ac881c;
+  --secundario: #010010;
+  --secundario2: #fff9e8;
+  --secundario3: #e6e6ff;
+  --fondo: #020236;
+  --barra: #23395d;
 }
 
+/* 
 * {
-    box-sizing: border-box;
-}
+  box-sizing: border-box;
+}*/
 
 .logo {
-    width: 100vw;
+  width: 100vw;
 }
 
 /*se agrego el ul para que list-style funcionara*/
-.nav-bar ul{
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    text-decoration: none;
+.nav-bar ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-decoration: none;
 }
 
-header ul li a{
-    color: var(--principal);
-    text-decoration: none;
-    font-weight: bold;
-    
+header ul li a {
+  color: var(--principal);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 body {
-    background-color: var(--barra);
+  background-color: var(--barra);
 }
 
 h1 {
-    color: var(--principal);
+  color: var(--principal);
 }
 
 h2 {
-    color: var(--principal);
-    text-align: center;
+  color: var(--principal);
+  text-align: center;
 }
 
 h3 {
-    color: var(--secundario3);
-    text-align: center;
+  color: var(--secundario3);
+  text-align: center;
 }
 
-footer ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-section .contenedor-conciertos{
-    display: flex;
-    justify-content: left;
-    width: 100vw;
+section .contenedor-conciertos {
+  display: flex;
+  justify-content: left;
+  width: 100vw;
 }
 
 section li p .contenedor-conciertos,
-.info{
-    text-align: justify;
-    display: flex;
-    color: var(--secundario3);
+.info {
+  text-align: justify;
+  display: flex;
+  color: var(--secundario3);
 }
 
-section li{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    list-style: none;
-    margin-bottom: 5vh;
+section li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  margin-bottom: 5vh;
 }
 
-section li .concierto_img{
-    display: flex;
-    width: 100vw;
+section li .concierto_img {
+  display: flex;
+  width: 100vw;
+}
+
+.imgEventos {
+  margin: 50px;
+  padding: 50px;
+  border: 50px;
+}
+.eventsParagraph {
+  text-align: center;
+}
+.botonCarrito {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--principal);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: var(--secundario2);
+  border-color: #d8d8d8;
+  border-width: 3px;
+  border-style: solid;
+
+  margin-right: 42vw;
+  margin-left: 42vw;
+  display: flex;
+  align-items: center;
 }
 
 /*ESTO PARA MEDIA QUERIE
@@ -89,22 +116,17 @@ section li .concierto_img{
 }
 */
 
-@media (min-width: 460px){
+@media (min-width: 460px) {
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-    .nav-bar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;        
-    }
-
-    .nav-bar ul{
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        text-decoration: none;
-        
-    }
-
+  .nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    text-decoration: none;
+  }
 }
-
-
