@@ -24,9 +24,6 @@ app.use(express.static(publicPath));
 app.get('/', (req, res) => {
     res.sendFile(indexPath);
 });
-app.get('/index', (req, res) => {
-    res.sendFile(indexPath);
-});
 
 //Register
 app.get('/register', (req,res)=>{
