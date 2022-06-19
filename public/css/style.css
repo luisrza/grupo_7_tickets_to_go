@@ -13,7 +13,7 @@
 }
 
 .logo {
-    width: 100%;
+    width: 100vw;
 }
 
 /*se agrego el ul para que list-style funcionara*/
@@ -31,9 +31,8 @@ header ul li a{
     
 }
 
-body{
+body {
     background-color: var(--barra);
- 
 }
 
 h1 {
@@ -50,14 +49,6 @@ h3 {
     text-align: center;
 }
 
-
-/*ESTO PARA MEDIA QUERIE
-.navegacion-principal a:hover {
-    /*Cuando el cursor pase cambia de color
-    background-color: var(--principal);
-    color: var(--secundario4);
-}
-*/
 footer ul{
     display: flex;
     flex-direction: row;
@@ -69,7 +60,6 @@ section .contenedor-conciertos{
     justify-content: left;
     width: 100vw;
 }
-
 
 section li p .contenedor-conciertos,
 .info{
@@ -91,6 +81,30 @@ section li .concierto_img{
     width: 100vw;
 }
 
+/*ESTO PARA MEDIA QUERIE
+.navegacion-principal a:hover {
+    /*Cuando el cursor pase cambia de color
+    background-color: var(--principal);
+    color: var(--secundario4);
+}
+*/
 
+@media (min-width: 460px){
+
+    .nav-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;        
+    }
+
+    .nav-bar ul{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        text-decoration: none;
+        
+    }
+
+}
 
 
