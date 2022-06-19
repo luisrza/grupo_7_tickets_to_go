@@ -8,12 +8,12 @@ const port = 4000;
 const indexPath= path.resolve(__dirname,'./views/index.html');
 const publicPath= path.resolve(__dirname,'./public');
 const indexRegister= path.resolve(__dirname,'./views/register.html');
-const indexLogin= path.resolve(__dirname,'./views/login.html');
-const index404= path.resolve(__dirname,'./views/404.html');
 const indexContacto= path.resolve(__dirname,'./views/contacto.html');
-const indexCarrito= path.resolve(__dirname,'./views/carrito.html')
-const indexEvento= path.resolve(__dirname,'./views/evento.html')
-const indexEventos= path.resolve(__dirname,'./views/eventos.html')
+//const indexEventos= path.resolve(__dirname,'./views/eventos.html');
+//const index404= path.resolve(__dirname,'./views/404.html');
+
+//const indexCarrito= path.resolve(__dirname,'./views/carrito.html');
+//const indexEvento= path.resolve(__dirname,'./views/evento.html');
 
 /*npm install express --save <---para bajar express */
 
@@ -35,16 +35,22 @@ app.get('/register', (req,res)=>{
 //Login
 app.get('/login', (req,res)=>{ 
     res.sendFile(indexLogin);
-}); 
+});
 
-//404
-app.get('*', (req, res) => {
-    res.sendFile(index404);
-}); 
+//Register
+app.get('/aboutus', (req,res)=>{
+    res.sendFile(path.resolve(__dirname,'./views/aboutus.html'));
+});
 
 //contacto
 app.get('/contacto', (req, res) => {
     res.sendFile(indexContacto);
+}); 
+
+/*
+//404
+app.get('*', (req, res) => {
+    res.sendFile(index404);
 }); 
 
 //carrito
@@ -62,7 +68,7 @@ app.get('/eventos', (req, res) => {
     res.sendFile(indexEventos);
 });
 
-
+*/
 
 //escuchando
 app.listen(port, () => {
