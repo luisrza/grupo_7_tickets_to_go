@@ -9,6 +9,7 @@ const indexPath= path.resolve(__dirname,'./views/index.html');
 const publicPath= path.resolve(__dirname,'./public');
 const indexRegister= path.resolve(__dirname,'./views/register.html');
 const indexContacto= path.resolve(__dirname,'./views/contacto.html');
+const indexLogin= path.resolve(__dirname,'./views/login.html');
 //const indexEventos= path.resolve(__dirname,'./views/eventos.html');
 //const index404= path.resolve(__dirname,'./views/404.html');
 
