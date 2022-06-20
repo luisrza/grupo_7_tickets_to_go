@@ -35,8 +35,8 @@ app.get('/login', (req,res)=>{
 });
 
 //Register
-app.get('/aboutus', (req,res)=>{
-    res.sendFile(path.resolve(__dirname,'./views/aboutus.html'));
+app.get('/nosotros', (req,res)=>{
+    res.sendFile(path.resolve(__dirname,'./views/nosotros.html'));
 });
 
 //contacto

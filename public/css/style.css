@@ -13,6 +13,7 @@
 }*/
 
 .logo {
+
   width: 100vw;
 }
 
@@ -22,6 +23,17 @@
   flex-direction: column;
   list-style: none;
   text-decoration: none;
+}
+
+div.slider-contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+img.slider{
+    width: 90vw;
+    justify-content: center;
+
 }
 
 header ul li a {
@@ -78,7 +90,7 @@ section li {
 
 section li .concierto_img {
   display: flex;
-  width: 100vw;
+  width: 90vw;
 }
 
 .imgEventos {
