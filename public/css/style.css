@@ -60,10 +60,19 @@ h3 {
   text-align: center;
 }
 
-footer ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+section.redes{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer li {
+padding-top: 5vh;
+list-style: none;
+}
+
+footer li a{
+ text-decoration: none;
+color: var(--principal);
 }
 
 section .contenedor-conciertos {
@@ -154,3 +163,5 @@ div img {
     text-decoration: none;
   }
 }
+
+
