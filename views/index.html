@@ -10,35 +10,36 @@
   
   <body>
     <header>
-      <a href="/">
+      <a href="index.html">
         <img class="logo" src="/img/Logo_transparente.png" alt=""/>
       </a>
       <nav class="nav-bar"> 
         <ul class=navegacion-principal>
-          <li><a href="/"">Inicio</a></li>
+          <li><a href="/index">Inicio</a></li>
           <li><a href="/eventos">Eventos</a></li>
           <li><a href="/nosotros">Nosotros</a></li>
           <li><a href="/contacto">Contacto</a></li>
+          <li><a href="/carrito">Carrito</a></li>
         </ul>
         <ul>
           <li>*foto perfil*</li>
           <li><a href="/login">Inciar Sesión</a></li>
-          <li><a href="/carrito">Carrito</a></li>
         </ul>
       </nav>
     </header>
-    <main>
-      <hr/>
-        <div> contiene el slider</div>
-      <hr/>
-      <h2>Conciertos</h2>
-      <section class="contenedor-conciertos"> <!--li con hipervinculo a la pag del evento-->
-        <!--organizar con flowbox-->
+  <main>
+    <div class="slider-contenedor">
+      <img src="/img/Slider.png" alt="slider_placeholder" class="slider">
+    </div>
+  <h2>Conciertos</h2>
+    <section class="contenedor-conciertos"> <!--li con hipervinculo a la pag del evento-->
+       <!--organizar con flowbox-->
         <li> 
           <img src="img/concierto 1.jpg" alt="concierto_1" class="concierto_img">
           <h2>Buenos Aires, Argentina</h2> 
           <h3>30/03/2022</h3>
-          <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quam unde voluptatem! Cumque incidunt animi fugiat error molestiae sapiente, vel illum aliquam deleniti odit expedita aspernatur a libero nostrum omnis?</p>
+          <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quam unde voluptatem! Cumque incidunt animi fugiat error molestiae sapiente, vel illum aliquam deleniti odit expedita aspernatur a libero nostrum omnis?
+        </p>
         </li>
         <li> 
           <img src="img/concierto 2.jpg" alt="concierto_2" class="concierto_img">
@@ -64,11 +65,12 @@
       
     </section>
     
-    <div class=".iframe-container">
-      <iframe width="360" height="270" src="https://www.youtube.com/embed/bo_efYhYU2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ytube"></iframe>
+    
+    <div class="iframe-container">
+      <iframe width="340" height="260" src="https://www.youtube.com/embed/bo_efYhYU2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ytube"></iframe>
     </div>
     <!--Si quieren pueden hacer un video en yt y dsp lo pongo en la pag-->
-  </main>
+</main>
 
   <footer>
       <ul>

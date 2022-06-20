@@ -1,4 +1,4 @@
-:root {
+:root{
     --principal: #AC881C;
     --secundario: #010010;
     --secundario2: #FFF9E8;
@@ -13,7 +13,7 @@
 }
 
 .logo {
-    width: 100vw;
+    width: 100%;
 }
 
 /*se agrego el ul para que list-style funcionara*/
@@ -31,7 +31,7 @@ header ul li a{
     
 }
 
-body {
+body{
     background-color: var(--barra);
 }
 
@@ -49,6 +49,23 @@ h3 {
     text-align: center;
 }
 
+div .slider-contendor{
+    display: flex;
+    justify-content: center;
+}
+
+img.slider{
+    align-items: center;
+    width: 90vw;
+}
+
+/*ESTO PARA MEDIA QUERIE
+.navegacion-principal a:hover {
+    /*Cuando el cursor pase cambia de color
+    background-color: var(--principal);
+    color: var(--secundario4);
+}
+*/
 footer ul{
     display: flex;
     flex-direction: row;
@@ -58,8 +75,9 @@ footer ul{
 section .contenedor-conciertos{
     display: flex;
     justify-content: left;
-    width: 100vw;
+    width: 80vw;
 }
+
 
 section li p .contenedor-conciertos,
 .info{
@@ -78,33 +96,10 @@ section li{
 
 section li .concierto_img{
     display: flex;
-    width: 100vw;
+    width: 90vw;
 }
 
-/*ESTO PARA MEDIA QUERIE
-.navegacion-principal a:hover {
-    /*Cuando el cursor pase cambia de color
-    background-color: var(--principal);
-    color: var(--secundario4);
+div .iframe-container{
+    display: flex;
+    align-items: center;
 }
-*/
-
-@media (min-width: 460px){
-
-    .nav-bar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;        
-    }
-
-    .nav-bar ul{
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        text-decoration: none;
-        
-    }
-
-}
-
-
