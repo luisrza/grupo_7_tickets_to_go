@@ -1,18 +1,19 @@
 const express = require('express');
+
 const app = express();
 
 const path = require('path');
 
 const port = 4000;
 
-const indexPath= path.resolve(__dirname,'./views/index.html');
-const publicPath= path.resolve(__dirname,'./public');
-const registerPath= path.resolve(__dirname,'./views/register.html');
-const contactoPath= path.resolve(__dirname,'./views/contacto.html');
-const loginPath= path.resolve(__dirname,'./views/login.html');
-const eventosPath= path.resolve(__dirname,'./views/eventos.html');
-const index404Path= path.resolve(__dirname,'./views/404.html');
-const carritoPath= path.resolve(__dirname,'./views/carrito.html');
+const indexPath = path.resolve(__dirname,'./views/index.html');
+const publicPath = path.resolve(__dirname,'./public');
+const registerPath = path.resolve(__dirname,'./views/register.html');
+const contactoPath = path.resolve(__dirname,'./views/contacto.html');
+const loginPath = path.resolve(__dirname,'./views/login.html');
+const eventosPath = path.resolve(__dirname,'./views/eventos.html');
+const index404Path = path.resolve(__dirname,'./views/404.html');
+const carritoPath = path.resolve(__dirname,'./views/carrito.html');
 
 
 /*npm install express --save <---para bajar express */
@@ -24,18 +25,22 @@ app.get('/', (req, res) => {
     res.sendFile(indexPath);
 });
 
+app.get('/index', (req, res) => {
+    res.sendFile(indexPath);
+});
+
 //Register
-app.get('/register', (req,res)=>{
+app.get('/register', (req, res) => {
     res.sendFile(registerPath);
 });
 
 //Login
-app.get('/login', (req,res)=>{ 
+app.get('/login', (req, res) => { 
     res.sendFile(loginPath);
 });
 
-//Register
-app.get('/nosotros', (req,res)=>{
+//nostros
+app.get('/nosotros', (req, res) => {
     res.sendFile(path.resolve(__dirname,'./views/nosotros.html'));
 });
 
