@@ -10,11 +10,10 @@ const publicPath= path.resolve(__dirname,'./public');
 const registerPath= path.resolve(__dirname,'./views/register.html');
 const contactoPath= path.resolve(__dirname,'./views/contacto.html');
 const loginPath= path.resolve(__dirname,'./views/login.html');
-//const indexEventos= path.resolve(__dirname,'./views/eventos.html');
-//const index404= path.resolve(__dirname,'./views/404.html');
+const eventosPath= path.resolve(__dirname,'./views/eventos.html');
+const index404Path= path.resolve(__dirname,'./views/404.html');
+const carritoPath= path.resolve(__dirname,'./views/carrito.html');
 
-//const indexCarrito= path.resolve(__dirname,'./views/carrito.html');
-//const indexEvento= path.resolve(__dirname,'./views/evento.html');
 
 /*npm install express --save <---para bajar express */
 
@@ -45,39 +44,23 @@ app.get('/contacto', (req, res) => {
     res.sendFile(contactoPath);
 }); 
 
-/*
+
 //404
 app.get('*', (req, res) => {
-    res.sendFile(index404);
+    res.sendFile(index404Path);
 }); 
 
 //carrito
 app.get('/carrito', (req, res) => {
-    res.sendFile(indexCarrito);
+    res.sendFile(carritoPath);
 });
 
 //evento
 app.get('/evento', (req, res) => {
-    res.sendFile(indexEvento);
+    res.sendFile(eventosPath);
 });
-
-//eventos
-app.get('/eventos', (req, res) => {
-    res.sendFile(indexEventos);
-});
-
-*/
 
 //escuchando
 app.listen(port, () => {
     console.log('listening on http://localhost:'+port);
 });
-
-<<<<<<< HEAD
-console.log(carritoPath);
-console.log(eventosPath);
-=======
-
-console.log(contactoPath);
-console.log(indexPath);
->>>>>>> parent of 862d6ae (nuevos cambios en app)
