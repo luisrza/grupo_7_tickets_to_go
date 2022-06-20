@@ -45,9 +45,8 @@ app.get('/contacto', (req, res) => {
 }); 
 
 
-404
 app.get('*', (req, res) => {
-    res.sendFile(index404);
+    res.sendFile(index404Path);
 }); 
 
 //carrito
