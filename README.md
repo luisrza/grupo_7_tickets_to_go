@@ -2,6 +2,10 @@
 
 Enlace: git@github.com:luisrza/grupo_7_tickets_to_go.git
 
+**Tablero de gestión**
+
+https://www.notion.so/fa5ad6ecab254cdbb17aff63431d1f0a?v=efc193aecf7b4746b11bf863e360b7df
+
 **Tematica del sitio**
 
 Venta de entradas para los recitales de la banda.
