@@ -45,9 +45,9 @@ app.get('/contacto', (req, res) => {
 }); 
 
 
-//404
+404
 app.get('*', (req, res) => {
-    res.sendFile(index404Path);
+    res.sendFile(index404);
 }); 
 
 //carrito
@@ -55,8 +55,8 @@ app.get('/carrito', (req, res) => {
     res.sendFile(carritoPath);
 });
 
-//evento
-app.get('/evento', (req, res) => {
+//eventos
+app.get('/eventos', (req, res) => {
     res.sendFile(eventosPath);
 });
 
@@ -64,3 +64,7 @@ app.get('/evento', (req, res) => {
 app.listen(port, () => {
     console.log('listening on http://localhost:'+port);
 });
+
+
+console.log(contactoPath);
+console.log(indexPath);
