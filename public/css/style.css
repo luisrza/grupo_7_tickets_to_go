@@ -19,7 +19,7 @@ header{
 }
 
 .logo {
-  width: 90vw;
+  width: 80vw;
 }
 
 /*se agrego el ul para que list-style funcionara*/
@@ -72,26 +72,46 @@ h3 {
     text-align: center;
 }
 
-section.redes{
+footer{
+    background-color: var(--barra2);
+    padding-bottom: 2.5vh;
+}
+.redes{
+    margin-top: 2.5vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-content: center;
+    padding-top: 1vh;
+    height: 4.5vh;
 }
 
-footer li {
-    padding-top: 5vh;
-    list-style: none;
+.redes li{
+    display: flex;
+    align-items: center;
+    align-content: center;
 }
 
-footer li a{
+.redes li a{
+    display: flex;
+    font-size:30px;
+    color:var(--secundario3);
     text-decoration: none;
-    color: var(--principal);
     font-size: 20px;
 }
+
+.derechos{
+    text-align: center;
+    color: var(--secundario3);
+
+}
+
+
 
 section .contenedor-conciertos {
     display: flex;
     justify-content: left;
     width: 100vw;
+    margin-bottom: 10vh;
 }
 
 
