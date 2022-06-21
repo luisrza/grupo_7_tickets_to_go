@@ -74,15 +74,16 @@ h3 {
 
 footer{
     background-color: var(--barra2);
-    padding-bottom: 2.5vh;
+    padding-bottom: .5vh;
 }
+
 .redes{
     margin-top: 2.5vh;
     display: flex;
     justify-content: space-evenly;
     align-content: center;
     padding-top: 1vh;
-    height: 4.5vh;
+    height: 2vh;
 }
 
 .redes li{
@@ -102,10 +103,7 @@ footer{
 .derechos{
     text-align: center;
     color: var(--secundario3);
-
 }
-
-
 
 section .contenedor-conciertos {
     display: flex;
@@ -113,7 +111,6 @@ section .contenedor-conciertos {
     width: 100vw;
     margin-bottom: 10vh;
 }
-
 
 section li p .contenedor-conciertos,
 .info {
@@ -141,7 +138,17 @@ div img.imgContacto{
     width: 90vw;
 }
 
-div img {
+.contenedor-conciertos li p{
+    padding: 10px;
+}
+
+@media (min-width: 1024px) {
+    .contenedor-conciertos li p{
+        padding: 0 75px;
+    }
+}
+
+div img{
     display: flex;
     justify-content: center;
 }
@@ -219,6 +226,7 @@ div img {
 
 .iframe-container-lap{
     display: none;
+    padding-left: 2vw;
 }
 
 @media (min-width: 768px) {
