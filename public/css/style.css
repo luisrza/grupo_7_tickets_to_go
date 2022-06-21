@@ -172,6 +172,7 @@ div img {
         flex-direction: row;
         justify-content: space-around;
         margin-bottom: 2vh;
+        padding-top: 5px;
        
 }
     
