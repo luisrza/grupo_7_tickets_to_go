@@ -168,17 +168,4 @@ div img {
         margin-bottom: 2.5svh;
     }}
 
-@media (min-width: 1px){
-    .nav-bar,
-    .navegacion-principal{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    }}
 
-  .nav-bar ul{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    text-decoration: none;
-}
