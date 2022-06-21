@@ -5,6 +5,8 @@
   --secundario3: #e6e6ff;
   --fondo: #020236;
   --barra: #23395d;
+  --barra2: rgba(172, 136, 28, .8 )
+
 }
 
 /* 
@@ -12,18 +14,31 @@
   box-sizing: border-box;
 }*/
 
-.logo {
+header{
 
-  width: 100vw;
+}
+
+.logo {
+  width: 90vw;
 }
 
 /*se agrego el ul para que list-style funcionara*/
-.nav-bar ul {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  text-decoration: none;
+.nav-bar{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    color: var(--secundario3);
+    text-decoration: none;
+    padding-left: 5vw;
 }
+
+.nav-bar .navbar_link,
+.nav-bar li{
+    color: var(--secundario3);
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
 
 div.slider-contenedor{
     display: flex;
@@ -33,17 +48,11 @@ div.slider-contenedor{
 img.slider{
     width: 90vw;
     justify-content: center;
-
-}
-
-header ul li a {
-  color: var(--principal);
-  text-decoration: none;
-  font-weight: bold;
 }
 
 body {
   background-color: var(--barra);
+  
 }
 
 h1 {
@@ -93,7 +102,7 @@ section li p .contenedor-conciertos,
     color: var(--secundario3);
 }
 
-section li {
+section li{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -138,7 +147,6 @@ div img {
     border-color: #d8d8d8;
     border-width: 3px;
     border-style: solid;
-
     margin-right: 42vw;
     margin-left: 42vw;
     display: flex;
@@ -153,19 +161,66 @@ div img {
 }
 */
 
-@media (min-width: 460px) {
-  .nav-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    }}
 
-@media (min-width: 1200px){
-    nav.nav-bar{
-        align-self: left;
-        background-color: red;
-        width: 100vw;
-        margin-bottom: 2.5svh;
-    }}
 
+/*cambios para 768px y 1200px*/
+
+@media (min-width: 768px){
+    .nav-bar{
+        display: flex;
+        background-color: var(--barra2); 
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 2vh;
+       
+}
+    
+    .nav-bar{
+        font-weight: bolder;
+        align-content: center;
+}}
+
+
+@media (min-width: 768px) {
+    img.slider,
+    li img.concierto_img {
+        width: 70vw;
+}}
+
+/*Iframe Video de YouTube y Mediaqueries*/
+.iframe-container{
+    padding-left: 2vw;
+}
+
+.iframe-container-tab{
+    display: none;
+}
+
+.iframe-container-lap{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .iframe-container{
+        display: none;
+    }
+    .iframe-container-tab{
+        display: contents;
+    }
+    .iframe-container-lap{
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .iframe-container{
+        display: none;
+    }
+    .iframe-container-tab{
+        display: none;
+    }
+    .iframe-container-lap{
+        display: contents;
+    }
+}
 
