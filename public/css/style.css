@@ -1,9 +1,9 @@
 :root {
-  --principal: #ac881c;
-  --secundario: #010010;
-  --secundario2: #fff9e8;
-  --secundario3: #e6e6ff;
-  --fondo: #020236;
+  --amarillo: #fecd45;
+  --negro: #3b3b3b;
+  --azul: #2568FB;
+  --blanco: #fff;
+  --fondo: #222222;
   --barra: #23395d;
   --barra2: rgba(172, 136, 28, .8 )
 }
@@ -12,6 +12,11 @@
 * {
   box-sizing: border-box;
 }*/
+
+html{
+    
+    
+}
 
 header{
 
@@ -26,14 +31,14 @@ header{
     display: flex;
     flex-direction: column;
     list-style: none;
-    color: var(--secundario3);
+    color: var(--);
     text-decoration: none;
     padding-left: 5vw;
 }
 
 .nav-bar .navbar_link,
 .nav-bar li{
-    color: var(--secundario3);
+    color: var(--blanco);
     text-decoration: none;
     font-weight: bold;
     padding-bottom: 5px;
@@ -50,8 +55,9 @@ img.slider{
 }
 
 body {
-  background-color: var(--barra);
-  
+    background-color: var(--fondo);
+    color: #d8d8d8;
+    font-family: 'Roboto', serif;
 }
 
 h1 {
@@ -59,16 +65,32 @@ h1 {
     font-size: 24px;
 }
 
-h2 {
-    font-size: 26px;
-    color: var(--principal);
+h2{
+    display: flex;
+    font-size: 60px;
+    color: var(--amarillo);
     text-align: center;
+    justify-content: center;
+}
+
+h2 span{
+    color: var(--blanco);
+}
+
+.conciertos, h2, h3{
+    display: flex;
+    color: var(--barra2);
+    text-align: center;
+    font-family: 'Joan', serif;
+    align-items: center;
+    height: 5.5vh;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 30px;
     color: var(--secundario3);
     text-align: center;
+    height: 1vh;
 }
 
 footer{
@@ -104,15 +126,8 @@ footer{
     color: var(--secundario3);
 }
 
-section .contenedor-conciertos {
-    display: flex;
-    justify-content: left;
-    width: 100vw;
-    margin-bottom: 10vh;
-}
-
 section li p .contenedor-conciertos,
-.info {
+.info{
     text-align: justify;
     display: flex;
     color: var(--secundario3);
@@ -187,30 +202,92 @@ div img{
 }
 */
 
+@media (min-width: 768px) {
+    .nav-bar a:hover{
+        background-color: var(--negro);
+        color: var(--barra2);
+        width: 25vw;
+    }
+}
+
 
 
 /*cambios para 768px y 1200px*/
+@media (min-width: 768px){
+    .contenedor-conciertos1{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+    .contenedor-conciertos1 li{
+        width: 45vw;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .contenedor-conciertos1 li img{
+        width: 45vw;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    
+    .contenedor-conciertos1 li img:hover{
+        border: solid 2px var(--barra2);
+    }
+
+    .contenedor-conciertos2{
+        display: flex;
+        flex-wrap: nowrap;
+
+        justify-content: space-around;
+    }
+    .contenedor-conciertos2 li{
+        width: 45vw;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-content: center;
+    }
+
+    .contenedor-conciertos2 li img{
+        width: 45vw;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    .contenedor-conciertos2 li img:hover{
+        border: solid 2px var(--barra2);
+    }
+}
 
 @media (min-width: 768px){
     .nav-bar{
         display: flex;
         background-color: var(--barra2); 
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         margin-bottom: 2vh;
-        padding-top: 5px;
-       
 }
-    
-    .nav-bar{
-        font-weight: bolder;
-        align-content: center;
-}}
+
+    .nav-bar li{
+        justify-content: space-evenly;
+        width: 8vw;
+        text-align: center;
+}
+    .nav-bar li:hover{
+
+        background-color: var(--negro);
+        color: var(--barra2);
+        width: 8vw;
+        text-align: center;  
+}
+}
 
 
 @media (min-width: 768px) {
-    img.slider,
-    li img.concierto_img {
+    img.slider{
         width: 70vw;
 }}
 
@@ -251,4 +328,3 @@ div img{
         display: contents;
     }
 }
-
