@@ -58,6 +58,11 @@ label{
 }
 
 @media (min-width: 768px){
+    .boton:hover{
+        background-color: var(--negro);
+        color: var(--amarillo);
+    }
+
     form{
         display: flex;
         flex-direction: column;
@@ -83,11 +88,6 @@ label{
     .forma p a{
         color: white;
     }
-}
-
-.boton:hover {
-    background-color: var(--negro);
-    color: var(--amarillo);
 }
 
 .contenedor-boton{
@@ -157,10 +157,3 @@ footer{
     text-align: center;
     color: var(--secundario3);
 }
-
-@media (min-width: 768px) {
-    .boton:hover{
-      background-color: var(--negro);
-      color: var(--amarillo);
-    }
-  }
