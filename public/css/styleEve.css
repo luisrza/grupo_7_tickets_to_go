@@ -1,0 +1,151 @@
+:root {
+    --amarillo: #fecd45;
+    --negro: #3b3b3b;
+    --azul: #2568FB;
+    --blanco: #fff;
+    --fondo: #222222;
+    --barra: #23395d;
+    --barra2: rgba(172, 136, 28, .8 )
+  }
+
+html {
+box-sizing: border-box;
+}
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+header .logo{
+    width: 80vw;
+  }
+
+.nav-bar{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    color: var(--);
+    text-decoration: none;
+    padding-left: 5vw;
+}
+
+.nav-bar .navbar_link,
+.nav-bar li{
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+/*MQ para barra de navegacion en resolucion al y con efectos*/
+@media (min-width: 768px) {
+    .nav-bar a:hover{
+        background-color: var(--negro);
+        color: var(--barra2);
+        width: 25vw;
+    }
+
+    .nav-bar{
+      display: flex;
+      background-color: var(--barra2); 
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 2vh;
+}
+
+  .nav-bar li{
+      justify-content: space-evenly;
+      width: 8vw;
+      text-align: center;
+}
+  .nav-bar li:hover{
+
+      background-color: var(--negro);
+      color: var(--barra2);
+      width: 8vw;
+      text-align: center;  
+}}
+
+body {
+    background-color: var(--fondo);
+    color: #d8d8d8;
+    font-family: 'Roboto', serif;
+}
+
+h1 {
+  color: var(--principal);
+  font-size: 24px;
+}
+
+h2{
+  display: flex;
+  font-size: 60px;
+  color: var(--amarillo);
+  text-align: center;
+  justify-content: center;
+}
+
+h2, h3{
+  display: flex;
+  color: var(--barra2);
+  text-align: center;
+  font-family: 'Joan', serif;
+  align-items: center;
+  height: 5.5vh;
+}
+
+.imgEvento{
+
+}
+.eventsParagraph {
+  text-align: center;
+}
+.botonCarrito {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--negro);
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: var(--amarillo);
+  border-color: var(--amarillo);
+  border-width: 3px;
+  border-style: solid;
+  margin-right: 42vw;
+  margin-left: 42vw;
+  display: flex;
+  align-items: center;
+  border-radius: 8%;
+}
+
+.imgEvento{
+  background-image: url("/img/concierto 5.jpg");
+  display: block;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center; 
+  justify-items: right;
+  height: 400px;
+  width: 100%;
+}
+.imgEvento p{ 
+  opacity: 0%;
+  color: #222222;
+}
+.imgEvento p:hover{
+  opacity: 100%;
+  color:red;
+}
+
+@media (min-width: 768px) {
+    .botonCarrito:hover{
+      background-color: var(--negro);
+      color: var(--amarillo);
+      
+    }
+  .imgEvento:hover img{
+    background-color: red;
+
+  }
+}
+

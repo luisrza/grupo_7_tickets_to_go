@@ -8,21 +8,13 @@
   --barra2: rgba(172, 136, 28, .8 )
 }
 
-/* 
-* {
-  box-sizing: border-box;
-}*/
-
-html{
-    
-    
+* 
+html {box-sizing: border-box;}
+  *, *:before, *:after {
+    box-sizing: inherit;
 }
 
-header{
-
-}
-
-.logo {
+header .logo{
   width: 80vw;
 }
 
@@ -42,7 +34,7 @@ header{
     text-decoration: none;
     font-weight: bold;
     padding-bottom: 5px;
-  }
+}
 
 div.slider-contenedor{
     display: flex;
@@ -71,10 +63,6 @@ h2{
     color: var(--amarillo);
     text-align: center;
     justify-content: center;
-}
-
-h2 span{
-    color: var(--blanco);
 }
 
 .conciertos, h2, h3{
@@ -167,14 +155,6 @@ div img{
     justify-content: center;
 }
 
-.imgEventos {
-    margin: 50px;
-    padding: 50px;
-    border: 50px;
-}
-.eventsParagraph {
-    text-align: center;
-}
 .botonCarrito {
     text-decoration: none;
     font-weight: 600;
@@ -292,8 +272,17 @@ div img{
 }}
 
 /*Iframe Video de YouTube y Mediaqueries*/
+.ytube{
+    display: block;
+    border: none;
+    margin: 0 auto;
+    width: minmax(360px, 990px);
+}
+
 .iframe-container{
     padding-left: 2vw;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .iframe-container-tab{
@@ -318,6 +307,7 @@ div img{
 }
 
 @media (min-width: 1024px) {
+    
     .iframe-container{
         display: none;
     }
