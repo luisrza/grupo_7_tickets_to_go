@@ -4,7 +4,8 @@ const app = express();
 
 const path = require('path');
 
-const port = 4000;
+const PORT = process.env.PORT || 4000;
+const HOST = process.env.HOST || 'localhost';
 
 const indexPath = path.resolve(__dirname,'./views/index.html');
 const publicPath = path.resolve(__dirname,'./public');
@@ -67,8 +68,8 @@ app.get('*', (req, res) => {
 
 
 //escuchando
-app.listen(port, () => {
-    console.log('listening on http://localhost:'+port);
+app.listen(PORT, ()=>{
+    console.log(`Server running at http://${HOST}:${PORT}/`);
 });
 
 
