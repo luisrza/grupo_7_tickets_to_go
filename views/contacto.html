@@ -1,52 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/styleCon.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Joan&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <a href="/">
-          <img class="logo" src="/img/Logo_transparente.png" alt=""/>
-        </a>
-        <nav class="nav-bar"> 
-          <ul class=navegacion-principal>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/eventos">Eventos</a></li>
-            <li><a href="/nosotros">Nosotros</a></li>
-            <li><a href="/contacto">Contacto</a></li>
-          </ul>
-          <ul>
-            <li>*foto perfil*</li>
-            <li><a href="/login">Inciar Sesión</a></li>
-            <li><a href="/carrito">Carrito</a></li>
-          </ul>
-        </nav>
+      <a href="/">
+        <img class="logo" src="/img/Logo_transparente.png" alt="logo" />
+      </a>
+      <nav class="nav-bar">
+        <li><a href="/index" class="navbar_link">Inicio</a></li>
+        <li><a href="/eventos" class="navbar_link">Eventos</a></li>
+        <li><a href="/nosotros" class="navbar_link">Nosotros</a></li>
+        <li><a href="/contacto" class="navbar_link">Contacto</a></li>
+        <li><a href="/carrito" class="navbar_link">Carrito</a></li>
+        <li>*foto perfil*</li>
+        <li><a href="/login" class="navbar_link">Inciar Sesión</a></li>
+      </nav>
     </header>
-
     <main>
-        <div>
-          <img src="img/contacto.jpg"alt="imagen-contacto" class="imgContacto">
+        <div class="contenedorImg">
+        <div class="contenedorImg2">
+            <img src="/img/contacto.jpg" alt="">
         </div>
-        <h2>Contactanos:</h2>
-        <p>Contactanos para resolver tus dudas, si tienes alguna recomendación para nuestro equipo o si notas algún problema con el sitio</p>
-        <br>
-        <form action="/" method="POST">
-        <label>Email:</label>
-        <input type="email" name="email" placeholder="email" required />
-        <form action="/" method="POST">
-        <div>
-          <label>Mensaje:</label>
-        </div>
-        <textarea name="comment" form="usrform">Escribe tu mensaje...</textarea>
-        <br>
-        <br>
+          <h2>Contactanos:</h2>
+          <p>Contactanos para resolver tus dudas, si tienes alguna recomendación para nuestro equipo o si notas algún problema con el sitio</p>
+          <br>
+          <form action="/" method="POST">
+          <label>E-mail:</label>
+          <input type="email" name="email" placeholder="email" required />
+          <form action="/" method="POST">
+          <div>
+            <label>Mensaje:</label>
+          </div>
 
+            <div class="input"><textarea>Escribe tu mensaje...</textarea></div>
+            <div class="contenedor-boton">
+              <a href="#" type="submit" class="boton">Enviar</a>
+            </div>
+          </div>
+          <br>
+          <br>
+        </div>
+      
         <!--TODO: elegir uno de los dos formatos-->
 
         <!--<input type="text" required placeholder="Escribinos acá">
@@ -56,16 +70,35 @@
         <div class="input"><textarea>Escribinos</textarea></div>
         <div class="submit"><input type="button" value="Enviar"></div>
         </div> -->
+      </form>
 
     </form>
     
 
 </main>
-
 <footer>
-    <!--pegar footer terminado-->
-</footer>
-
+  <section class="redes">
+      <li>
+      <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
+      </li>
+      <li>
+      <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
+      </li>
+      <li>
+      <a href="https://www.instagram.com"><i class="fa-brands fa-instagram-square"></i></a>
+      </li>
+      <li>
+      <a href="https://www.youtube.com"><i class="fa-brands fa-youtube-square"></i></a>
+      </li>
+      <li>
+      <a href="https://www.spotify.com"><i class="fa-brands fa-spotify"></i></a>
+      </li>
+      
+  </section>
+  <div class="derechos">
+  <p>Todos los derechos Reservados</p>
+  <p>Diseño: Diego Franco, Lautaro González, Luis Garza, Nico Del Gio, Sebastián Perez.</p>
+  </div>
 </body>
 
 </html>
