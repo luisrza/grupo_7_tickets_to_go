@@ -17,14 +17,22 @@
     box-sizing: inherit;
   }
   
+header a{
+    display: flex;
+    justify-content: center;
+}
+
 header .logo {
+    display: flex;
     width: 80vw;
+    justify-items: center;
 }
 
 h2{
     font-size: 5vh;
     margin-bottom: 1vh;
-    color: var(--amararillo2);
+    color: var(--amarillo);
+    font-family: "Joan", serif;
 }
 
 body {
@@ -35,6 +43,40 @@ body {
 
 label{
     font-weight: 1000;
+    color: var(--amararillo2);
+}
+
+@media (min-width: 768px){
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+        text-align: center;
+        justify-content: safe;
+    }
+
+    label{
+        font-size: 22px;
+        font-weight: 1000;
+        color: var(--amararillo2);
+    }
+
+    .forma{
+        display: flex;
+        justify-content: center;
+    }
+
+    h2{
+        text-align: center;
+    }
+    .forma p a{
+        color: white;
+    }
+}
+
+.boton:hover {
+    background-color: var(--negro);
+    color: var(--amarillo);
 }
 
 .contenedor-boton{
@@ -44,7 +86,7 @@ label{
     margin-top: 5vh;
 }
 
-.botonCarrito{
+.boton{
     text-decoration: none;
     font-weight: 600;
     font-size: 20px;
@@ -58,8 +100,7 @@ label{
     border-color: var(--amarillo);
     border-width: 3px;
     border-style: solid;
-    margin-right: 40vw;
-    margin-left: 40vw;
+    margin: -5vh 40vw -5vh 40vw;
     display: flex;
     align-items: center;
     border-radius: 8%;
@@ -67,8 +108,7 @@ label{
 
 .textArea{
     border-style: inset;
-    background-color:var(--amarillo);
-    
+    background-color:var(--negro);
 }
 
 footer{
