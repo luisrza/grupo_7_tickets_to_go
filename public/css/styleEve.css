@@ -1,73 +1,75 @@
 :root {
-    --amarillo: #fecd45;
-    --negro: #3b3b3b;
-    --azul: #2568FB;
-    --blanco: #fff;
-    --fondo: #222222;
-    --barra: #23395d;
-    --barra2: rgba(172, 136, 28, .8 )
-  }
+  --amarillo: #fecd45;
+  --negro: #3b3b3b;
+  --azul: #2568fb;
+  --blanco: #fff;
+  --fondo: #222222;
+  --barra: #23395d;
+  --barra2: rgba(172, 136, 28, 0.8);
+}
 
 html {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
-*, *:before, *:after {
-box-sizing: inherit;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
-header .logo{
-    width: 80vw;
-  }
+header .logo {
+  width: 80vw;
+}
 
-.nav-bar{
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    color: var(--);
-    text-decoration: none;
-    padding-left: 5vw;
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  color: var(--);
+  text-decoration: none;
+  padding-left: 5vw;
 }
 
 .nav-bar .navbar_link,
-.nav-bar li{
-    color: var(--blanco);
-    text-decoration: none;
-    font-weight: bold;
-    padding-bottom: 5px;
-  }
+.nav-bar li {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
 /*MQ para barra de navegacion en resolucion al y con efectos*/
 @media (min-width: 768px) {
-    .nav-bar a:hover{
-        background-color: var(--negro);
-        color: var(--barra2);
-        width: 25vw;
-    }
+  .nav-bar a:hover {
+    background-color: var(--negro);
+    color: var(--barra2);
+    width: 25vw;
+  }
 
-    .nav-bar{
-      display: flex;
-      background-color: var(--barra2); 
-      flex-direction: row;
-      justify-content: space-between;
-      margin-bottom: 2vh;
+  .nav-bar {
+    display: flex;
+    background-color: var(--barra2);
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+  }
+
+  .nav-bar li {
+    justify-content: space-evenly;
+    width: 8vw;
+    text-align: center;
+  }
+  .nav-bar li:hover {
+    background-color: var(--negro);
+    color: var(--barra2);
+    width: 8vw;
+    text-align: center;
+  }
 }
-
-  .nav-bar li{
-      justify-content: space-evenly;
-      width: 8vw;
-      text-align: center;
-}
-  .nav-bar li:hover{
-
-      background-color: var(--negro);
-      color: var(--barra2);
-      width: 8vw;
-      text-align: center;  
-}}
 
 body {
-    background-color: var(--fondo);
-    color: #d8d8d8;
-    font-family: 'Roboto', serif;
+  background-color: var(--fondo);
+  color: #d8d8d8;
+  font-family: "Roboto", serif;
 }
 
 h1 {
@@ -75,7 +77,7 @@ h1 {
   font-size: 24px;
 }
 
-h2{
+h2 {
   display: flex;
   font-size: 60px;
   color: var(--amarillo);
@@ -83,17 +85,17 @@ h2{
   justify-content: center;
 }
 
-h2, h3{
+h2,
+h3 {
   display: flex;
   color: var(--barra2);
   text-align: center;
-  font-family: 'Joan', serif;
+  font-family: "Joan", serif;
   align-items: center;
   height: 5.5vh;
 }
 
-.imgEvento{
-
+.imgEvento {
 }
 .eventsParagraph {
   text-align: center;
@@ -119,33 +121,45 @@ h2, h3{
   border-radius: 8%;
 }
 
-.imgEvento{
+.imgEvento {
   background-image: url("/img/concierto 5.jpg");
   display: block;
   background-repeat: no-repeat, no-repeat;
-  background-position: center; 
+  background-position: center;
   justify-items: right;
   height: 400px;
   width: 100%;
 }
-.imgEvento p{ 
-  opacity: 0%;
-  color: #222222;
+.imgEvento p {
+  bottom: 0;
+  margin: 110px;
+  padding: 110px;
+  border: 110px;
 }
-.imgEvento p:hover{
+.imgEvento p:hover {
   opacity: 100%;
-  color:red;
+  color: wheat;
+  margin-top: 110px;
+  padding-top: 110px;
+  border-top: 110px;
+  
+}
+.boxEvento {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 5px;
+  padding: 5px;
+  border: 5px;
+  
 }
 
 @media (min-width: 768px) {
-    .botonCarrito:hover{
-      background-color: var(--negro);
-      color: var(--amarillo);
-      
-    }
-  .imgEvento:hover img{
+  .botonCarrito:hover {
+    background-color: var(--negro);
+    color: var(--amarillo);
+  }
+  .imgEvento:hover img {
     background-color: red;
-
   }
 }
-
