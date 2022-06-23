@@ -41,6 +41,17 @@ body {
     font-family: "Roboto", serif;
 }
 
+.checkbox{
+        display: flex;
+        justify-content: center;
+}
+
+.forma p a{
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+
 label{
     font-weight: 1000;
     color: var(--amararillo2);
