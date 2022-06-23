@@ -137,8 +137,7 @@ h3{
   height: 25vh;
   margin: 5vh 3vw 3vh 3vw;
   background-image: url("/img/concierto 5.jpg");
-  background-size: contain;
-
+  background-size: cover;
 }
 .txtEvento{
   display: flex;
@@ -170,6 +169,7 @@ h3{
     padding-bottom: 75vh;
     background-image: url("/img/concierto 5.jpg");
     background-position: center;
+    background-size: none;
 }
 .txtEvento{
   display: flex;

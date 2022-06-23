@@ -6,50 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleLog.css">
     <title>Login</title>
   </head>
-
-  <body>
-
-    <header>
-      <a href="/">
-        <img class="logo" src="/img/Logo_transparente.png" alt=""/>
-      </a>
-      <nav class="nav-bar"> 
-        <ul class=navegacion-principal>
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/eventos">Eventos</a></li>
-          <li><a href="/nosotros">Nosotros</a></li>
-          <li><a href="/contacto">Contacto</a></li>
-        </ul>
-        <ul>
-          <li>*foto perfil*</li>
-          <li><a href="/login">Inciar Sesión</a></li>
-          <li><a href="/carrito">Carrito</a></li>
-        </ul>
-      </nav>
-    </header>
-
+    <body>
+      <header>
+          <a href="/">
+            <img class="logo" src="/img/Logo_transparente.png" alt=""/>
+          </a>
+      </header>
     <main>
       <h2>Entrar a mi sesion:</h2>
       <br />
       <form action="/" method="POST">
-        <label>Email:</label>
+        <label>E-mail:</label>
         <input
+          class="textArea"
           type="email"
           name="email"
           id="email"
-          placeholder="email"
+          placeholder=""
           required
         />
         <br />
         <br />
         <label>Constraseña:</label>
         <input
+          class="textArea"
           type="password"
           name="pass"
-          placeholder="Inserte su contraseña"
+          placeholder=""
           required
         />
         <p><a href="#">¿Olvidaste tu contraseña?</a></p>
@@ -64,32 +50,38 @@
         <label for="si">Recordar mi usuario</label>
         <br />
         <br />
-        <input type="submit" value="Login" />
+
+        <div class="contenedor-boton">
+          <a href="#" type="submit" class="botonCarrito">Login</a>
+        </div>
+      </div>
       </form>
 
       <p><a href="/register">¿Sos nuevo? Crea tu cuenta acá</a></p>
     </main>
-
     <footer>
       <section class="redes">
           <li>
-            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
+          <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
           </li>
           <li>
-            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
           </li>
           <li>
-            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram-square"></i></a>
+          <a href="https://www.instagram.com"><i class="fa-brands fa-instagram-square"></i></a>
           </li>
           <li>
-            <a href="https://www.youtube.com"><i class="fa-brands fa-youtube-square"></i></a>
+          <a href="https://www.youtube.com"><i class="fa-brands fa-youtube-square"></i></a>
           </li>
           <li>
-            <a href="https://www.spotify.com"><i class="fa-brands fa-spotify"></i></a>
+          <a href="https://www.spotify.com"><i class="fa-brands fa-spotify"></i></a>
           </li>
-        </section>
-    </footer>
-    
+          
+      </section>
+      <div class="derechos">
+      <p>Todos los derechos Reservados</p>
+      <p>Diseño: Diego Franco, Lautaro González, Luis Garza, Nico Del Gio, Sebastián Perez.</p>
+      </div>
   </body>
 
 </html>
