@@ -1,54 +1,69 @@
 :root {
-    --amarillo: #fecd45;
-    --negro: #3b3b3b;
-    --azul: #2568FB;
-    --blanco: #fff;
-    --fondo: #222222;
-    --barra: #23395d;
-    --barra2: rgba(172, 136, 28, .8 )
-  }
+  --amarillo: #fecd45;
+  --negro: #3b3b3b;
+  --azul: #2568fb;
+  --blanco: #fff;
+  --fondo: #222222;
+  --barra: #23395d;
+  --barra2: rgba(172, 136, 28, 0.8);
+}
 
 html {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
-*, *:before, *:after {
-box-sizing: inherit;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
-header .logo{
-    width: 80vw;
-  }
+header .logo {
+  width: 80vw;
+}
 
-.nav-bar{
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    color: var(--);
-    text-decoration: none;
-    padding-left: 5vw;
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  color: var(--);
+  text-decoration: none;
+  padding-left: 5vw;
 }
 
 .nav-bar .navbar_link,
-.nav-bar li{
-    color: var(--blanco);
-    text-decoration: none;
-    font-weight: bold;
-    padding-bottom: 5px;
-  }
+.nav-bar li {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
 /*MQ para barra de navegacion en resolucion al y con efectos*/
 @media (min-width: 768px) {
-    .nav-bar a:hover{
-        background-color: var(--negro);
-        color: var(--barra2);
-        width: 25vw;
-    }
+  .nav-bar a:hover {
+    background-color: var(--negro);
+    color: var(--barra2);
+    width: 25vw;
+  }
 
-    .nav-bar{
-      display: flex;
-      background-color: var(--barra2); 
-      flex-direction: row;
-      justify-content: space-between;
-      margin-bottom: 2vh;
+  .nav-bar {
+    display: flex;
+    background-color: var(--barra2);
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+  }
+
+  .nav-bar li {
+    justify-content: space-evenly;
+    width: 8vw;
+    text-align: center;
+  }
+  .nav-bar li:hover {
+    background-color: var(--negro);
+    color: var(--barra2);
+    width: 8vw;
+    text-align: center;
+  }
 }
 
   .nav-bar li{
@@ -61,12 +76,12 @@ header .logo{
       color: var(--barra2);
       width: 8vw;
       text-align: center;  
-}}
+}
 
 body {
-    background-color: var(--fondo);
-    color: #d8d8d8;
-    font-family: 'Roboto', serif;
+  background-color: var(--fondo);
+  color: #d8d8d8;
+  font-family: "Roboto", serif;
 }
 
 h1{
@@ -74,7 +89,7 @@ h1{
   font-size: 24px;
 }
 
-h2{
+h2 {
   display: flex;
   font-size: 60px;
   color: var(--amarillo);
@@ -82,11 +97,12 @@ h2{
   justify-content: center;
 }
 
-h2, h3{
+h2,
+h3 {
   display: flex;
   color: var(--barra2);
   text-align: center;
-  font-family: 'Joan', serif;
+  font-family: "Joan", serif;
   align-items: center;
   height: 5.5vh;
 }
@@ -129,7 +145,20 @@ h2, h3{
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.9) inset;
   font-size: 35px;
   opacity: 100%;
-  color:red;
+  color: wheat;
+  margin-top: 110px;
+  padding-top: 110px;
+  border-top: 110px;
+  
+}
+.boxEvento {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 5px;
+  padding: 5px;
+  border: 5px;
+  
 }
 
 .titleEvents{
@@ -137,14 +166,11 @@ h2, h3{
 }
 
 @media (min-width: 768px) {
-    .botonCarrito:hover{
-      background-color: var(--negro);
-      color: var(--amarillo);
-      
-    }
-  .imgEvento:hover img{
+  .botonCarrito:hover {
+    background-color: var(--negro);
+    color: var(--amarillo);
+  }
+  .imgEvento:hover img {
     background-color: red;
-
   }
 }
-
