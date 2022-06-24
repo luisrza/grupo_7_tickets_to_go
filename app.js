@@ -51,7 +51,6 @@ app.get('/contacto', (req, res) => {
 }); 
 
 
-
 //carrito
 app.get('/carrito', (req, res) => {
     res.sendFile(carritoPath);
@@ -61,6 +60,7 @@ app.get('/carrito', (req, res) => {
 app.get('/eventos', (req, res) => {
     res.sendFile(eventosPath);
 });
+
 //
 app.get('*', (req, res) => {
     res.sendFile(index404Path);

@@ -1,0 +1,234 @@
+:root {
+    --amarillo: #fecd45;
+    --negro: #3b3b3b;
+    --azul: #2568fb;
+    --blanco: #fff;
+    --fondo: #222222;
+    --barra: #23395d;
+    --amarillo2: rgba(172, 136, 28, 0.8);
+  }
+  
+  * html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  header .logo {
+    width: 80vw;
+  }
+  
+  /*se agrego el ul para que list-style funcionara*/
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    color: var(--);
+    text-decoration: none;
+    padding-left: 5vw;
+  }
+  
+  .nav-bar .navbar_link,
+  .nav-bar li {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+  
+  div.slider-contenedor {
+    display: flex;
+    justify-content: center;
+  }
+  
+  img.slider {
+    width: 90vw;
+    justify-content: center;
+  }
+  
+  body {
+    background-color: var(--fondo);
+    color: #d8d8d8;
+    font-family: "Roboto", serif;
+  }
+  
+  h1 {
+    color: var(--amarillo2);
+    font-size: 8vh;
+    font-family: "Joan", serif;
+    text-align: center;
+    margin-bottom: 0vh;
+  }
+  
+  h2 {
+    display: flex;
+    font-size: 7vh;
+    color: var(--amarillo);
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 1vh;
+  }
+  
+  .conciertos,
+  h2,
+  h3 {
+    display: flex;
+    color: var(--barra2);
+    text-align: center;
+    font-family: "Joan", serif;
+    align-items: center;
+  }
+  
+  h3 {
+    font-size: 30px;
+    color: var(--secundario3);
+    text-align: center;
+    height: 1vh;
+  }
+  
+  footer {
+    background-color: var(--amarillo2);
+    padding-bottom: 0.5vh;
+  }
+  
+.redes {
+    margin-top: 2.5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    padding-top: 1vh;
+    height: 2vh;
+  }
+  
+.redes li {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+  
+.redes li a {
+    display: flex;
+    font-size: 30px;
+    color: var(--secundario3);
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+.derechos {
+    text-align: center;
+    color: var(--secundario3);
+  }
+  
+section li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    margin-bottom: 5vh;
+  }
+  
+.contenedor-invisible{
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+.contenedor-invisible img{
+    display: flex;
+    width: 80vw;
+    border: solid 2px var(--amarillo2);
+}
+
+main .txtArea{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+  /*ESTO PARA MEDIA QUERIE
+  .navegacion-principal a:hover {
+      /*Cuando el cursor pase cambia de color
+      background-color: var(--principal);
+      color: var(--secundario4);
+  }
+  */
+  .hinvisible{
+    display: none;
+}
+  
+@media (min-width: 768px) {
+
+    .brInvi{
+        content-visibility: hide;
+    }
+
+    .contenedor-invisible{
+        display: none;
+      }
+    
+    main{
+        background-image:url("/img/about_us.jpg");
+        background-position: center;
+        display: flex;
+        height: 80vh;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+    }
+    main .txtArea{
+        display: flex;
+        height: 80vh;
+        flex-direction: column;
+        text-align: justify;
+        color: white;
+        background-color: rgba(51, 51, 51, 0.5);
+        background-size: contain;
+        border: solid 5px white;
+        padding-top: 30vh;
+       
+    }
+    
+    div .txtArea{
+        align-items: center;
+    }
+    
+    .txt{
+        justify-content: center;
+        width: 40vw;
+        margin: 0 30vw;
+    }
+
+}
+
+ @media (min-width: 768px) {
+    .nav-bar a:hover {
+        background-color: var(--negro);
+        color: var(--amarillo2);
+        width: 25vw;
+    }
+    .nav-bar {
+      display: flex;
+      background-color: var(--amarillo2);
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 2vh;
+    }
+  
+    .nav-bar li {
+      justify-content: space-evenly;
+      width: 8vw;
+      text-align: center;
+    }
+    .nav-bar li:hover {
+      background-color: var(--negro);
+      color: var(--barra2);
+      width: 8vw;
+      text-align: center;
+    }
+  }
