@@ -21,6 +21,20 @@ header .logo {
   width: 80vw;
 }
 
+div.burger-menu i{
+  background-color: #0044AA;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 20px;
+  height: 40px;
+  margin: 10px 0px 20px 0px;
+  padding: 10px;
+  width: 40px;
+}
+div.burger-menu{
+  text-align: center;
+}
+
 /*se agrego el ul para que list-style funcionara*/
 .nav-bar {
   display: flex;
@@ -28,7 +42,7 @@ header .logo {
   list-style: none;
   color: var(--);
   text-decoration: none;
-  padding-left: 5vw;
+  padding: 3px;
 }
 
 .nav-bar .navbar_link,
@@ -187,12 +201,26 @@ div img {
 }
 */
 
+@media (min-width: 320px) {
+  .nav-bar{
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
   .nav-bar a:hover {
     background-color: var(--negro);
     color: var(--barra2);
     width: 25vw;
   }
+  
+
+
+  div.burger-menu{
+    display: none;
+  }
+
+
 }
 
 /*cambios para 768px y 1200px*/
@@ -250,13 +278,13 @@ div img {
     display: flex;
     background-color: var(--barra2);
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 2vh;
+    align-items: center;
   }
 
   .nav-bar li {
     justify-content: space-evenly;
-    width: 8vw;
     text-align: center;
   }
   .nav-bar li:hover {
@@ -319,3 +347,4 @@ div img {
     display: contents;
   }
 }
+

@@ -17,7 +17,7 @@
     box-sizing: inherit;
 }
 
-  header .logo {
+header .logo {
     width: 80vw;
   }
 
@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     list-style: none;
-    color: var(--);
+    color: var(--amarillo2);
     text-decoration: none;
     padding-left: 5vw;
 }
@@ -158,7 +158,6 @@ h2{
     margin: -4.20vh 35vw 1vh 35vw;
     text-align: center;
     display: flex;
-    
     padding-top: 1vh;
     height: 20vh;
     width: 30vw;
