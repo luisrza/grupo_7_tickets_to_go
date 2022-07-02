@@ -1,14 +1,14 @@
 **Comenzar a hacer**
 
-Comenzar a laburar en código por equipos, especializandonos en lo que mas les gusta a cada uno.
+Trabajar el las tares designadas para cada integrante.
 
 **Hacer más**
 
-Trabajar el finde semana con las tareas asignadas al día martes antes de la clase.
+Hacer las tareas del Playground y practicar, para entender mejor los temaqs
 
 **Continuar haciendo**
 
-Seguir juntandonos todos los sábados para ver como estamos, reasignar tareas y evaluar nuevas ideas.
+Juntarnos todos los sábados para ver nuestro progreso, reasignar tareas y evaluar nuevas ideas.
 
 **Hacer menos**
 
