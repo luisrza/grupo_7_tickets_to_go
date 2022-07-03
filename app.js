@@ -13,15 +13,17 @@ const usersRoutes = require('./routes/usersRoutes');
 
 const index404Path = path.resolve(__dirname,'./views/404.html');
 
-
-/*npm install express --save <---para bajar express */
-
 app.use(express.static(publicPath));
 
-//Index
+app.get('*', (req, res) => {
+    res.sendFile(index404Path);
+});
+
 app.use('/', mainRoutes);
-app.use('/eventos', productRoutes );
+app.use('/products', productRoutes );
 app.use('/users', usersRoutes);
+
+
 
 //escuchando
 app.listen(PORT, ()=>{
