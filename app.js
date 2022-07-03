@@ -15,15 +15,15 @@ const index404Path = path.resolve(__dirname,'./views/404.html');
 
 app.use(express.static(publicPath));
 
-app.get('*', (req, res) => {
-    res.sendFile(index404Path);
-});
+
 
 app.use('/', mainRoutes);
 app.use('/products', productRoutes );
 app.use('/users', usersRoutes);
 
-
+app.get('*', (req, res) => {
+    res.sendFile(index404Path);
+});
 
 //escuchando
 app.listen(PORT, ()=>{
