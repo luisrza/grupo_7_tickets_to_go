@@ -1,19 +1,21 @@
 **Comenzar a hacer**
 
-Comenzar a laburar en código por equipos, especializandonos en lo que mas les gusta a cada uno.
+Cada integrante tiene que hacerse responsable de su tarea y realizarla.
+Comprender que es un trabajo en grupo, y que si uno falla, todos fallamos.
 
 **Hacer más**
 
-Trabajar el finde semana con las tareas asignadas al día martes antes de la clase.
+Dedicarle un poco mas de tiempo, para lograr un mejor producto. Tratar de conseguir puntos extras.
 
 **Continuar haciendo**
 
-Seguir juntandonos todos los sábados para ver como estamos, reasignar tareas y evaluar nuevas ideas.
+Juntarnos todos los sábados para ver nuestro progreso, reasignar tareas y evaluar nuevas ideas.
 
 **Hacer menos**
 
 No demorar las tareas individuales que retrasan el inicio de otro compañero.
+No ausentarse sin aviso.
 
 **Dejar de hacer**
 
-
+No cumplir con lo pactado.

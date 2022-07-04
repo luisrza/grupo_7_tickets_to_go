@@ -1,77 +1,36 @@
 const express = require('express');
-
 const app = express();
 
+app.set("view engine","ejs");
+
+// app.set("views", __dirname + 'nombre'); si quisieramos cambiar el destino de la carpeta dnd va a buscar.
+
 const path = require('path');
+const publicPath = path.resolve(__dirname,'./public');
 
 const PORT = process.env.PORT || 4000;
 const HOST = process.env.HOST || 'localhost';
 
-const indexPath = path.resolve(__dirname,'./views/index.html');
-const publicPath = path.resolve(__dirname,'./public');
-const registerPath = path.resolve(__dirname,'./views/register.html');
-const contactoPath = path.resolve(__dirname,'./views/contacto.html');
-const loginPath = path.resolve(__dirname,'./views/login.html');
-const eventosPath = path.resolve(__dirname,'./views/eventos.html');
+const mainRoutes = require('./routes/mainRoutes');
+const productRoutes = require('./routes/productRoutes');
+const usersRoutes = require('./routes/usersRoutes');
+
 const index404Path = path.resolve(__dirname,'./views/404.html');
-const carritoPath = path.resolve(__dirname,'./views/carrito.html');
+
+app.use(express.static(publicPath)); // indica que siempre href va a buscar a la carpeta public
 
 
-/*npm install express --save <---para bajar express */
 
-app.use(express.static(publicPath));
+app.use('/', mainRoutes);
+app.use('/products', productRoutes );
+app.use('/users', usersRoutes);
 
-//Index
-app.get('/', (req, res) => {
-    res.sendFile(indexPath);
-});
-
-app.get('/index', (req, res) => {
-    res.sendFile(indexPath);
-});
-
-//Register
-app.get('/register', (req, res) => {
-    res.sendFile(registerPath);
-});
-
-//Login
-app.get('/login', (req, res) => { 
-    res.sendFile(loginPath);
-});
-
-//nostros
-app.get('/nosotros', (req, res) => {
-    res.sendFile(path.resolve(__dirname,'./views/nosotros.html'));
-});
-
-//contacto
-app.get('/contacto', (req, res) => {
-    res.sendFile(contactoPath);
-}); 
-
-
-//carrito
-app.get('/carrito', (req, res) => {
-    res.sendFile(carritoPath);
-});
-
-//eventos
-app.get('/eventos', (req, res) => {
-    res.sendFile(eventosPath);
-});
-
-//
 app.get('*', (req, res) => {
     res.sendFile(index404Path);
-}); //
-
+});
 
 //escuchando
 app.listen(PORT, ()=>{
     console.log(`Server running at http://${HOST}:${PORT}/`);
 });
 
-
-console.log(contactoPath);
-console.log(indexPath);
