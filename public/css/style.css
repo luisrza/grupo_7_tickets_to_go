@@ -222,7 +222,6 @@ div img {
   .contenedor-conciertos2 {
     display: flex;
     flex-wrap: nowrap;
-
     justify-content: space-around;
   }
   .contenedor-conciertos2 li {

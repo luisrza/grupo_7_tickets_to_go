@@ -155,16 +155,12 @@ main .txtArea{
       /*Cuando el cursor pase cambia de color
       background-color: var(--principal);
       color: var(--secundario4);
-  }
-  */
-  .hinvisible{
-    display: none;
 }
-  
-@media (min-width: 768px) {
+  */
 
-    .brInvi{
-        content-visibility: hide;
+@media (min-width: 768px) {
+    .hinvisible{
+        display: none;
     }
 
     .contenedor-invisible{
@@ -190,8 +186,7 @@ main .txtArea{
         background-color: rgba(51, 51, 51, 0.5);
         background-size: contain;
         border: solid 5px white;
-        padding-top: 30vh;
-       
+        padding-top: 20vh;
     }
     
     div .txtArea{
@@ -203,7 +198,6 @@ main .txtArea{
         width: 40vw;
         margin: 0 30vw;
     }
-
 }
 
  @media (min-width: 768px) {
