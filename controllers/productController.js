@@ -3,7 +3,7 @@ const path = require('path');
 const productController = {
     eventos: (req, res) => {
         //res.sendFile(path.join(__dirname, '../views/products/eventos.html'));
-        res.render('eventos')
+        res.render('./products/eventos')
     },
 
     dinamicas: (req, res) => {
