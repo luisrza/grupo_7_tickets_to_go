@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 
+app.set("view engine","ejs");
+
+// app.set("views", __dirname + 'nombre'); si quisieramos cambiar el destino de la carpeta dnd va a buscar.
+
 const path = require('path');
 const publicPath = path.resolve(__dirname,'./public');
 
@@ -13,7 +17,7 @@ const usersRoutes = require('./routes/usersRoutes');
 
 const index404Path = path.resolve(__dirname,'./views/404.html');
 
-app.use(express.static(publicPath));
+app.use(express.static(publicPath)); // indica que siempre href va a buscar a la carpeta public
 
 
 
