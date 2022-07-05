@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/css/styleEve.css" />
+        <%- include('../partials/head.ejs') %>
+    <title>Eventos</title>
+</head>
+
+<body>
+    <header>
+        <%-include('../partials/header.ejs')%>
+    </header>
+
+    <main>
+        <h2>Subir evento nuevo</h2>
+        <form action="/" method="POST">
+            <label>Nombre del Evento:</label>
+                <input type="text" name="evento" placeholder="evento" required />
+            <br />
+            <br />
+            <label for="fechaEvento">Fecha del Evento:</label>
+                <input type="date" name="fechaEvento" id="fechaEvento" required />
+            <br />
+            <br />
+            <label for="bannerEvento">Banner del Evento:</label>
+                <input
+                    type="file"
+                    name="bannerEvento"
+                    id="bannerEvento"
+                    accept="image/png, image/jpeg"
+                />
+            <br />
+            <br />
+            <label>Precio:</label>
+                <input type="text" name="precio" placeholder="precio" required />
+                <input type="text" name="currency" placeholder="moneda" required />
+            <br />
+            <br />
+            <label>Categoria del Evento:</label><br>
+                <label><input type="checkbox" id="tipo1" value="tipo1"> Concierto pequeño </label><br>
+                <label><input type="checkbox" id="tipo1" value="tipo1"> Concierto mediano </label><br>
+                <label><input type="checkbox" id="tipo1" value="tipo1"> Concierto grande </label><br>
+                <label><input type="checkbox" id="tipo1" value="tipo1"> Meet and Greet </label><br>
+                <label><input type="checkbox" id="tipo1" value="tipo1"> Otros </label><br>
+            <br />
+            <br />
+                <input type="reset" value="Borrar" />
+                <input type="submit" value="Enviar" />
+        </form>
+
+    </main>
+
+    <footer>
+        <%-include('../partials/footer.ejs')%>
+    </footer>
+</body>
+</html>
