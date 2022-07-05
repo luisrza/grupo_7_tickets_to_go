@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!--
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/style.css">
@@ -11,6 +12,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tickets To Go</title>
   </head>
+  -->
+
+
+  <head>
+    <link rel="stylesheet" href="/css/style.css"> 
+    <%- include('./partials/head.ejs') %>
+    <title>Tickets To Go</title>
+  </head>
+
   
   <body>
     <header>
@@ -38,8 +48,7 @@
       <img src="/img/Slider.png" alt="slider_placeholder" class="slider">
     </div>
   <h2 class="conciertos">Conciertos</h2>
-    <section class="contenedor-conciertos1"> <!--li con hipervinculo a la pag del evento-->
-       <!--organizar con flowbox-->
+    <section class="contenedor-conciertos1"> 
         <li> 
           <img src="img/concierto 1.jpg" alt="concierto_1" class="concierto_img">
           <h2>Buenos Aires, Argentina</h2> 
