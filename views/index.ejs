@@ -14,23 +14,7 @@
   
   <body>
     <header>
-        <a href="/">
-          <img class="logo" src="/img/Logo_transparente.png" alt=""/>
-        </a>
-        <nav class="nav-bar"> 
-            <li><a href="/" class="navbar_link">Inicio</a></li>
-            <li><a href="/products/eventos" class="navbar_link">Eventos</a></li>
-            <li><a href="/nosotros" class="navbar_link">Nosotros</a></li>
-            <li><a href="/contacto" class="navbar_link">Contacto</a></li>
-            <li><a href="/users/carrito" class="navbar_link">Carrito</a></li>
-            <li>*foto perfil*</li>
-            <li><a href="/users/login" class="navbar_link">Inciar Sesión</a></li>
-            <li><a href="/users/register" class="navbar_link">Registro</a></li>
-        </nav>
-
-        <div class="burger-menu">
-          <i class="fa fa-bars burger"></i>
-      </div>
+      <%-include('./partials/header.ejs')%>
     </header>
 
   <main>
@@ -86,28 +70,7 @@
   </main>
 
   <footer>
-    <section class="redes">
-        <li>
-          <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
-        </li>
-        <li>
-          <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com"><i class="fa-brands fa-instagram-square"></i></a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com"><i class="fa-brands fa-youtube-square"></i></a>
-        </li>
-        <li>
-          <a href="https://www.spotify.com"><i class="fa-brands fa-spotify"></i></a>
-        </li>
-        
-    </section>
-    <div class="derechos">
-      <p>Todos los derechos Reservados</p>
-      <p>Diseño: Diego Franco, Lautaro González, Luis Garza, Nico Del Gio, Sebastián Perez.</p>
-    </div>
+    <%-include('./partials/footer.ejs')%>
   </footer>
   </body>
 </html>

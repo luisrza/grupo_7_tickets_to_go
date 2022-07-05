@@ -23,18 +23,7 @@
 
   <body>
     <header>
-      <a href="/">
-        <img class="logo" src="/img/Logo_transparente.png" alt="logo" />
-      </a>
-      <nav class="nav-bar">
-        <li><a href="/index" class="navbar_link">Inicio</a></li>
-        <li><a href="/eventos" class="navbar_link">Eventos</a></li>
-        <li><a href="/nosotros" class="navbar_link">Nosotros</a></li>
-        <li><a href="/contacto" class="navbar_link">Contacto</a></li>
-        <li><a href="/carrito" class="navbar_link">Carrito</a></li>
-        <li>*foto perfil*</li>
-        <li><a href="/login" class="navbar_link">Inciar Sesión</a></li>
-      </nav>
+      <%-include('./partials/header.ejs')%>
     </header>
     <main>
         <div class="contenedorImg">
@@ -75,29 +64,9 @@
     
 
 </main>
-<footer>
-  <section class="redes">
-      <li>
-      <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
-      </li>
-      <li>
-      <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
-      </li>
-      <li>
-      <a href="https://www.instagram.com"><i class="fa-brands fa-instagram-square"></i></a>
-      </li>
-      <li>
-      <a href="https://www.youtube.com"><i class="fa-brands fa-youtube-square"></i></a>
-      </li>
-      <li>
-      <a href="https://www.spotify.com"><i class="fa-brands fa-spotify"></i></a>
-      </li>
-      
-  </section>
-  <div class="derechos">
-  <p>Todos los derechos Reservados</p>
-  <p>Diseño: Diego Franco, Lautaro González, Luis Garza, Nicolas Del Giovannino, Sebastián Perez.</p>
-  </div>
+  <footer>
+    <%-include('./partials/footer.ejs')%>
+  <footer></footer>
 </body>
 
 </html>

@@ -15,6 +15,10 @@ const mainController = {
         //res.sendFile(path.join(__dirname, '../views/nosotros.html'));
         res.render('nosotros');
     },
+    pruebas: (req, res) => {
+        //res.sendFile(path.join(__dirname, '../views/pruebas.html'));
+        res.render('pruebas');
+    },
 }
 
 

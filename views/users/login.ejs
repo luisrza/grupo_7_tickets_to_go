@@ -7,10 +7,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="/css/styleLog.css">
-    <title>Login</title>
+    <title></title>
   </head>
     <body>
       <header>
+
           <a href="/">
             <img class="logo" src="/img/Logo_transparente.png" alt=""/>
           </a>
@@ -56,7 +57,7 @@
         <br />
 
         <div class="contenedor-boton">
-          <a href="#" type="submit" class="boton">Login</a>
+          <a href="#" type="submit" class="boton">Inciar Sesión</a>
         </div>
         <p><a href="/users/register">¿Sos nuevo? Crea tu cuenta acá</a></p>
       </div>
@@ -65,28 +66,8 @@
 
     </main>
     <footer>
-      <section class="redes">
-          <li>
-          <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
-          </li>
-          <li>
-          <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
-          </li>
-          <li>
-          <a href="https://www.instagram.com"><i class="fa-brands fa-instagram-square"></i></a>
-          </li>
-          <li>
-          <a href="https://www.youtube.com"><i class="fa-brands fa-youtube-square"></i></a>
-          </li>
-          <li>
-          <a href="https://www.spotify.com"><i class="fa-brands fa-spotify"></i></a>
-          </li>
-          
-      </section>
-      <div class="derechos">
-      <p>Todos los derechos Reservados</p>
-      <p>Diseño: Diego Franco, Lautaro González, Luis Garza, Nico Del Gio, Sebastián Perez.</p>
-      </div>
+      <%-include('./partials/footer.ejs')%>
+    </footer>
   </body>
 
 </html>
