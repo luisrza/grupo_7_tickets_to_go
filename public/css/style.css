@@ -24,25 +24,25 @@ header .logo {
 div.burger-menu i{
   background-color: var(--barra2);
   border-radius: 5px;
-  color: #FFF;
-  font-size: 20px;
-  height: 6vh;
-  margin: 10px 0px 20px 0px;
-  padding: 10px;
-  width: 5vw;
+  color: var(--negro);
+  font-size: 8vh;
+  height: 10vh;
+  margin: 3vh 0 3vh 0;
+  padding: 0vw;
+  width: 20vw;
+  
 }
+
 div.burger-menu{
   text-align: center;
+  
 }
 
 /*se agrego el ul para que list-style funcionara*/
 .nav-bar {
   display: flex;
-  flex-direction: column;
   list-style: none;
-  color: var(--);
-  text-decoration: none;
-  padding: 3px;
+  padding-top: 1vh;
 }
 
 .nav-bar .navbar_link,
@@ -85,7 +85,7 @@ h2 {
 
 .conciertos,
 h2,
-h3 {
+h3{
   display: flex;
   color: var(--barra2);
   text-align: center;
@@ -93,7 +93,7 @@ h3 {
   align-items: center;
 }
 
-h3 {
+h3{
   font-size: 30px;
   color: var(--secundario3);
   text-align: center;
