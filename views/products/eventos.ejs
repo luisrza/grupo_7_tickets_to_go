@@ -34,33 +34,19 @@
       <%-include('../partials/header.ejs')%>
     </header>
   <main>
-    <h2 class="titleEvents">Santiago,Chile</h2>
-    <h3>01/05/2022</h3>
-    <div class="imgEvento">
-      <div class="img2"></div>
-      <p class="txtEvento">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia vero delectus, accusantium hic veniam quibusdam 
-        dicta dolore omnis? Soluta, dignissimos dolores. Molestiae architecto dignissimos amet 
-        illum magnam quo incidunt consequuntur.<br><br>
-      <n>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia vero delectus, accusantium hic veniam quibusdam 
-        dicta dolore omnis? Soluta, dignissimos dolores. Molestiae architecto dignissimos amet 
-      </n><br>
-      <n>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia vero delectus, accusantium hic veniam quibusdam 
-        dicta dolore omnis? Soluta, dignissimos dolores. Molestiae architecto dignissimos amet 
-      </n><br>
-      <n>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia vero delectus, accusantium hic veniam quibusdam 
-        dicta dolore omnis? Soluta, dignissimos dolores. Molestiae architecto dignissimos amet 
-      </n>
-      </p>
+     
+    <%for (let i=0;i< eventos.length ;i++){ %>
       
-    </div>
-      <div class="contenedor-boton">
-    <a href="#" class="botonCarrito">Agregar a Carrito</a>
-      </div>
-    <center>
-      <div class="mapouter"><div class="gmap_canvas"><iframe width="312" height="225" id="gmap_canvas" src="https://maps.google.com/maps?q=Estadio%20Nacional%20Julio%20Mart%C3%ADnez%20Pr%C3%A1danos&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies-online.net"></a><br><style>.mapouter{position:relative;text-align:right;height:225px;width:360px;}</style><style>.gmap_canvas {overflow:hidden;background:none!important;height:225px;width:360px;}</style></div></div>
-    </center>
-
+      <h2 class="titleEvents"><%= eventos[i].place %></h2>
+      
+      <h3><%=eventos[i].date%></h3>
+      
+      <img src="img/<%=eventos[i].image%>" alt="foto_concierto">
+      <p class="info"> <%=eventos[i].description%>
+      </p>
+    <%}%>
+    
+ 
   </main>
 
 
