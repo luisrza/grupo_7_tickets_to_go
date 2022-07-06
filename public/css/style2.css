@@ -16,9 +16,11 @@
     box-sizing: inherit;
 }
 
+/*logo*/
 header .logo {
-    width: 80vw;
+    width: 25em;
 }
+
 /*barra de navegacion*/
 .nav-bar {
     display: flex;
@@ -34,16 +36,6 @@ header .logo {
     padding-bottom: 5px;
 }
 
-div.slider-contenedor {
-    display: flex;
-    justify-content: center;
-}
-
-img.slider {
-    width: 90vw;
-    justify-content: center;
-}
-
 div.burger-menu i{
     background-color: var(--barra);
     border-radius: 5px;
@@ -57,4 +49,183 @@ div.burger-menu i{
 
 div.burger-menu{
     text-align: center;
+}
+
+/*slider*/
+
+
+div.slider-contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+img.slider {
+    width: 90vw;
+    justify-content: center;
+}
+
+/*Aqui empieza el BODY*/
+
+body {
+    background-color: var(--fondo);
+    color: #d8d8d8;
+    font-family: "Roboto", serif;
+}
+
+h1 {
+    color: var(--principal);
+    font-size: 24px;
+}
+
+h2 {
+    display: flex;
+    font-size: 7vh;
+    color: var(--amarillo);
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 1vh;
+}
+
+.conciertos,
+h2,
+h3{
+    display: flex;
+    color: var(--barra2);
+    text-align: center;
+    font-family: "Joan", serif;
+    align-items: center;
+}
+
+h3{
+    font-size: 30px;
+    color: var(--secundario3);
+    text-align: center;
+    height: 1vh;
+}
+
+section li p .contenedor-conciertos,
+.info {
+    text-align: justify;
+    display: flex;
+    color: var(--secundario3);
+}
+
+section li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    margin-bottom: 5vh;
+}
+
+section li .concierto_img {
+    display: flex;
+    width: 90vw;
+}
+
+div img.imgContacto{
+    display: flex;
+    align-self: center;
+    width: 90vw;
+}
+
+.contenedor-conciertos li p{
+    padding: 10px;
+}
+
+div img {
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--barra2);
+    padding-bottom: 0.5vh;
+}
+
+.redes {
+    margin-top: 2.5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    padding-top: 1vh;
+    height: 2vh;
+}
+
+.redes li {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.redes li a {
+    display: flex;
+    font-size: 30px;
+    color: green;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.derechos {
+    text-align: center;
+    color: var(--secundario3);
+}
+
+/* Media Queries para moviles*/
+@media (min-width: 320px) {
+    .nav-bar{
+        display: none;
+    }
+}
+
+/* Media Queries laptop
+
+
+/*Iframe Video de YouTube y Mediaqueries*/
+.ytube {
+    display: block;
+    border: none;
+    margin: 0 auto;
+    width: minmax(360px, 990px);
+}
+
+.iframe-container{
+    padding-left: 2vw;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.iframe-container-tab {
+    display: none;
+}
+
+.iframe-container-lap {
+    display: none;
+    padding-left: 2vw;
+}
+
+@media (min-width: 768px) {
+    .iframe-container {
+    display: none;
+    }
+    .iframe-container-tab {
+    display: contents;
+    }
+    .iframe-container-lap {
+    display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .iframe-container {
+    display: none;
+    }
+    .iframe-container-tab {
+    display: none;
+    }
+    .iframe-container-lap {
+    display: contents;
+    }
 }

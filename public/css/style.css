@@ -18,19 +18,17 @@
 }
 
 header .logo {
-  width: 80vw;
+  width: 25em;
 }
 
 div.burger-menu i{
   background-color: var(--barra2);
   border-radius: 5px;
   color: var(--negro);
-  font-size: 8vh;
-  height: 10vh;
+  font-size: 4.5em;
+  height: 1.1em;
   margin: 3vh 0 3vh 0;
-  padding: 0vw;
-  width: 20vw;
-  
+  width: 1.3em;
 }
 
 div.burger-menu{
@@ -95,7 +93,7 @@ h3{
 
 h3{
   font-size: 30px;
-  color: var(--secundario3);
+  color: var(green);
   text-align: center;
   height: 1vh;
 }
