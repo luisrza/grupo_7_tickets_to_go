@@ -19,6 +19,13 @@ const mainController = {
         //res.sendFile(path.join(__dirname, '../views/pruebas.html'));
         res.render('pruebas');
     },
+
+    error: (req, res) => {
+        //res.sendFile(path.join(__dirname, '../views/pruebas.html'));
+        res.render('404');
+    },
+
+
 }
 
 

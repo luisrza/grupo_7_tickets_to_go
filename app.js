@@ -21,13 +21,17 @@ app.use(express.static(publicPath)); // indica que siempre href va a buscar a la
 
 
 
-app.use('/', mainRoutes);
+
 app.use('/products', productRoutes );
 app.use('/users', usersRoutes);
+app.use('/', mainRoutes);
 
+/*
 app.get('*', (req, res) => {
     res.sendFile(index404Path);
 });
+*/
+
 
 //escuchando
 app.listen(PORT, ()=>{
