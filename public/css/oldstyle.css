@@ -1,0 +1,346 @@
+:root {
+  --amarillo: #fecd45;
+  --negro: #3b3b3b;
+  --azul: #2568fb;
+  --blanco: #fff;
+  --fondo: #222222;
+  --barra: #23395d;
+  --barra2: rgba(172, 136, 28, 0.8);
+}
+
+* html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header .logo {
+  width: 25em;
+}
+
+div.burger-menu i{
+  background-color: var(--barra2);
+  border-radius: 5px;
+  color: var(--negro);
+  font-size: 4.5em;
+  height: 1.1em;
+  margin: 3vh 0 3vh 0;
+  width: 1.3em;
+}
+
+div.burger-menu{
+  text-align: center;
+}
+
+/*se agrego el ul para que list-style funcionara*/
+.nav-bar {
+  display: flex;
+  list-style: none;
+  padding-top: 1vh;
+}
+
+.nav-bar .navbar_link,
+.nav-bar li {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+div.slider-contenedor {
+  display: flex;
+  justify-content: center;
+}
+
+img.slider {
+  width: 90vw;
+  justify-content: center;
+}
+
+body {
+  background-color: var(--fondo);
+  color: #d8d8d8;
+  font-family: "Roboto", serif;
+}
+
+h1 {
+  color: var(--principal);
+  font-size: 24px;
+}
+
+h2 {
+  display: flex;
+  font-size: 7vh;
+  color: var(--amarillo);
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 1vh;
+}
+
+.conciertos,
+h2,
+h3{
+  display: flex;
+  color: var(--barra2);
+  text-align: center;
+  font-family: "Joan", serif;
+  align-items: center;
+}
+
+h3{
+  font-size: 30px;
+  color: var(green);
+  text-align: center;
+  height: 1vh;
+}
+
+footer {
+  background-color: var(--barra2);
+  padding-bottom: 0.5vh;
+}
+
+.redes {
+  margin-top: 2.5vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  padding-top: 1vh;
+  height: 2vh;
+}
+
+.redes li {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.redes li a {
+  display: flex;
+  font-size: 30px;
+  color: var(--secundario3);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.derechos {
+  text-align: center;
+  color: var(--secundario3);
+}
+
+section li p .contenedor-conciertos,
+.info {
+  text-align: justify;
+  display: flex;
+  color: var(--secundario3);
+}
+
+section li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  margin-bottom: 5vh;
+}
+
+section li .concierto_img {
+  display: flex;
+  width: 90vw;
+}
+
+div img.imgContacto {
+  display: flex;
+  align-self: center;
+  width: 90vw;
+}
+
+.contenedor-conciertos li p {
+  padding: 10px;
+}
+
+@media (min-width: 1024px) {
+  .contenedor-conciertos li p {
+    padding: 0 75px;
+  }
+}
+
+div img {
+  display: flex;
+  justify-content: center;
+}
+
+.botonCarrito {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--principal);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: var(--secundario2);
+  border-color: #d8d8d8;
+  border-width: 3px;
+  border-style: solid;
+  margin-right: 42vw;
+  margin-left: 42vw;
+  display: flex;
+  align-items: center;
+}
+
+/*ESTO PARA MEDIA QUERIE
+.navegacion-principal a:hover {
+    /*Cuando el cursor pase cambia de color
+    background-color: var(--principal);
+    color: var(--secundario4);
+}
+*/
+
+@media (min-width: 320px) {
+  .nav-bar{
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-bar a:hover {
+    background-color: var(--negro);
+    color: var(--barra2);
+    width: 25vw;
+  }
+  
+
+
+  div.burger-menu{
+    display: none;
+  }
+
+
+}
+
+/*cambios para 768px y 1200px*/
+@media (min-width: 768px) {
+  .contenedor-conciertos1 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+  .contenedor-conciertos1 li {
+    width: 45vw;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .contenedor-conciertos1 li img {
+    width: 45vw;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  .contenedor-conciertos1 li img:hover {
+    border: solid 2px var(--barra2);
+  }
+
+  .contenedor-conciertos2 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  .contenedor-conciertos2 li {
+    width: 45vw;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: center;
+  }
+
+  .contenedor-conciertos2 li img {
+    width: 45vw;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  .contenedor-conciertos2 li img:hover {
+    border: solid 2px var(--barra2);
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-bar {
+    display: flex;
+    background-color: var(--barra2);
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 2vh;
+    align-items: center;
+  }
+
+  .nav-bar li {
+    justify-content: space-evenly;
+    text-align: center;
+  }
+  .nav-bar li:hover {
+    background-color: var(--negro);
+    color: var(--barra2);
+    width: 8vw;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  img.slider {
+    width: 70vw;
+  }
+}
+
+/*Iframe Video de YouTube y Mediaqueries*/
+.ytube {
+  display: block;
+  border: none;
+  margin: 0 auto;
+  width: minmax(360px, 990px);
+}
+
+.iframe-container{
+  padding-left: 2vw;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.iframe-container-tab {
+  display: none;
+}
+
+.iframe-container-lap {
+  display: none;
+  padding-left: 2vw;
+}
+
+@media (min-width: 768px) {
+  .iframe-container {
+    display: none;
+  }
+  .iframe-container-tab {
+    display: contents;
+  }
+  .iframe-container-lap {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .iframe-container {
+    display: none;
+  }
+  .iframe-container-tab {
+    display: none;
+  }
+  .iframe-container-lap {
+    display: contents;
+  }
+}
+

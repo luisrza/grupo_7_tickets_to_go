@@ -15,7 +15,7 @@
 -->
 
   <head>
-    <link rel="stylesheet" href="/css/styleCar.css">
+    <link rel="stylesheet" href="/css/styleUser.css">
     <%- include('../partials/head.ejs') %>
     <title>Tickets To Go</title>
   </head>
@@ -23,18 +23,7 @@
   
   <body>
     <header>
-        <a href="/">
-          <img class="logo" src="/img/Logo_transparente.png" alt=""/>
-        </a>
-        <nav class="nav-bar"> 
-            <li><a href="/index" class="navbar_link">Inicio</a></li>
-            <li><a href="/eventos" class="navbar_link">Eventos</a></li>
-            <li><a href="/nosotros" class="navbar_link">Nosotros</a></li>
-            <li><a href="/contacto" class="navbar_link">Contacto</a></li>
-            <li><a href="/carrito" class="navbar_link">Carrito</a></li>
-            <li>*foto perfil*</li>
-            <li><a href="/login" class="navbar_link">Inciar Sesión</a></li>
-        </nav>
+      <%- include('../partials/header.ejs') %>
     </header>
     <body>
       <main>
@@ -52,7 +41,7 @@
             <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ratione quas nisi vero vel similique molestiae corporis corrupti, tempore eos facere facilis, eum maiores dolores ad enim quo. Blanditiis, dolorum.
             </p>
             <div class="contenedor-boton">
-                <a href="#" class="botonCarrito">Comprar</a>
+                <a href="#" class="boton">Comprar</a>
         </section>
         </div>
       </main>

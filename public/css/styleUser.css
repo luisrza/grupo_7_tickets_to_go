@@ -1,0 +1,350 @@
+:root {
+    --amarilloBotton: #fecd45;
+    --negro: #3b3b3b;
+    --blanco: #fff;
+    --fondo: #222222;
+    --barra: rgba(172, 136, 28, 0.8);
+}
+
+* html {
+    box-sizing: border-box;
+}
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+}
+
+/*logo*/
+img .logo{
+margin: 0 auto;
+width: 100%;
+}
+
+/*barra de navegacion*/
+.nav-bar {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.nav-bar .navbar_link,
+.nav-bar li {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+div.burger-menu i{
+    background-color: var(--barra);
+    border-radius: 5px;
+    color: var(--blanco);
+    font-size: 20px;
+    height: 6vh;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 5vw;
+}
+
+div.burger-menu{
+    text-align: center;
+}
+
+/*slider*/
+div.slider-contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+img.slider {
+    width: 90vw;
+    justify-content: center;
+}
+
+/*Aqui empieza el BODY*/
+
+body {
+    background-color: var(--fondo);
+    color: #d8d8d8;
+    font-family: "Roboto", serif;
+}
+
+h1{
+    color: var(--barra);
+    font-size: 24px;
+    font-family: "Joan", serif;
+    text-align: center;
+    font-size: 6vh;
+    margin: 2vh 0;
+}
+
+h2{
+    display: flex;
+    font-size: 5.5vh;
+    color: var(--barra);
+    text-align: center;
+    justify-content: center;
+    font-family: "Joan", serif;
+    margin-bottom: 2.5vh;
+}
+
+h3{
+    margin-bottom: 0vh;
+    margin-top: 1.5vh;
+    font-size: 4vh;
+    color: var(--barra);
+    font-family: "Joan", serif;
+    text-align: center;
+}
+
+h3 span{
+    color: var(--barra);
+}
+/*CARRITO*/
+.img_reg{
+    display: flex;
+    justify-content: center;
+}
+
+.botones{
+    display: flex;
+    flex-direction: column;
+    margin: 0 25% 0 25%;
+}
+
+.form_reg {
+    text-align: center;
+}
+
+@media (min-width:768px) {
+    .botones {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.imgConcierto{
+    display: flex;
+    justify-content: center;
+}
+
+.imgConcierto img{
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    border: 3px solid var(--barra2);
+}
+
+.contenedorDeCompra{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    text-align: center;
+}
+
+.descripcion{
+    display: flex;
+    text-align: justify;
+}
+
+.contenedor-boton{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8vh;
+    margin-top: 5vh;
+}
+
+.botonCarrito{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--negro);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: var(--amarillo);
+    border-color: var(--amarillo);
+    border-width: 3px;
+    border-style: solid;
+    margin-right: 40vw;
+    margin-left: 40vw;
+    display: flex;
+    align-items: center;
+    border-radius: 8%;
+}
+
+@media (min-width: 768px){
+    .contenedorCon{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .imgConcierto{
+        border: 3px solid var(--barra2);
+        display: flex;
+        flex-direction: row;
+        width: 60vw;
+        height: 75vh;
+        background-image: url("/img/concierto 2.jpg");
+        background-size: cover;
+        background-position: 70%;
+    }
+
+    .imgConcierto img{
+        display: none;
+    }
+
+    .contenedorDeCompra{
+        height: 2vh;
+        justify-content: center;
+    }
+
+    .botonCarrito:hover {
+        background-color: var(--negro);
+        color: var(--amarillo);
+    }
+
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .descripcion{
+        display: flex;
+        width: 75vw;
+    }
+
+    .contenedor p{
+        width: 75vw;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+}
+
+@media (min-width: 1024px){
+    .contenedor p{
+        width: 60vw;
+        margin: 0 auto;
+        text-align: justify;
+    }
+}
+
+.contenedor-boton{
+    margin-bottom: 1vh;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+@media (min-width: 768px) {
+    .boton:hover{
+        background-color: var(--negro);
+        color: var(--amarilloBotton);
+        transition: .8s ease-in-out;
+    }
+    }
+
+.boton{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--negro);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: var(--amarilloBotton);
+    border-color: var(--amarilloBotton);
+    border-width: 1px ridge;
+    border-style: solid;
+    margin-right: 0vw;
+    margin-left: 0vw;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--barra);
+    padding-bottom: 0.5vh;
+}
+
+.redes{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    padding-top: 1vh;
+    height: 2vh;
+}
+
+.redes li{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.redes li a{
+    display: flex;
+    font-size: 30px;
+    color: var(--fondo);
+    text-decoration: none;
+    font-size: 20px;
+}
+.redes li a:hover{
+    color: var(--blanco);
+    transition: .5s ease-in-out;
+}
+
+.derechos{
+    text-align: center;
+    color: var(--secundario3);
+}
+
+/* Media Queries para moviles*/
+@media (min-width: 320px) {
+    .nav-bar{
+        display: none;
+    }
+}
+
+/*Media Queries Tablet*/
+
+@media (min-width: 768px){
+.nav-bar{
+    display: flex;
+    background-color: var(--barra);
+    flex-direction: row;
+    margin-bottom: 2em;
+    align-items: center;
+}
+
+.nav-bar li{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: .5em;
+    transition: 1s ease-in-out;
+}
+
+.nav-bar li a{
+    width: 100%;
+}
+
+.nav-bar li:hover {
+    background-color: var(--fondo);
+    text-align: center;
+}
+
+div.burger-menu{
+    display: none;
+}
+}

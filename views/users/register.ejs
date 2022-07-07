@@ -13,7 +13,7 @@
   -->
 
   <head>
-    <link rel="stylesheet" href="/css/style.css"> 
+    <link rel="stylesheet" href="/css/styleUser.css"> 
     <%- include('../partials/head.ejs') %>
     <title>Register</title>
   </head>
@@ -21,33 +21,17 @@
   <body>
 
   <header>
-      <a href="index.html">
-        <img class="logo" src="/img/Logo_transparente.png" alt=""/>
-      </a>
-      <nav class="nav-bar"> 
-        <ul class=navegacion-principal>
-          <li><a href="/index">Inicio</a></li>
-          <li><a href="/eventos">Eventos</a></li>
-          <li><a href="/nosotros">Nosotros</a></li>
-          <li><a href="/contacto">Contacto</a></li>
-          <li><a href="/carrito">Carrito</a></li>
-        </ul>
-        <ul>
-          <li>*foto perfil*</li>
-          <li><a href="/login">Inciar Sesión</a></li>
-        </ul>
-      </nav>
+      <%- include('../partials/header.ejs') %>
   </header>
 
     <main>
-      <div>
-        <!--esta de sobra este div?-->
-        <img src="#" alt="Aca va una imagen" />
+      <div class="img_reg">
+        <img src="../img/registrar.png" alt="registrar" />
       </div>
 
       <h2>Registrate:</h2>
 
-      <form action="/" method="POST">
+      <form action="/" method="POST" class="form_reg">
         <label>Nombre y Apellido:</label>
         <input type="text" name="nombre" placeholder="nombre" required />
         <br />
@@ -78,7 +62,6 @@
         />
         <br />
         <br />
-        <!--no estoy seguro de si esta bien lo de la contraseña-->
         <label>Contraseña:</label>
         <br />
         <input
@@ -105,29 +88,16 @@
         <label for="si">Aceptar terminos y condiciones</label>
         <br />
         <br />
-        <input type="reset" value="Borrar" />
-        <input type="submit" value="Enviar" />
+        <div class="botones">
+          <input type="reset" value="Borrar" class="boton"/>
+          <input type="submit" value="Enviar" class="boton"/>
+        </div>
       </form>
+        </div>
     </main>
 
   <footer>
-      <section class="redes">
-          <li>
-            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
-          </li>
-          <li>
-            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram-square"></i></a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com"><i class="fa-brands fa-youtube-square"></i></a>
-          </li>
-          <li>
-            <a href="https://www.spotify.com"><i class="fa-brands fa-spotify"></i></a>
-          </li>
-        </section>
+    <%-include('../partials/footer.ejs')%>
   </footer>
 
   </body>

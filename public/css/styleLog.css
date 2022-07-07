@@ -1,13 +1,11 @@
 :root {
-    --amarillo: #fecd45;
+    --amarilloBotton: #fecd45;
     --negro: #3b3b3b;
-    --azul: #2568fb;
     --blanco: #fff;
     --fondo: #222222;
-    --barra: #23395d;
-    --amararillo2: rgba(172, 136, 28, 0.8);
-  }
-  
+    --barra: rgba(172, 136, 28, 0.8);
+}
+
   html {
     box-sizing: border-box;
   }
@@ -31,8 +29,9 @@ header .logo {
 h2{
     font-size: 5vh;
     margin-bottom: 1vh;
-    color: var(--amarillo);
+    color: var(--amarilloBotton);
     font-family: "Joan", serif;
+    text-align: center;
 }
 
 body {
@@ -54,13 +53,17 @@ body {
 
 label{
     font-weight: 1000;
-    color: var(--amararillo2);
+    color: var(--barra);
+}
+
+form{
+    text-align: center;
 }
 
 @media (min-width: 768px){
     .boton:hover{
         background-color: var(--negro);
-        color: var(--amarillo);
+        color: var(--amarilloBotton);
     }
 
     form{
@@ -74,7 +77,7 @@ label{
     label{
         font-size: 22px;
         font-weight: 1000;
-        color: var(--amararillo2);
+        color: var(--barra);
     }
 
     .forma{
@@ -107,14 +110,13 @@ label{
     padding-bottom: 10px;
     padding-left: 35px;
     padding-right: 35px;
-    background-color: var(--amarillo);
-    border-color: var(--amarillo);
+    background-color: var(--amarilloBotton);
+    border-color: var(--amarilloBotton);
     border-width: 3px;
-    border-style: solid;
+    border-style: ridge;
     margin: -5vh 40vw -5vh 40vw;
     display: flex;
     align-items: center;
-    border-radius: 8%;
 }
 
 .textArea{
@@ -122,38 +124,42 @@ label{
     background-color:var(--negro);
 }
 
-footer{
-    background-color: var(--amararillo2);
+/* Footer */
+
+footer {
+    background-color: var(--barra);
     padding-bottom: 0.5vh;
-    margin-top: 2vh;
     padding-top: 0.5vh;
-    }
-    
-    .redes {
-    margin-top: 2.5vh;
+}
+
+.redes{
+    margin-top: 5vh;
     display: flex;
     justify-content: space-evenly;
     align-content: center;
     padding-top: 1vh;
     height: 2vh;
-    }
-    
-    .redes li {
-    
+}
+
+.redes li{
     display: flex;
     align-items: center;
     align-content: center;
-    }
-    
-    .redes li a {
+}
+
+.redes li a{
     display: flex;
     font-size: 30px;
-    color: var(--secundario3);
+    color: var(--fondo);
     text-decoration: none;
     font-size: 20px;
-    }
-    
-    .derechos {
+}
+.redes li a:hover{
+    color: var(--blanco);
+    transition: .5s ease-in-out;
+}
+
+.derechos{
     text-align: center;
     color: var(--secundario3);
 }

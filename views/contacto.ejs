@@ -24,27 +24,26 @@
   -->
 
   <head>
-    <link rel="stylesheet" href="/css/styleCon.css"> 
+    <link rel="stylesheet" href="/css/style.css"> 
     <%- include('./partials/head.ejs') %>
     <title>Contacto</title>
   </head>
-
 
   <body>
     <header>
       <%-include('./partials/header.ejs')%>
     </header>
-    <main>
+    <main id="contactos">
         <div class="contenedorImg">
         <div class="contenedorImg2">
             <img src="/img/contacto.jpg" alt="">
         </div>
-          <h2>Contactanos:</h2>
+          <h2 class="contacto">Contactanos:</h2>
           <p>Contactanos para resolver tus dudas, si tienes alguna recomendación para nuestro equipo o si notas algún problema con el sitio</p>
           <br>
           <form action="/" method="POST">
           <label>E-mail:</label>
-          <input type="emial" name="email" placeholder="email" required />
+          <input class="correoc" type="email" name="email" placeholder="E-mail" required />
           <form action="/" method="POST">
           <div>
             <label>Mensaje:</label>
@@ -57,7 +56,6 @@
           <br>
           <br>
         </div>
-      
         <!--TODO: elegir uno de los dos formatos-->
 
         <!--<input type="text" required placeholder="Escribinos acá">
