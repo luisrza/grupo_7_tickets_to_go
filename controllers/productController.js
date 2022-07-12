@@ -14,7 +14,12 @@ const productController = {
         res.render('./products/crearEvento')
     },
     editarEvento: (req, res) => {
-        res.render('./products/editarEvento')
+        let idEvento= req.params.idEvento
+        //res.send(idEvento);
+
+        let eventoToEdit= eventos [idEvento];
+        //res.send(EventoToEdit);
+        res.render('./products/editarEvento', {eventoToEdit:eventoToEdit});
     }
 
 }

@@ -13,13 +13,11 @@
     </header>
 
     <main>
-        <h2>Editar Eventos</h2>
-        <form action="/" method="POST">
-            <label>Eventos programados:</label>
-            <p>
-                Aca iria una lista de los eventos y habria que agregarle una opcion extra para 
-                editarlos o eliminarlos
-            </p>
+        <h1>Editar Eventos</h1>
+        <form action="/products/editarEvento?_method=PUT" method="POST">
+            <label for="">Eventos programados:</label>
+            <input type="text" name="nombre" value="<%= eventoToEdit.name%>" >
+            
             <div class="botones">
                 <input type="button" class="boton" value="Eliminar">
                 <input type="button" class="boton" value="Editar">
