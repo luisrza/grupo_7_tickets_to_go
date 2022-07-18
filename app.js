@@ -13,14 +13,15 @@ app.use(methodOverride('_method'));
 
 // configuracion para el EJS
 
+const path = require('path');
 app.set("view engine","ejs");
-//app.set('views', path.join(__dirname,'views'));
+app.set('views', path.join(__dirname,'views'));
 
 // app.set("views", __dirname + 'nombre'); si quisieramos cambiar el destino de la carpeta dnd va a buscar.
 
 
 // Configuramos para que los archivos estaticos estan en la carpeta public.
-const path = require('path');
+
 const publicPath = path.resolve(__dirname,'./public');
 app.use(express.static(publicPath)); // indica que siempre href va a buscar a la carpeta public
 
