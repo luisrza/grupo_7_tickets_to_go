@@ -34,18 +34,19 @@
       <%-include('../partials/header.ejs')%>
     </header>
   <main>
-     
-    <%for (let i=0;i< eventos.length ;i++){ %>
-      
+    <section class="contenedor">
+    <%for (let i=0;i < eventos.length ;i++){ %>
+      <div class="tarjeta_eve">
       <h2 class="titleEvents"><%= eventos[i].place %></h2>
       
       <h3><%=eventos[i].date%></h3>
       
-      <img src="/img/<%=eventos[i].image%>" alt="foto_concierto">
+      <img class="imagen_eve" src="/img/<%=eventos[i].image%>" alt="foto_concierto">
       <p class="info"> <%=eventos[i].description%>
       </p>
+    </div>
     <%}%>
-    
+  </section>
  
   </main>
 

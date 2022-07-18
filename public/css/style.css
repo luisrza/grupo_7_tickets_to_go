@@ -457,8 +457,8 @@ input, textarea {
     padding-bottom: 10px;
     padding-left: 35px;
     padding-right: 35px;
-    background-color: var(--amarilloBotton);
-    border-color: var(--amarilloBotton);
+    background-color: var(--barra);
+    border-color: var(--fondo);
     border-width: 1px ridge;
     border-style: solid;
     margin-right: 0vw;
@@ -475,7 +475,7 @@ body{
 
 @media (min-width: 768px) {
 .boton:hover{
-    background-color: var(--negro);
+    background-color: var(--fondo);
     color: var(--amarilloBotton);
     transition: .8s ease-in-out;
 }
@@ -553,8 +553,19 @@ div .txtArea{
 
 /*Estilo 404*/
 
+
+
 .error{
-    font-size: 10vh;
+    font-size: 3em;
     font-family: "Joan", serif;
     text-align: center;
+}
+
+
+video{
+
+    padding: 2em 0 2em 0;
+    margin: 0 auto;
+    display: flex;
+    object-fit: none;
 }
