@@ -14,28 +14,32 @@
 
     <main>
         <h2>Subir evento nuevo</h2>
-        <form action="/" method="POST">
-            <label>Nombre del Evento:</label>
-                <input type="text" name="evento" placeholder="evento" required />
+        <form action="/products/creandoEvento" method="POST" enctype="multipart/form-data">
+            <label>Lugar del Evento:</label>
+                <input type="text" name="place" placeholder="evento" required />
             <br />
             <br />
             <label for="fechaEvento">Fecha del Evento:</label>
-                <input type="date" name="fechaEvento" id="fechaEvento" required />
+                <input type="date" name="date" id="date" required />
             <br />
             <br />
             <label for="bannerEvento">Banner del Evento:</label>
                 <input
                     type="file"
-                    name="bannerEvento"
-                    id="bannerEvento"
+                    name="image"
+                    id="image"
                     accept="image/png, image/jpeg"
                 />
             <br />
             <br />
             <label>Precio:</label>
-                <input type="text" name="precio" placeholder="precio" required />
+                <input type="text" name="prize" placeholder="precio" required />
                 <input type="text" name="currency" placeholder="moneda" required />
             <br />
+            <br />
+            <label>Descripción:</label>
+                <input type="textarea" name="description" placeholder="" required />
+                
             <br />
             <label>Categoria del Evento:</label><br>
                 <label><input type="checkbox" id="tipo1" value="tipo1"> Concierto pequeño </label><br>

@@ -1,0 +1,28 @@
+[
+  {
+    "place": "Messi",
+    "date": "0111-11-11",
+    "prize": "123123123",
+    "currency": "$",
+    "description": "ksdjf skdjfb skdjbf skdjbc skjdfb skjdbf skjdb ksdjbf skjdhbf kjsdhbf kjsdhb fkjsdhbf skjdhbf ",
+    "id": 1658173777011,
+    "agotado": "No",
+    "image": "image-1658173777004.jpg"
+  },
+  {
+    "place": "jennifer lowrenceeeee",
+    "date": "0002-02-22",
+    "prize": "43",
+    "currency": "U$S",
+    "id": "1658173857397",
+    "image": "image-1658184724038.jpg"
+  },
+  {
+    "place": "arwen22",
+    "date": "0003-03-31",
+    "prize": "22222",
+    "currency": "$",
+    "id": "1658184879518",
+    "image": "image-1658185075798.jpg"
+  }
+]

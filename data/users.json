@@ -1,0 +1,43 @@
+[
+    {"id" : 1,
+    "apellido": "Gomez",
+    "nombre": "Pepe",
+    "usuario": "pepegomez",
+    "email": "pepegomez@gmail.com",
+    "categoria": "admin",
+    "image": "rambo.jpg" ,
+    "password": "Ab123456",
+    "fecha_nac": "25/03/1990"  
+    },
+    {"id" : 2,
+    "apellido": "Garcia",
+    "nombre": "Analia",
+    "usuario": "analiii",
+    "email": "analiagarcia@gmail.com",
+    "categoria": "user",
+    "image": "arwen.jpg" ,
+    "password": "Ab12",
+    "fecha_nac": "25/02/1980"  
+    },
+    {"id" : 3,
+    "apellido": "Gonzalez",
+    "nombre": "Lorena",
+    "usuario": "lore",
+    "email": "lorego@gmail.com",
+    "categoria": "admin",
+    "image": "jennifer.jpg" ,
+    "password": "A56",
+    "fecha_nac": "22/03/1993"  
+    },
+    {"id" : 3,
+    "apellido": "MacDonald",
+    "nombre": "Ronald",
+    "usuario": "macdonald",
+    "email": "macdonald@gmail.com",
+    "categoria": "user",
+    "image": "messi.jpg" ,
+    "password": "56",
+    "fecha_nac": "25/03/2000"  
+    }
+    
+]

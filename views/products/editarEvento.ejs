@@ -13,17 +13,55 @@
     </header>
 
     <main>
-        <h1>Editar Eventos</h1>
-        <form action="/products/editarEvento?_method=PUT" method="POST">
-            <label for="">Eventos programados:</label>
-            <input type="text" name="nombre" value="<%= eventoToEdit.name%>" >
+        <h1>Editando Evento: <%=eventoToEdit.place%></h1>
+        
+        
+        
+        
+        <form action="/products/editandoEvento?_method=PUT" method="POST" enctype="multipart/form-data"> 
+            
+                <label>Lugar del Evento:</label>
+                    <input type="text" name="place" value="<%=eventoToEdit.place%>" required />
+                <br/>
+                <br/>
+                <label for="fechaEvento">Fecha del Evento:</label>
+                    <input type="date" name="date" id="date" value="<%=eventoToEdit.date%>"required />
+                <br />
+                <br />
+                <label for="bannerEvento">Banner del Evento:</label>
+                    <input
+                        type="file"
+                        name="image"
+                        id="image"
+                        accept="image/png, image/jpeg"
+                        required
+                    />
+                <br />
+                <br />
+                <label>Precio:</label>
+                    <input type="text" name="prize" value="<%=eventoToEdit.prize%>" required />
+                    <input type="text" name="currency" value="<%=eventoToEdit.currency%>" required />
+                <br />
+                <br />
+                <label>Categoria del Evento:</label><br>
+                    <label><input type="checkbox" id="tipo1" value="tipo1"> Concierto pequeño </label><br>
+                    <label><input type="checkbox" id="tipo1" value="tipo1"> Concierto mediano </label><br>
+                    <label><input type="checkbox" id="tipo1" value="tipo1"> Concierto grande </label><br>
+                    <label><input type="checkbox" id="tipo1" value="tipo1"> Meet and Greet </label><br>
+                    <label><input type="checkbox" id="tipo1" value="tipo1"> Otros </label><br>
+                <br />
+                <br />
+                <label>Id:</label>
+                    <input type="text" name="id" value="<%=eventoToEdit.id%>" required />
             
             <div class="botones">
-                <input type="button" class="boton" value="Eliminar">
-                <input type="button" class="boton" value="Editar">
+                
+                <input type="submit" class="boton" value="Editar">
             </div>
         </form>
 
+        
+        
     </main>
 
     <footer>

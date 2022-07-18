@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="/css/styleEve.css" />
+  <%- include('../partials/head.ejs') %>
+  <title>Detalles Eventos</title>
+</head>
+
+  <body>
+    <header>
+      <%-include('../partials/header.ejs')%>
+    </header>
+  <main>
+    <section class="contenedor">
+    
+      <div class="tarjeta_eve">
+      <h2 class="titleEvents"><%= evento.place %></h2>
+      
+      <h3><%=evento.date%></h3>
+      <h3><%=evento.currency%> <%=evento.prize%></h3>
+      <img class="imagen_eve" src="/img/<%=evento.image%>" alt="foto_concierto">
+      <p class="info"> <%=evento.description%>
+      </p>
+    </div>
+    
+  </section>
+ 
+  <div>
+    
+    <a href="/products/editarEvento/<%=evento.id%>"><h2>Editar Evento</h2></a>
+    
+    
+    <form action="/products/eliminarEvento/<%=evento.id%>?_method=DELETE" method="POST">   
+      <div class="botones">
+      <input type="submit" class="boton" value="Eliminar Evento">
+    </form>
+
+</div>
+  </main>
+
+
+    <footer>
+      <%-include('../partials/footer.ejs')%>
+    </footer>
+  </body>
+</html>
