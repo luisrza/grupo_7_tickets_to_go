@@ -184,8 +184,8 @@ div.burger-menu{
   padding-bottom: 10px;
   padding-left: 35px;
   padding-right: 35px;
-  background-color: var(--amarilloBotton);
-  border-color: var(--amarilloBotton);
+  background-color: var(--barra);
+  border-color: var(--fondo);
   border-width: 1px ridge;
   border-style: solid;
   margin-right: 0vw;
@@ -202,7 +202,7 @@ body{
 
 @media (min-width: 768px) {
 .boton:hover{
-  background-color: var(--negro);
+  background-color: var(--fondo);
   color: var(--amarilloBotton);
   transition: .8s ease-in-out;
 }
@@ -233,4 +233,42 @@ body{
     margin: 0 auto;
   }
   
+}
+
+/*crear eventos*/
+
+.form_crear{
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+  text-align: center;
+}
+
+input{
+  display: flex;
+  margin: 0 auto;
+  width: 20vw;
+}
+
+.botones_crear{
+  margin: 10px;
+}
+
+.label__crear{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.input__crear{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+
+
+.categoria__crear{
+  margin: 0 auto;
+  margin: red solid 2px;
 }

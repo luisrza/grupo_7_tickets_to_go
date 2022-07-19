@@ -14,7 +14,7 @@
 
     <main>
         <h2>Subir evento nuevo</h2>
-        <form action="/products/creandoEvento" method="POST" enctype="multipart/form-data">
+        <form class="form_crear" action="/products/creandoEvento" method="POST" enctype="multipart/form-data">
             <label>Lugar del Evento:</label>
                 <input type="text" name="place" placeholder="evento" required />
             <br />
@@ -41,17 +41,29 @@
                 <input type="textarea" name="description" placeholder="" required />
                 
             <br />
-            <label>Categoria del Evento:</label><br>
-                <label><input type="checkbox" id="tipo1" value="tipo1"> Concierto pequeño </label><br>
-                <label><input type="checkbox" id="tipo1" value="tipo1"> Concierto mediano </label><br>
-                <label><input type="checkbox" id="tipo1" value="tipo1"> Concierto grande </label><br>
-                <label><input type="checkbox" id="tipo1" value="tipo1"> Meet and Greet </label><br>
-                <label><input type="checkbox" id="tipo1" value="tipo1"> Otros </label><br>
+            <div class="label__crear">
+            <label class="categoria__crear">Categoria del Evento:</label><br>
+                <div class="input__crear"></div>
+                    <label><input type="checkbox" id="tipo1" value="tipo1"> Concierto pequeño </label><br>
+                </div>
+                <div class="input__crear">
+                    <label><input type="checkbox" id="tipo1" value="tipo1"> Concierto mediano </label><br>
+                </div>
+                <div class="input__crear">
+                    <label><input type="checkbox" id="tipo1" value="tipo1"> Concierto grande </label><br>
+                </div>
+                <div class="input__crear">
+                    <label><input type="checkbox" id="tipo1" value="tipo1"> Meet and Greet </label><br>
+                </div>
+                <div class="input__crear">
+                    <label><input type="checkbox" id="tipo1" value="tipo1"> Otros </label><br>
+                </div>
             <br />
             <br />
-                <div class="botones">
-                    <input type="reset" class="boton" value="Borrar" />
-                    <input type="submit" class="boton" value="Enviar" />
+            </div>
+                <div class="botones botones_crear">
+                    <input type="reset" class="boton botones" value="Borrar" />
+                    <input type="submit" class="boton botones" value="Enviar" />
                 </div>
         </form>
 
