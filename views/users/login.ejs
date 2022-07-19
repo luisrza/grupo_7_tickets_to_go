@@ -20,58 +20,76 @@
 
     <body>
       <header>
-
-          <a href="/">
-            <img class="logo" src="/img/Logo_transparente.png" alt=""/>
-          </a>
+        <a href="/">
+          <img class="logo" src="/img/Logo_transparente.png" alt=""/>
+        </a>
       </header>
     <main>
+
       <h2>Entrar a mi sesion:</h2>
       <br />
-      <div class="forma">
-      <form action="/" method="POST">
-        <label>E-mail:</label>
-        <input
-          class="textArea"
-          type="email"
-          name="email"
-          id="email"
-          placeholder=""
-          required
-        />
-        <br />
-        <br />
-        <label>Constraseña:</label>
-        <input
-          class="textArea"
-          type="password"
-          name="pass"
-          placeholder=""
-          required
-        />
-        <p><a href="#">¿Olvidaste tu contraseña?</a></p>
-        <!--No vimos como hacer esto-->
-        <div class="checkbox">
-        <input
-          type="checkbox"
-          name="RecordarMiUsuario"
-          value="si"
-          id="si"
-          required
-        />
-        
-        <label for="si">Recordar mi usuario</label>
-        </div>
-        <br />
-        <br />
 
-        <div class="contenedor-boton">
-          <a href="#" type="submit" class="boton">Inciar Sesión</a>
+      <div class="forma">
+        <form action="/" method="POST">
+          <div class="campos">
+          <label>E-mail:</label>
+          <input
+            class="textArea"
+            type="email"
+            name="email"
+            id="email"
+            placeholder=""
+            required
+          />
+          <br />
+          <br />
+
+          <label>Constraseña:</label>
+          <input
+            class="textArea"
+            type="password"
+            name="pass"
+            placeholder=""
+            required
+          />
         </div>
-        <p><a href="/users/register">¿Sos nuevo? Crea tu cuenta acá</a></p>
+
+          <label class="checkbox"> Recordar mi usuario
+            <input type="checkbox" 
+            name="RecordarMiUsuario"
+            value="si"
+            id="si">
+            <span class="checkmark"></span>
+          </label>
+
+          <!--<div class="checkbox">
+          <input
+            type="checkbox"
+            name="RecordarMiUsuario"
+            value="si"
+            id="si"
+            required
+          />
+          <label for="si">Recordar mi usuario</label>
+          </div>-->
+          <br />
+
+          <button for="submit" class="boton">Inciar Sesión</button>
+
+          <!--<div class="contenedor-boton">
+            <a href="#" type="submit" class="boton">Inciar Sesión</a>
+          </div>-->
+
+          <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+          <!--No vimos como hacer esto-->
+
+          <p><a href="/users/register">¿Sos nuevo? Crea tu cuenta acá</a></p>
+
+        </form>
       </div>
-      </form>
-    </div>
+
+      <br>
+
 
     </main>
     <footer>

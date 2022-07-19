@@ -29,7 +29,7 @@ header .logo {
 h2{
     font-size: 5vh;
     margin-bottom: 1vh;
-    color: var(--amarilloBotton);
+    color: var(--barra);
     font-family: "Joan", serif;
     text-align: center;
 }
@@ -38,6 +38,7 @@ body {
     background-color: var(--fondo);
     color: #d8d8d8;
     font-family: "Roboto", serif;
+    min-height: 100vh;
 }
 
 .checkbox{
@@ -58,6 +59,8 @@ label{
 
 form{
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (min-width: 768px){
@@ -88,11 +91,56 @@ form{
     h2{
         text-align: center;
     }
+
     .forma p a{
         color: white;
     }
+
+    
 }
 
+.boton{
+    max-width: 6rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--negro);
+    text-align: center;
+    background-color: var(--barra);
+    border: 0;
+    min-width: 10rem;
+    min-height: 2rem;
+    cursor: pointer;
+    font-weight: 1000;
+    border-radius: 2px;
+    font-size: 1rem;
+}
+
+.campos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.checkbox{
+    cursor: pointer;
+    margin-top: 0.5rem;
+    font-size: smaller;
+}
+
+.checkbox input {
+    cursor: pointer;
+}
+
+form p a{
+    opacity: 0.9;
+    margin-top: 0.5rem;
+    font-size: smaller;
+}
+
+/*
 .contenedor-boton{
     display: flex;
     justify-content: center;
@@ -117,7 +165,7 @@ form{
     margin: -5vh 40vw -5vh 40vw;
     display: flex;
     align-items: center;
-}
+}*/
 
 .textArea{
     border-style: inset;

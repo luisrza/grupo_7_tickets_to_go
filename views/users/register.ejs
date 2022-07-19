@@ -13,7 +13,7 @@
   -->
 
   <head>
-    <link rel="stylesheet" href="/css/styleUser.css"> 
+    <link rel="stylesheet" href="/css/styleReg.css"> 
     <%- include('../partials/head.ejs') %>
     <title>Register</title>
   </head>
@@ -25,12 +25,13 @@
   </header>
 
     <main>
-      <div class="img_reg">
-        <img src="../img/registrar.png" alt="registrar" />
-      </div>
+
+      <!--<div class="img_reg">
+        <img src="../img/registrar.png" alt="registrar"/>
+      </div>-->
 
       <h2>Registrate:</h2>
-
+      <br>
       <form action="/users/register" method="POST" class="form_reg">
         <label>Nombre y Apellido:</label>
         <input type="text" name="nombre" placeholder="nombre" required />
@@ -93,7 +94,6 @@
           <input type="submit" value="Enviar" class="boton"/>
         </div>
       </form>
-        </div>
     </main>
 
   <footer>
