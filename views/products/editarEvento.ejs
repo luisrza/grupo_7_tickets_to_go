@@ -6,7 +6,6 @@
         <%- include('../partials/head.ejs') %>
     <title>Editar Eventos</title>
 </head>
-
 <body>
     <header>
         <%-include('../partials/header.ejs')%>
@@ -40,23 +39,17 @@
                 <br />
                 <label>Precio:</label>
                     <input type="text" name="prize" value="<%=eventoToEdit.prize%>" required />
+                <br />
                     <input type="text" name="currency" value="<%=eventoToEdit.currency%>" required />
-                <br />
-                <br />
-                <label>Categoria del Evento:</label><br>
-                    <label><input type="checkbox" id="tipo1" value="tipo1"> Concierto pequeño </label><br>
-                    <label><input type="checkbox" id="tipo1" value="tipo1"> Concierto mediano </label><br>
-                    <label><input type="checkbox" id="tipo1" value="tipo1"> Concierto grande </label><br>
-                    <label><input type="checkbox" id="tipo1" value="tipo1"> Meet and Greet </label><br>
-                    <label><input type="checkbox" id="tipo1" value="tipo1"> Otros </label><br>
                 <br />
                 <br />
                 <label>Id:</label>
                     <input type="text" name="id" value="<%=eventoToEdit.id%>" required />
-            
+                <br />
+                <br />
             <div class="botones">
                 
-                <input type="submit" class="boton" value="Editar">
+                <input type="submit" class="boton botones" value="Editar">
             </div>
         </form>
 
