@@ -12,20 +12,25 @@
     </header>
 
     <main>
-        <h1>Editando Evento: <%=eventoToEdit.place%></h1>
-        
-        
-        
-        
-        <form action="/products/editandoEvento?_method=PUT" method="POST" enctype="multipart/form-data"> 
+        <h1>Editando Evento: <%=eventoToEdit.place ?? ''%></h1>
+
+        <form action="/products/editarEvento/<%=eventoToEdit.id ?? ''%>?_method=PUT" method="POST" enctype="multipart/form-data"> 
             
                 <label>Lugar del Evento:</label>
-                    <input type="text" name="place" value="<%=eventoToEdit.place%>" required />
+                    <input 
+                        type="text" 
+                        name="place" 
+                        value="<%=eventoToEdit.place ?? ''%>"
+                    >
                 <br/>
-                <br/>
+
                 <label for="fechaEvento">Fecha del Evento:</label>
-                    <input type="date" name="date" id="date" value="<%=eventoToEdit.date%>"required />
-                <br />
+                    <input 
+                        type="date" 
+                        name="date" 
+                        id="date" 
+                        value="<%=eventoToEdit.date ?? ''%>"
+                    >
                 <br />
                 <label for="bannerEvento">Banner del Evento:</label>
                     <input
@@ -33,18 +38,39 @@
                         name="image"
                         id="image"
                         accept="image/png, image/jpeg"
-                        required
-                    />
+                    >
                 <br />
                 <br />
                 <label>Precio:</label>
-                    <input type="text" name="prize" value="<%=eventoToEdit.prize%>" required />
+                    <input 
+                        type="text" 
+                        name="prize" 
+                        value="<%=eventoToEdit.prize ?? ''%>"
+                    >
                 <br />
-                    <input type="text" name="currency" value="<%=eventoToEdit.currency%>" required />
+                
+                <label>Moneda:</label>
+                    <input 
+                        type="text" 
+                        name="currency" 
+                        value="<%=eventoToEdit.currency ?? ''%>"
+                    >
                 <br />
                 <br />
-                <label>Id:</label>
-                    <input type="text" name="id" value="<%=eventoToEdit.id%>" required />
+                <label>Description</label>
+                    <input 
+                        type="text" 
+                        name="description" 
+                        value="<%=eventoToEdit.description ?? ''%>"
+                    >
+                <br />
+                <br />
+                <label>Agotado</label>
+                    <input 
+                        type="text" 
+                        name="agotado" 
+                        value="<%=eventoToEdit.agotado ?? ''%>"
+                    >
                 <br />
                 <br />
             <div class="botones">

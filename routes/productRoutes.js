@@ -25,7 +25,7 @@ router.post('/creandoEvento', upload.single('image'), productController.creandoE
 
 //rutas para editar eventos
 router.get('/editarEvento/:id', productController.editarEvento);
-router.put('/editandoEvento', upload.single('image'), productController.editandoEvento);
+router.put('/editarEvento/:id', upload.single('image'), productController.editandoEvento);
 
 //ruta para eliminar evento
 router.delete('/eliminarEvento/:id', productController.eliminarEvento);

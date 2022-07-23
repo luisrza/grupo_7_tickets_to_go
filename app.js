@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 
 // Configuracion METHOD POST, captura lo venga de un form, en objeto litera, y si queremos lo pasamos a json.
 
@@ -13,7 +14,6 @@ app.use(methodOverride('_method'));
 
 // configuracion para el EJS
 
-const path = require('path');
 app.set("view engine","ejs");
 app.set('views', path.join(__dirname,'views'));
 

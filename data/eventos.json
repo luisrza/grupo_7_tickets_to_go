@@ -1,28 +1,46 @@
 [
   {
-    "place": "Messi",
-    "date": "0111-11-11",
+    "place": "peces raros",
+    "date": "0111-11-30",
     "prize": "123123123",
     "currency": "$",
     "description": "ksdjf skdjfb skdjbf skdjbc skjdfb skjdbf skjdb ksdjbf skjdhbf kjsdhbf kjsdhb fkjsdhbf skjdhbf ",
-    "id": 1658173777011,
     "agotado": "No",
-    "image": "image-1658173777004.jpg"
+    "image": "image-1658620296047.jpeg",
+    "id": "1658173777011"
   },
   {
     "place": "jennifer lowrenceeeee",
     "date": "0002-02-22",
     "prize": "43",
     "currency": "U$S",
-    "id": "1658173857397",
-    "image": "image-1658184724038.jpg"
+    "description": "das",
+    "agotado": "ddddddddddd",
+    "image": "image-1658619547931.jpeg"
   },
   {
-    "place": "arwen22",
+    "place": "hola",
     "date": "0003-03-31",
     "prize": "22222",
     "currency": "$",
-    "id": "1658184879518",
-    "image": "image-1658185075798.jpg"
+    "description": "que tal",
+    "agotado": "no"
+  },
+  {
+    "place": "Mar del Plata",
+    "date": "2022-07-30",
+    "prize": "3500",
+    "currency": "pesos",
+    "description": "Alto evento",
+    "agotado": "si"
+  },
+  {
+    "place": "soel",
+    "date": "2022-07-27",
+    "prize": "dasd",
+    "currency": "asd",
+    "description": "dasd",
+    "agotado": "No",
+    "image": "image-1658619034140.jpeg"
   }
 ]

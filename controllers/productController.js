@@ -1,7 +1,5 @@
-
 const fs = require('fs');
 const path = require('path');
-
 const productsFilePath = path.join(__dirname, '../data/eventos.json');
 var eventos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -28,7 +26,7 @@ const productController = {
         
 
         newEvento.id = Date.now();
-        newEvento.agotado = "No"
+        newEvento.agotado = "No";
 
         let imagen = req.file;
 		newEvento.image = imagen.filename;
@@ -44,33 +42,38 @@ const productController = {
       
     },
     editarEvento: (req, res) => {
-        let id= req.params.id
-        
+        let id= req.params.id;
+        let eventoToEdit = eventos.find(eventoToEdit=> eventoToEdit.id == id);
+        console.log("new values",eventoToEdit);
+        /*
         for(i=0;i<eventos.length;i++){
             if(eventos[i].id==id){
                 eventoToEdit=eventos[i];
             }
         }
-        
-        res.render('./products/editarEvento', {eventoToEdit});
+        */
+
+        res.render('./products/editarEvento', {eventoToEdit: eventoToEdit});
            
     },
     editandoEvento: (req, res) => {
-        let eventoEditado = req.body;
+        let id= req.params.id;
+        let newProduct = req.body;
+        let eventoToEdit = eventos.find(eventoToEdit=> eventoToEdit.id == id);
+        console.log ("id", id);
+        console.log ("editando", eventoToEdit);
         
         let imagen = req.file;
-        eventoEditado.image = imagen.filename
-		
-		let eventosNew = [];
-        for (i=0;i<eventos.length;i++){
-            if (eventoEditado.id != eventos[i].id){
-               eventosNew.push(eventos[i])  
+        newProduct.image = imagen.filename;
+        console.log("new values",newProduct);
+        newProduct.id= id;
+
+        for (let i=0; i<eventos.length; i++){
+            const element= eventos[i];
+            if (element.id==id){
+               eventos[i] = newProduct;
              };
          }
-           
-         eventosNew.push(eventoEditado);
-
-         eventos = eventosNew;
 
          fs.writeFileSync(productsFilePath, JSON.stringify(eventos, null, 2));
         
