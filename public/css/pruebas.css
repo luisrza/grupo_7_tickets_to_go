@@ -1,0 +1,20 @@
+:root {
+    --amarilloBotton: #fecd45;
+    --negro: #3b3b3b;
+    --blanco: #fff;
+    --fondo: #222222;
+    --barra: rgba(172, 136, 28, 0.8);
+}
+
+
+.imagen{
+    margin: 0 auto;
+    width: 1280px;
+    height: 720px;
+
+    background-color: green;
+}
+
+.imagen2{
+    clip-path: polygon(0% 25%, 50% 65%, 50% 65%, 0% 65%);
+}
