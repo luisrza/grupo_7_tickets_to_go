@@ -1,41 +1,23 @@
 [
   {
-    "place": "jennifer lowrenceeeee",
-    "date": "0002-02-22",
-    "prize": "43",
-    "currency": "U$S",
-    "description": "das",
-    "agotado": "ddddddddddd",
-    "image": "image-1658619547931.jpeg",
-    "id": 1658822761823687
-  },
-  {
-    "place": "hola",
-    "date": "0003-03-31",
-    "prize": "22222",
-    "currency": "$",
-    "description": "que tal",
-    "agotado": "no",
-    "id": 1658876182362287
-  },
-  {
     "place": "Mar del Plata",
     "date": "2022-07-30",
     "prize": "3500",
     "currency": "pesos",
-    "description": "Alto evento",
+    "description": "sdasdasdasd",
     "agotado": "si",
-    "id": 1658876182376687
+    "image": "image-1658877174121.jpeg",
+    "id": "1658876182376687"
   },
   {
     "place": "soel",
     "date": "2022-07-27",
     "prize": "dasd",
     "currency": "asd",
-    "description": "dasd",
+    "description": "dasdsdasdsadsdsd",
     "agotado": "No",
-    "id": 16588768236287,
-    "image": "image-1658619034140.jpeg"
+    "image": "image-1658877156232.jpeg",
+    "id": "16588768236287"
   },
   {
     "place": "Tennsi",
