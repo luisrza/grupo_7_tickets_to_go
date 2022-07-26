@@ -1,0 +1,77 @@
+
+/*FOOTER*/
+
+footer {
+    height: 10vh;
+    width: 100%;
+    background: var(--fondo);
+    display: flex;
+    flex-direction: column;
+}
+
+.arriba {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 2vh;
+    text-decoration: none;
+}
+
+.arriba a {
+    opacity: 0.5;
+    color: var(--blanco2);
+}
+
+.abajo {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 8vh;
+}
+
+.derechos {
+    width: 85vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.derechos p {
+    margin-left: 2em;
+    margin-top: 0.3em;
+    color: var(--blanco2);
+    opacity: 0.5;
+}
+
+.redes {
+    width: 15vw;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.redes li {
+    margin-right: 0.5em;
+}
+
+.redes a {
+    color: var(--barra);
+    font-size: 2em;
+}
+
+
+/*@MEDIAS FOOTER*/
+
+@media (min-width: 320px) {
+    
+}
+
+@media (min-width: 768px) {
+    
+}

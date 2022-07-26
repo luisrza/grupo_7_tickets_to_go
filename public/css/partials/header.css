@@ -1,0 +1,135 @@
+/*HEADER 2*/
+
+header {
+    background: var(--fondo);
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+    z-index: 6969696969;
+}
+
+.contenedor-logo {
+    height: 100%;
+    width: 80%;
+}
+
+.logo {
+    width: 200px;
+    height: 100%;
+}
+
+.burger-menu {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.burger {
+    margin-right: 10%;
+    padding: 10%;
+    color: var(--blanco2);
+}
+
+/*MEDIA HEADER*/
+
+@media (min-width: 320px) {
+    .nav-bar{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) { 
+
+    .burger-menu{
+        display: none;
+    }
+
+    .contenedor-logo {
+        width: 20%;
+        height: 100%;
+    }
+
+    .logo {
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav-bar {
+        display: contents;
+        display: flex;
+        width: 80%;
+        height: 100%;
+    }
+
+    .ul-izq {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .ul-izq li {
+        list-style: none;
+    }
+
+    .ul-izq li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        font-family: ; /*TODO:*/
+        font-size: var(--header-font-size);
+        font-weight: bold;
+        color: var(--blanco2);
+    }
+
+    .ul-izq span:hover {
+        text-decoration: underline;
+        color: var(--blanco1);
+    }
+
+    .ul-izq i {
+        color: var(--barra);
+    }
+
+    .ul-der {
+        width: 10%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .ul-der li {
+        list-style: none;
+    }
+
+    .ul-der li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        font-family: ; /*TODO:*/
+        font-size: var(--header-font-size);
+        font-weight: bold;
+        color: var(--barra);
+    }
+
+}
+
+@media (min-width: 1440px) {
+
+    .ul-der li a {
+        font-size: var(--header-big-font-size);
+    }
+
+    .ul-izq li a {
+        font-size: var(--header-big-font-size);
+    }
+}

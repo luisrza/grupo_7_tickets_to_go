@@ -79,38 +79,6 @@ header {
     height: 100%;
 }
 
-<<<<<<< HEAD
-nav {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-}
-
-.ul-izq {
-    color: var(--blanco);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.ul-der {
-    display: flex;
-    list-style: none;
-    width: 15%;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-nav ul li {
-    margin: 0 2rem 0 0;
-    font-size: 1em;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-.nav-bar a {
-=======
 .burger-menu {
     height: 100%;
     width: 20%;
@@ -122,7 +90,6 @@ nav ul li {
 .burger {
     margin-right: 10%;
     padding: 10%;
->>>>>>> 866995265c10ff36641f05ef25f64f834d600908
     color: var(--blanco2);
 }
 
@@ -263,7 +230,6 @@ footer {
 
 .arriba {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     width: 100%;
     height: 2vh;
@@ -277,23 +243,18 @@ footer {
 
 .abajo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     width: 100%;
     height: 8vh;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
 }
 
 .derechos {
+    width: 85vw;
     height: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
     flex-direction: column;
-    background: var(--fondo);
-    width: 100%;
 }
 
 .derechos p {
@@ -304,13 +265,13 @@ footer {
 }
 
 .redes {
-    width: 100%;
+    width: 15vw;
     height: 100%;
     display: flex;
     flex-direction: row;
     list-style: none;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
 }
 
@@ -326,128 +287,3 @@ footer {
 
 /*@MEDIAS FOOTER*/
 
-@media (min-width: 768px) {
-    nav {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        width: 80vw;
-        height: 100%;
-    }
-    
-    .ul-izq {
-        display: flex;
-        list-style: none;
-        width: 85%;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    
-    .ul-der {
-        display: flex;
-        list-style: none;
-        width: 15%;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    
-    nav ul li {
-        margin: 0 2rem 0 0;
-        font-size: 1.7em;
-        font-weight: 700;
-        letter-spacing: 2px;
-    }
-    
-    .nav-bar a {
-        color: var(--blanco2);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-decoration: none;
-    }
-    
-    ul i {
-        color: var(--barra);
-        font-size: 0.8em;
-    }
-    
-    .ul-izq li {
-        margin: 0 5rem 0 1rem;
-        font-family: 'Italiana', serif;
-    }
-    
-    .ul-izq span:hover {
-        text-decoration: underline;
-        color: var(--blanco1);
-    }
-
-    footer {
-        height: 10vh;
-        width: 100%;
-        background: var(--fondo);
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .arriba {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        height: 2vh;
-        text-decoration: none;
-    }
-    
-    .arriba a {
-        opacity: 0.5;
-        color: var(--blanco2);
-    }
-    
-    .abajo {
-        display: flex;
-        flex-direction: row-reverse;
-        width: 100%;
-        height: 8vh;
-    }
-    
-    .derechos {
-        width: 85vw;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: nowrap;
-        flex-direction: column;
-    }
-    
-    .derechos p {
-        margin-left: 2em;
-        margin-top: 0.3em;
-        color: var(--blanco2);
-        opacity: 0.5;
-    }
-    
-    .redes {
-        width: 15vw;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-        align-items: flex-end;
-    }
-    
-    .redes li {
-        margin-right: 0.5em;
-    }
-    
-    .redes a {
-        color: var(--barra);
-        font-size: 2em;
-    }
-}
