@@ -28,7 +28,11 @@
  
   <div>
     
-    <a href="/products/editarEvento/<%=evento.id%>"><h2>Editar Evento</h2></a>
+
+    <form action="/products/editarEvento/<%=evento.id%>" method="GET">   
+      <div class="botones">
+      <input type="submit" class="boton" value="Editar Evento">
+    </form>
     
     
     <form action="/products/eliminarEvento/<%=evento.id%>?_method=DELETE" method="POST">   
