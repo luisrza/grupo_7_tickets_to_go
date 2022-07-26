@@ -211,6 +211,8 @@ body{
 .contenedor{
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  flex-direction: column;
 }
 
 .tarjeta_eve {
@@ -221,16 +223,23 @@ body{
 }
 
 @media (min-width: 768px) {
+  .contenedor{
+    flex-direction: row;
+  }
+
+
   .imagen_eve{
     display: flex;
+    width: 20vw;
+    height: 45vh;
+    justify-content: center;
   }
   .tarjeta_eve {
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: column;
     width: 45vw;
-
     margin: 0 auto;
+    flex-direction: column;
   }
   
 }
