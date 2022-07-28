@@ -1,69 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <link rel="stylesheet" href="/css/style.css"> 
-    <%- include('./partials/head.ejs') %>
-    <title>Tickets To Go</title>
-  </head>
+<head>
+  <link rel="stylesheet" href="/css/pruebas.css"> 
+  <%- include('./partials/head.ejs') %>
+  <title>Tickets To Go</title>
+</head>
 
-  
-  <body>
-    <header>
-      <%-include('./partials/header.ejs')%>
-    </header>
-  <main>
-    <div class="slider-contenedor">
-      <img src="/img/Slider.png" alt="slider_placeholder" class="slider">
-    </div>
-  <h2 class="conciertos">Conciertos</h2>
-    <section class="contenedor-conciertos1"> 
-        <li> 
-          <img src="img/concierto 1.jpg" alt="concierto_1" class="concierto_img">
-          <h2>Buenos Aires, Argentina</h2> 
-          <h3>30/03/2022</h3>
-          <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quam unde voluptatem! Cumque incidunt animi fugiat error molestiae sapiente, vel illum aliquam deleniti odit expedita aspernatur a libero nostrum omnis?
-        </p>
-        </li>
-        <li> 
-          <img src="img/concierto 2.jpg" alt="concierto_2" class="concierto_img">
-          <h2>Monterrey, México</h2> 
-          <h3>23/04/2022</h3>
-          <p class="info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, illum esse? Illo nisi molestias esse numquam omnis incidunt temporibus tenetur? Harum consequuntur laudantium eaque accusamus quas nisi velit corrupti quod?
-        </p>
-        </li>
-      </section>
-      <section class="contenedor-conciertos2"> 
-        <li> 
-          <img src="img/concierto 3.jpg" alt="concierto_3" class="concierto_img">
-          <h2>Cundinamarca, Colombia</h2> 
-          <h3>01/05/2022</h3>
-          <p class="info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis sint animi dolor nemo ipsa, rerum fugit non placeat quos eligendi laudantium facilis natus sunt quod, reiciendis iste nulla. Voluptatibus, dolorum!
-        </p>
-        </li>
-        <li> 
-          <img src="img/concierto 4.jpg" alt="concierto_4" class="concierto_img">
-          <h2>Santiago, Chile</h2> 
-          <h3>12/06/2022</h3>
-          <p class="info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, neque eaque, itaque temporibus enim, in odit sint id corporis qui fuga minima aliquam eius est consequuntur! Placeat non odio recusandae!
-        </p>
-        </li>
-      </section>
-    
+
+
+<body>
+
+<%-include('./partials/header.ejs')%>
+
+<main>
+
+  <div class="espacio-header"></div>
+
+  <div class="slider-container">
+    <img src="/img/Slider.png" alt="slider_placeholder" class="slider">
+  </div>
+
+  <div class="main-container">
+    <h2 class="title">-CONCIERTOS-</h2>
+    <section class="conciertos-container"> 
+
+      <li class="conciertos"> 
+        <img src="img/concierto 1.jpg" alt="concierto_1" class="image">
+        <h2 class="place">Buenos Aires, Argentina</h2> 
+        <h3 class="date">30/03/2022</h3>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quam unde voluptatem! Cumque incidunt animi fugiat error molestiae sapiente, vel illum aliquam deleniti odit expedita aspernatur a libero nostrum omnis?</p>
+        <div class="prize">$6969,69</div>
+      </li>
+      <li class="conciertos"> 
+        <img src="img/concierto 2.jpg" alt="concierto_2" class="image">
+        <h2 class="place">Monterrey, México</h2> 
+        <h3 class="date">23/04/2022</h3>
+        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, illum esse? Illo nisi molestias esse numquam omnis incidunt temporibus tenetur? Harum consequuntur laudantium eaque accusamus quas nisi velit corrupti quod?</p>
+        <div class="prize">$6969,69</div>
+      </li>
+      <li class="conciertos"> 
+        <img src="img/concierto 3.jpg" alt="concierto_3" class="image">
+        <h2 class="place">Cundinamarca, Colombia</h2> 
+        <h3 class="date">01/05/2022</h3>
+        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis sint animi dolor nemo ipsa, rerum fugit non placeat quos eligendi laudantium facilis natus sunt quod, reiciendis iste nulla. Voluptatibus, dolorum!</p>
+        <div class="prize">$6969,69</div>
+      </li>
+      <li class="conciertos"> 
+        <img src="img/concierto 4.jpg" alt="concierto_4" class="image">
+        <h2 class="place">Santiago, Chile</h2> 
+        <h3 class="date">12/06/2022</h3>
+        <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, neque eaque, itaque temporibus enim, in odit sint id corporis qui fuga minima aliquam eius est consequuntur! Placeat non odio recusandae!</p>
+        <div class="prize">$6969,69</div>
+      </li>
+      <li class="conciertos"> 
+        <img src="img/concierto 1.jpg" alt="concierto_1" class="image">
+        <h2 class="place">Córdoba, Argentina</h2> 
+        <h3 class="date">25/9/2022</h3>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quam unde voluptatem! Cumque incidunt animi fugiat error molestiae sapiente, vel illum aliquam deleniti odit expedita aspernatur a libero nostrum omnis?</p>
+        <div class="prize">$6969,69</div>
+      </li>
+      <li class="conciertos"> 
+        <img src="img/concierto 1.jpg" alt="concierto_1" class="image">
+        <h2 class="place">Miami, USA</h2> 
+        <h3 class="date">29/10/2022</h3>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quam unde voluptatem! Cumque incidunt animi fugiat error molestiae sapiente, vel illum aliquam deleniti odit expedita aspernatur a libero nostrum omnis?</p>
+        <div class="prize">$6969,69</div>
+      </li>
+    </section>
+  </div>
+
   <div class="iframe-container">
-      <iframe width="360" height="216" src="https://www.youtube.com/embed/bo_efYhYU2A"  class="ytube" </iframe> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="iframe-container-tab">
-      <iframe width="750" height="505" src="https://www.youtube.com/embed/bo_efYhYU2A"  class="ytube" </iframe>title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="iframe-container-lap">
-      <iframe width="990" height="515" src="https://www.youtube.com/embed/bo_efYhYU2A"  class="ytube" </iframe>title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </main>
-  <br>
+    <iframe width="320" height="216" src="https://www.youtube.com/embed/bo_efYhYU2A"  class="ytube" </iframe> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="iframe-container-tab">
+    <iframe width="750" height="505" src="https://www.youtube.com/embed/bo_efYhYU2A"  class="ytube" </iframe>title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="iframe-container-lap">
+    <iframe width="990" height="515" src="https://www.youtube.com/embed/bo_efYhYU2A"  class="ytube" </iframe>title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 
-  <footer>
-    <%-include('./partials/footer.ejs')%>
-  </footer>
-  </body>
+</main>    
+
+<%- include('./partials/footer.ejs')%> 
+
+</body>
 </html>
