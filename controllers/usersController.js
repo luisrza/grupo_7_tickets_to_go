@@ -57,7 +57,9 @@ const usersController = {
             avatar: userToEdit.avatar
 
         }
-        if (req.file) {userEdited.avatar = avatar.filename}
+        console.log(req.file)
+       
+       if (req.file) {userEdited.avatar = req.file.filename}
        newUsers = [];
        newUsers.push(userEdited)
         for (i=0;i<users.length;i++){
