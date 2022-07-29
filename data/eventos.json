@@ -1,22 +1,22 @@
 [
   {
-    "place": "Mar del Plata",
+    "place": "prueba que va",
     "date": "2022-07-30",
     "prize": "3500",
     "currency": "pesos",
     "description": "sdasdasdasd",
     "agotado": "si",
-    "image": "image-1658877174121.jpeg",
+    "image": "image-1659053507890.jpeg",
     "id": "1658876182376687"
   },
   {
-    "place": "soel",
+    "place": "soel nuevo",
     "date": "2022-07-27",
     "prize": "dasd",
     "currency": "asd",
     "description": "dasdsdasdsadsdsd",
     "agotado": "No",
-    "image": "image-1658877156232.jpeg",
+    "image": "image-1659052586610.jpeg",
     "id": "16588768236287"
   },
   {
@@ -28,5 +28,15 @@
     "id": 1658876823687,
     "agotado": "No",
     "image": "image-1658876823680.png"
+  },
+  {
+    "place": "nuevito 4",
+    "date": "2022-08-06",
+    "prize": "4000",
+    "currency": "pesos",
+    "description": "evento cool",
+    "agotado": "No",
+    "image": "image-1659052655706.jpeg",
+    "id": "1659049353221"
   }
 ]

@@ -44,7 +44,7 @@ const productController = {
     editarEvento: (req, res) => {
         let id= req.params.id;
         let eventoToEdit = eventos.find(eventoToEdit=> eventoToEdit.id == id);
-        console.log("new values",eventoToEdit);
+        console.log("Evento a EDITAR",eventoToEdit);
         /*
         for(i=0;i<eventos.length;i++){
             if(eventos[i].id==id){
@@ -60,26 +60,39 @@ const productController = {
         let id= req.params.id;
         let newProduct = req.body;
         let eventoToEdit = eventos.find(eventoToEdit=> eventoToEdit.id == id);
-        console.log ("id", id);
-        console.log ("editando", eventoToEdit);
+        console.log("id", id);
+        console.log("Evento a Editar", eventoToEdit);
         
         let imagen = req.file;
-        newProduct.image = imagen.filename;
-        console.log("new values",newProduct);
-        newProduct.id= id;
+        console.log("valor de imagen",imagen);
+        //newProduct.image= eventoToEdit.image;
+        
+        if (imagen==undefined){
+            newProduct.image= eventoToEdit.image;
+        }
+        else{
+            let imagen = req.file;
+            newProduct.image = imagen.filename;
+        };
+        //let imagen = req.file;
+        //console.log(imagen);
 
+        
+        newProduct.id= id;
+        console.log("Nuevos valores",newProduct);
         for (let i=0; i<eventos.length; i++){
             const element= eventos[i];
             if (element.id==id){
                eventos[i] = newProduct;
              };
-         }
-
+         };
          fs.writeFileSync(productsFilePath, JSON.stringify(eventos, null, 2));
+         
         
          res.redirect('/products/eventos');
            
     },
+
     eliminarEvento: (req, res) => {
         
         id = req.params.id
