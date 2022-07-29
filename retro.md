@@ -1,7 +1,6 @@
 **Comenzar a hacer**
 
-Cada integrante tiene que hacerse responsable de su tarea y realizarla.
-Comprender que es un trabajo en grupo, y que si uno falla, todos fallamos.
+Dentro de cada subequipo, lograr dividir las tareas para lograr un mejor trabajo en paralelo.
 
 **Hacer más**
 
@@ -10,6 +9,8 @@ Dedicarle un poco mas de tiempo, para lograr un mejor producto. Tratar de conseg
 **Continuar haciendo**
 
 Juntarnos todos los sábados para ver nuestro progreso, reasignar tareas y evaluar nuevas ideas.
+El equipo logro dividirse en front y back naturalmente. Aprovechar esa fortaleza para mejorar cada uno en lo suyo.
+
 
 **Hacer menos**
 
