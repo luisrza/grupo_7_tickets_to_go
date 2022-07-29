@@ -1,43 +1,38 @@
 [
-    {"id" : 1,
-    "apellido": "Gomez",
-    "nombre": "Pepe",
-    "usuario": "pepegomez",
-    "email": "pepegomez@gmail.com",
-    "categoria": "admin",
-    "image": "rambo.jpg" ,
-    "password": "Ab123456",
-    "fecha_nac": "25/03/1990"  
-    },
-    {"id" : 2,
-    "apellido": "Garcia",
-    "nombre": "Analia",
-    "usuario": "analiii",
-    "email": "analiagarcia@gmail.com",
-    "categoria": "user",
-    "image": "arwen.jpg" ,
-    "password": "Ab12",
-    "fecha_nac": "25/02/1980"  
-    },
-    {"id" : 3,
-    "apellido": "Gonzalez",
-    "nombre": "Lorena",
-    "usuario": "lore",
-    "email": "lorego@gmail.com",
-    "categoria": "admin",
-    "image": "jennifer.jpg" ,
-    "password": "A56",
-    "fecha_nac": "22/03/1993"  
-    },
-    {"id" : 3,
-    "apellido": "MacDonald",
-    "nombre": "Ronald",
-    "usuario": "macdonald",
-    "email": "macdonald@gmail.com",
-    "categoria": "user",
-    "image": "messi.jpg" ,
-    "password": "56",
-    "fecha_nac": "25/03/2000"  
-    }
-    
+  {
+    "id": 1659119449599,
+    "nombre": "Jennifer Lowrence",
+    "user": "Jeny",
+    "nacimiento": "1990-03-22",
+    "email": "jennifer@gmail.com",
+    "password": "ff",
+    "avatar": "avatar-1659119449594.jpg"
+  },
+  {
+    "id": 1659119500806,
+    "nombre": "Silvester Stallone",
+    "user": "Rambo",
+    "nacimiento": "1970-02-22",
+    "email": "rambo@gmail.com",
+    "password": "e",
+    "avatar": "avatar-1659119500799.jpg"
+  },
+  {
+    "id": 1659119535220,
+    "nombre": "Lionel Messi",
+    "user": "El 10",
+    "nacimiento": "1995-11-11",
+    "email": "messi@gmail.com",
+    "password": "eee",
+    "avatar": "avatar-1659119535214.jpg"
+  },
+  {
+    "id": 1659119572361,
+    "nombre": "Arwen",
+    "user": "Arewn",
+    "nacimiento": "2000-02-22",
+    "email": "arwen@gmail.com",
+    "password": "tt",
+    "avatar": "avatar-1659119572356.jpg"
+  }
 ]

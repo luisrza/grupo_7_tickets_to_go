@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <link rel="stylesheet" href="/css/styleReg.css"> 
+    <%- include('../partials/head.ejs') %>
+    <title>Register</title>
+  </head>
+
+  <body>
+
+  <header>
+      <%- include('../partials/header.ejs') %>
+  </header>
+
+    <main>
+
+      <h2>Bienvenido/a!! <%=userLogin.nombre%></h2>
+      
+      <h2>Tu usuario es: <%=userLogin.user%></h2>
+      <h2>Tu fecha de Nacimiento es: <%=userLogin.nacimiento%></h2>
+      <img src="/img/<%=userLogin.avatar%>" alt="avatar">
+
+
+      <h2><a href="/users/editarUsuario/<%=userLogin.id%>">Editar mi Usuario</a></h2>
+      <h2><a href="/users/eliminarUsuario/<%=userLogin.id%>">Eliminar mi Usuario de esta Base de Datos</a></h2>
+      
+      
+
+
+      
+     
+    </main>
+
+  <footer>
+    <%-include('../partials/footer.ejs')%>
+  </footer>
+
+  </body>
+</html>

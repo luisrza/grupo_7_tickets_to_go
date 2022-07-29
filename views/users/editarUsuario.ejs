@@ -19,28 +19,28 @@
         <img src="../img/registrar.png" alt="registrar"/>
       </div>-->
 
-      <h2>Registrate:</h2>
+      <h2>EDITAR USUARIO</h2>
       <br>
-      <form action="/users/register" method="POST" enctype="multipart/form-data" class="form_reg">
+      <form action="/users/editandoUsuario/<%=userToEdit.id%>" method="POST" enctype="multipart/form-data" class="form_reg">
         <label>Nombre y Apellido:</label>
-        <input type="text" name="nombre" placeholder="nombre" required />
+        <input type="text" name="nombre" placeholder="<%=userToEdit.nombre%>" required />
         <br />
         <br />
         <label>Nombre de usuario:</label>
         <input
           type="text"
           name="user"
-          placeholder="nombre de usuario"
+          placeholder="<%=userToEdit.user%>"
           required
         />
         <br />
         <br />
         <label for="nacimiento">Fecha de nacimiento:</label>
-        <input type="date" name="nacimiento" id="fechaNacimiento" required />
+        <input type="date" name="nacimiento" id="fechaNacimiento" required placeholder="<%=userToEdit.nacimiento%>"/>
         <br />
         <br />
         <label>Email:</label>
-        <input type="email" name="email" placeholder="email" required />
+        <input type="email" name="email" placeholder="<%=userToEdit.email%>" required />
         <br />
         <br />
         <label for="avatar">Foto de perfil:</label>
@@ -48,7 +48,7 @@
           type="file"
           name="avatar"
           id="avatar"
-          accept="image/png, image/jpeg"
+                    accept="image/png, image/jpeg"
         />
         <br />
         <br />
@@ -68,19 +68,11 @@
         />
         <br />
         <br />
-        <input
-          type="checkbox"
-          name="TerminosYCondiciones"
-          value="si"
-          id="si"
-          required
-        />
-        <label for="si">Aceptar terminos y condiciones</label>
-        <br />
+        
         <br />
         <div class="botones">
           <input type="reset" value="Borrar" class="boton"/>
-          <input type="submit" value="Enviar" class="boton"/>
+          <input type="submit" value="Editar" class="boton"/>
         </div>
       </form>
     </main>
