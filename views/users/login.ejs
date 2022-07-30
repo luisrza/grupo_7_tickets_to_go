@@ -17,7 +17,7 @@
 
       <h2>Entrar a mi sesion:</h2>
       <br />
-
+      
       <div class="forma">
         <form action="/users/logueando" method="POST">
           <div class="campos">
@@ -27,20 +27,21 @@
             type="email"
             name="email"
             id="email"
-            placeholder=""
-            required
+            placeholder=<%= oldData.email!="sin_email" ? oldData.email : 'ejemplo@gmail.com' %>
+            
           />
           <br />
           <br />
 
-          <label>Constraseña:</label>
+          <label>Contraseña:</label>
+          
           <input
             class="textArea"
             type="password"
             name="pass"
             placeholder=""
             required
-          />
+          ><%= oldData.email!="sin_email" ? 'OPS...!! Contraseña Incorrecta...' : '' %></input>
         </div>
 
           <label class="checkbox"> Recordar mi usuario

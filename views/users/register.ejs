@@ -20,17 +20,21 @@
       </div>-->
 
       <h2>Registrate:</h2>
+      
       <br>
       <form action="/users/register" method="POST" enctype="multipart/form-data" class="form_reg">
         <label>Nombre y Apellido:</label>
-        <input type="text" name="nombre" placeholder="nombre" required />
+        <input type="text" 
+        name="nombre" 
+        placeholder='<%=newUsuario.nombre%>'
+        required />
         <br />
         <br />
         <label>Nombre de usuario:</label>
         <input
           type="text"
           name="user"
-          placeholder="nombre de usuario"
+          placeholder= '<%=newUsuario.user%>'
           required
         />
         <br />
@@ -40,7 +44,8 @@
         <br />
         <br />
         <label>Email:</label>
-        <input type="email" name="email" placeholder="email" required />
+        <input type="email" name="email" placeholder='<%=newUsuario.email%>' required />
+        <%= error.email=='repetido'? 'Este email ya se encuentra en nuestra base de datos':''%>
         <br />
         <br />
         <label for="avatar">Foto de perfil:</label>
@@ -49,6 +54,7 @@
           name="avatar"
           id="avatar"
           accept="image/png, image/jpeg"
+          
         />
         <br />
         <br />
@@ -64,8 +70,8 @@
           type="password"
           name="pass_confirm"
           placeholder="Confirmá tu contraseña"
-          required
-        />
+          required><%=error.email=='contrasenias'?'Las contraseñas ingresadas no coinciden':''%>
+      </input>
         <br />
         <br />
         <input

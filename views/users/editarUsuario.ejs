@@ -23,7 +23,7 @@
       <br>
       <form action="/users/editandoUsuario/<%=userToEdit.id%>" method="POST" enctype="multipart/form-data" class="form_reg">
         <label>Nombre y Apellido:</label>
-        <input type="text" name="nombre" placeholder="<%=userToEdit.nombre%>" required />
+        <input type="text" name="nombre" placeholder="<%=userToEdit.nombre%>" />
         <br />
         <br />
         <label>Nombre de usuario:</label>
@@ -31,17 +31,15 @@
           type="text"
           name="user"
           placeholder="<%=userToEdit.user%>"
-          required
+          
         />
         <br />
         <br />
         <label for="nacimiento">Fecha de nacimiento:</label>
-        <input type="date" name="nacimiento" id="fechaNacimiento" required placeholder="<%=userToEdit.nacimiento%>"/>
+        <input type="date" name="nacimiento" id="fechaNacimiento" placeholder="<%=userToEdit.nacimiento%>"/>
         <br />
         <br />
-        <label>Email:</label>
-        <input type="email" name="email" placeholder="<%=userToEdit.email%>" required />
-        <br />
+        
         <br />
         <label for="avatar">Foto de perfil:</label>
         <input
@@ -65,7 +63,7 @@
           name="pass_confirm"
           placeholder="Confirmá tu contraseña"
           required
-        />
+        ><%=error.pass=='pass_no_coinciden'?'Las contraseñas ingresadas no coindicen':''%></inptu>
         <br />
         <br />
         

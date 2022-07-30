@@ -1,38 +1,40 @@
 [
   {
-    "id": 1659119449599,
-    "nombre": "Jennifer Lowrence",
-    "user": "Jeny",
-    "nacimiento": "1990-03-22",
-    "email": "jennifer@gmail.com",
-    "password": "ff",
-    "avatar": "avatar-1659119449594.jpg"
-  },
-  {
-    "id": 1659119500806,
-    "nombre": "Silvester Stallone",
-    "user": "Rambo",
-    "nacimiento": "1970-02-22",
-    "email": "rambo@gmail.com",
-    "password": "e",
-    "avatar": "avatar-1659119500799.jpg"
-  },
-  {
     "id": 1659119535220,
     "nombre": "Lionel Messi",
     "user": "El 10",
     "nacimiento": "1995-11-11",
+    "avatar": "avatar-1659119535214.jpg",
     "email": "messi@gmail.com",
-    "password": "eee",
-    "avatar": "avatar-1659119535214.jpg"
+    "password": "$2a$10$VtNSq.cLz8aYSUDpPZPS..StjDJAoe4HU680q1KQPZ4KS2aRxpKFe"
+  },
+  
+  {
+    "id": 1659212325430,
+    "nombre": "arwen",
+    "user": "arwen",
+    "nacimiento": "1111-11-11",
+    "email": "arwen@gmail.com",
+    "avatar": "avatar-1659212325312.jpg",
+    "password": "$2a$10$yx41Qmoy5m/VLkc1xrOFG.tzMPP4RGEMO681Y9q8GQ6ENey29cyiW"
   },
   {
-    "id": 1659119572361,
-    "nombre": "Arwen",
-    "user": "Arewn",
-    "nacimiento": "2000-02-22",
-    "email": "arwen@gmail.com",
-    "password": "tt",
-    "avatar": "avatar-1659119572356.jpg"
+    "id": 1659212408197,
+    "nombre": "rambo",
+    "user": "rambo",
+    "nacimiento": "0022-02-22",
+    "email": "rambo@gmail.com",
+    "avatar": "avatar-1659212408109.jpg",
+    "password": "$2a$10$VhR/AdgDi5ZhZz1x0Zgm6uVNIvs5V6u/irf8lXHGWUVRxRtbjkS8."
+  },
+  {
+    "id": 1659212452621,
+    "nombre": "Jennifer Lowrence",
+    "user": "jennifer",
+    "nacimiento": "0111-11-11",
+    "email": "jennifer@gmail.com",
+    "avatar": "avatar-1659212452502.jpg",
+    "password": "$2a$10$r6O43Q9HYMCHarIuEkp4FOBbv0GZ75zfqy0maj76GD.nb6V.lJyZ6"
   }
+
 ]
