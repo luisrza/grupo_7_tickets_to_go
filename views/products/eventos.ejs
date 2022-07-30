@@ -7,34 +7,37 @@
   <title>Eventos</title>
 </head>
 
-  <body>
-    <header>
-      <%-include('../partials/header.ejs')%>
-    </header>
-  <main>
-    <section class="contenedor">
-    <%for (let i=0;i < eventos.length ;i++){ %>
+<body>
 
-      <div class="tarjeta_eve">
-      <a href="/products/eventos/detalles/<%=eventos[i].place%>"><h2 class="titleEvents"><%= eventos[i].place %></h2></a>
-      
-      <h3><%=eventos[i].date%></h3>
-      
-      <img class="imagen_eve" src="/img/<%=eventos[i].image%>" alt="foto_concierto">
-      <!-- <p class="info"> <%=eventos[i].description%>
-      </p> -->
-    </div>
-    <%}%>
-  </section>
-<br>
+  <%-include('../partials/header.ejs')%>
+
+  <main>
+
+    <div class="espacio-header"></div>
+
+    <section class="conciertos-container">
+      <%for (let i=0;i < eventos.length ;i++){ %>
+        <div class="conciertos">
+          <a href="/products/eventos/detalles/<%=eventos[i].place%>" class="evento-link">
+            <img class="image" src="/img/<%=eventos[i].image%>" alt="foto_concierto">
+            <h2 class="place"><%= eventos[i].place %></h2>
+            <h3 class="date"><%=eventos[i].date%></h3>
+            <p class="description"> <%=eventos[i].description%></p>
+            <p class="prize"><%=eventos[i].currency%><%=eventos[i].prize%></p>
+          </a>
+        </div>
+      <%}%>
+    </section>
+
   <div class="contenedor-boton">
     <a href="/products/crearEvento" class="boton">Crear Evento Nuevo</a>
-      </div>
-<br>
+  </div>
+
+
   </main>
 
-    <footer>
-      <%-include('../partials/footer.ejs')%>
-    </footer>
-  </body>
+
+  <%-include('../partials/footer.ejs')%>
+
+</body>
 </html>
