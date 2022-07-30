@@ -2,55 +2,59 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="/css/styleEve.css" />
+    <link rel="stylesheet" href="/css/styleEditar.css" />
         <%- include('../partials/head.ejs') %>
     <title>Eventos</title>
 </head>
 
 <body>
-    <header>
-        <%-include('../partials/header.ejs')%>
-    </header>
+
+    <%-include('../partials/header.ejs')%>
+
+    <div class="espacio-header"></div>
 
     <main>
-        <h2>Subir evento nuevo</h2>
+
+        <h1>Subir evento nuevo</h2>
+
         <form class="form_crear" action="/products/creandoEvento" method="POST" enctype="multipart/form-data">
+
             <label>Lugar del Evento:</label>
-                <input type="text" name="place" placeholder="evento" required />
-            <br />
-            <br />
+                <input class="inputs" type="text" name="place" placeholder="evento" required />
+
             <label for="fechaEvento">Fecha del Evento:</label>
-                <input type="date" name="date" id="date" required />
-            <br />
-            <br />
+                <input class="inputs" type="date" name="date" id="date" required />
+
             <label for="bannerEvento">Banner del Evento:</label>
-                <input
+                <input class="inputs"
                     type="file"
                     name="image"
                     id="image"
                     accept="image/png, image/jpeg"
                 />
-            <br />
-            <br />
+
             <label>Precio:</label>
-                <input type="text" name="prize" placeholder="precio" required />
-                <br />
-                <input type="text" name="currency" placeholder="moneda" required />
-            <br />
-            <br />
+                <input class="inputs" type="text" name="prize" placeholder="precio" required />
+
+            <label>Moneda:</label>
+                <input class="inputs" type="text" name="currency" placeholder="moneda" required />
+
             <label>Descripción:</label>
-                <input type="textarea" name="description" placeholder="" required />
-                
-            <br />
-                <div class="botones botones_crear">
-                    <input type="reset" class="boton botones" value="Borrar" />
-                    <input type="submit" class="boton botones" value="Enviar" />
-                </div>
+                <input class="inputs" type="textarea" name="description" placeholder="" required />
+
+            <br>
+
+            <div class="botones botones_crear">
+                <input type="reset" class="boton botones" value="Borrar" />
+                <input type="submit" class="boton botones" value="Enviar" />
+            </div>
+
         </form>
+
     </main>
 
-    <footer>
-        <%-include('../partials/footer.ejs')%>
-    </footer>
+
+    <%-include('../partials/footer.ejs')%>
+
 </body>
 </html>

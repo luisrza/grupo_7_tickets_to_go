@@ -418,6 +418,7 @@ main {
   border-radius: 5px;
   color: var(--blanco2);
   text-decoration: none;
+  border: none;
 }
 
 /* MEDIAS MAIN */
