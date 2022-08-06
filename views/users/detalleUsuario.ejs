@@ -15,15 +15,15 @@
 
     <main>
 
-      <h2>Bienvenido/a!! <%=userLogin.nombre%></h2>
+      <h2>Bienvenido/a!! <%=userLogged.nombre%></h2>
       
-      <h2>Tu usuario es: <%=userLogin.user%></h2>
+      <h2>Tu usuario es: <%=userLogged.user%></h2>
       <h2>Tu fecha de Nacimiento es: <%=userLogin.nacimiento%></h2>
-      <img src="/img/<%=userLogin.avatar%>" alt="avatar">
+      <img src="/img/<%=userLogged.avatar%>" alt="avatar">
 
 
-      <h2><a href="/users/editarUsuario/<%=userLogin.id%>">Editar mi Usuario</a></h2>
-      <h2><a href="/users/eliminarUsuario/<%=userLogin.id%>">Eliminar mi Usuario de esta Base de Datos</a></h2>
+      <h2><a href="/users/editarUsuario/<%=userLogged.id%>">Editar mi Usuario</a></h2>
+      <h2><a href="/users/eliminarUsuario/<%=userLogged.id%>">Eliminar mi Usuario de esta Base de Datos</a></h2>
       
       
 

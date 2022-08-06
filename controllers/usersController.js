@@ -20,7 +20,12 @@ const usersController = {
         noExiste=false
         passEncriptada =userLogin.password 
         let check = bcrypt.compareSync(req.body.pass, passEncriptada);
-        if (check==true){res.render('users/detalleUsuario',{userLogin})}
+        if (check==true){
+            delete userLogin.pass
+            req.session.userLogged = userLogin  
+            userLogged = req.session.userLogged  
+            res.render('users/detalleUsuario',{userLogged})
+        }
         else {
             oldData = {email: 'sin_email'}
             if(req.body.email){oldData.email=req.body.email}
@@ -184,11 +189,10 @@ const usersController = {
         res.render('./users/registrado')
     },
 
-    editar: (req, res) => {
-    },
-
-    actualizar: (req, res) => {
-    },
+    logout: (req,res)=>{
+        req.session.destroy();
+        res.redirect('/')
+    }
 
 
 

@@ -1,12 +1,19 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const session = require('express-session')
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
 
 // Configuracion METHOD POST, captura lo venga de un form, en objeto litera, y si queremos lo pasamos a json.
 
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
-
+app.use(session({
+    secret: "Tickets to go",
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(userLoggedMiddleware)
 // Configuracion de METHOD-OVERRIDE para usar PUT y DELETE.
 
 const methodOverride = require('method-override');

@@ -1,5 +1,14 @@
 [
   {
+    "id": 1659795347663,
+    "nombre": "Diego Franco",
+    "user": "diegofranco2001",
+    "nacimiento": "1982-07-25",
+    "avatar": "avatar-1659795347536.jpg",
+    "email": "diegofranco2001@gmail.com",
+    "password": "$2a$10$cYY78QzvX2V5mNm0YbH7V.L.dS2SFvjG329GQWP3TOkoWFuxH2zAm"
+  },
+  {
     "id": 1659119535220,
     "nombre": "Lionel Messi",
     "user": "El 10",
@@ -8,7 +17,6 @@
     "email": "messi@gmail.com",
     "password": "$2a$10$VtNSq.cLz8aYSUDpPZPS..StjDJAoe4HU680q1KQPZ4KS2aRxpKFe"
   },
-  
   {
     "id": 1659212325430,
     "nombre": "arwen",
@@ -35,6 +43,14 @@
     "email": "jennifer@gmail.com",
     "avatar": "avatar-1659212452502.jpg",
     "password": "$2a$10$r6O43Q9HYMCHarIuEkp4FOBbv0GZ75zfqy0maj76GD.nb6V.lJyZ6"
+  },
+  {
+    "id": 1659804286177,
+    "nombre": "Rosario",
+    "user": "rosario",
+    "nacimiento": "2222-02-25",
+    "email": "rosariohuertaf@gmail.com",
+    "avatar": "avatar-1659804286047.jpg",
+    "password": "$2a$10$hUziE7gsdCGvcvDy7iXdPupl3JEH0gxoOrFNBkXk0xy2lzi0xZMwC"
   }
-
 ]

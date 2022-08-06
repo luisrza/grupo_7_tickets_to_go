@@ -35,8 +35,21 @@
       </li>
     </ul>
     <ul class="ul-der">
-      <li><a href="/users/login"><i class="fa-solid fa-user"></i></a></li>
+      <% if (locals.isLogged){ %> 
+        <%=locals.userLogged.nombre%>
+        <img src="/img/<%=locals.userLogged.avatar%>" width="60">
+      <li><a href="/users/logout">Logout</a></li>
       <li><a href="/users/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
+
+      <% } else {%>
+       
+
+      <li><a href="/users/register">Registrarme</a></li>
+      <li><a href="/users/login"><i class="fa-solid fa-user"></i></a></li>
+      
+      <% } %>
+
+      
     </ul>
   </nav>
 </header>
