@@ -13,6 +13,7 @@ const mainController = {
 
     nosotros: (req, res) => {
         //res.sendFile(path.join(__dirname, '../views/nosotros.html'));
+        
         res.render('nosotros');
     },
     pruebas: (req, res) => {

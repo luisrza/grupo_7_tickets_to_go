@@ -24,6 +24,13 @@ const usersController = {
             delete userLogin.pass
             req.session.userLogged = userLogin  
             userLogged = req.session.userLogged  
+            
+            if (req.body.recordarMiUsuario){
+                
+                res.cookie('emailCookie',req.body.email,{maxAge : 1000*60*3})
+               
+            }
+            
             res.render('users/detalleUsuario',{userLogged})
         }
         else {
@@ -39,6 +46,7 @@ const usersController = {
 
 
     detalleUsuario: (req,res) => {
+        
         res.render('users/detalleUsuario')
 
     },
@@ -190,6 +198,7 @@ const usersController = {
     },
 
     logout: (req,res)=>{
+        res.clearCookie('emailCookie');
         req.session.destroy();
         res.redirect('/')
     }

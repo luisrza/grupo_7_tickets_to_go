@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const session = require('express-session')
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
+const cookies = require('cookie-parser')
 
 // Configuracion METHOD POST, captura lo venga de un form, en objeto litera, y si queremos lo pasamos a json.
 
@@ -13,6 +14,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
+app.use(cookies());
 app.use(userLoggedMiddleware)
 // Configuracion de METHOD-OVERRIDE para usar PUT y DELETE.
 
