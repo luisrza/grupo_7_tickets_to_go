@@ -52,5 +52,14 @@
     "email": "rosariohuertaf@gmail.com",
     "avatar": "avatar-1659804286047.jpg",
     "password": "$2a$10$hUziE7gsdCGvcvDy7iXdPupl3JEH0gxoOrFNBkXk0xy2lzi0xZMwC"
+  },
+  {
+    "id": 1659831664982,
+    "nombre": "ro huerta",
+    "user": "ro",
+    "nacimiento": "2222-02-22",
+    "email": "rosariohuertaf@gmail.com",
+    "avatar": "avatar-1659831664822.jpg",
+    "password": "$2a$10$JvOPjx.tbpattq33esMZvO91kc9nOt.eU9lcN9z6XShdfUuNYQpV6"
   }
 ]
