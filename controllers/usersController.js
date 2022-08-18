@@ -31,7 +31,9 @@ const usersController = {
                
             }
             
-            res.render('users/detalleUsuario',{userLogged})
+            //res.render('users/detalleUsuario',{userLogged})
+            //console.log(userLogged, "logueando")
+            res.redirect('/')
         }
         else {
             oldData = {email: 'sin_email'}
@@ -46,8 +48,10 @@ const usersController = {
 
 
     detalleUsuario: (req,res) => {
+        userLogged = req.session.userLogged 
+        //console.log(userLogged,'renderizando')
+        res.render('./users/detalleUsuario',{userLogged})
         
-        res.render('users/detalleUsuario')
 
     },
     editarUsuario: (req,res) => {
@@ -100,12 +104,13 @@ const usersController = {
                     newUsers.push(users[i]) 
                 }
             }
-            users= newUsers
-            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-            userLogin = userEdited
-    
+        users= newUsers
+        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
             
-        res.render('users/detalleUsuario',{userLogin})
+        
+        req.session.destroy();
+        res.redirect('/')
+
         }
         else {
             error = {pass : 'pass_no_coinciden'}

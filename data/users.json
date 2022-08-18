@@ -1,12 +1,12 @@
 [
   {
-    "id": 1659795347663,
+    "id": 1660858818489,
     "nombre": "Diego Franco",
-    "user": "diegofranco2001",
-    "nacimiento": "1982-07-25",
-    "avatar": "avatar-1659795347536.jpg",
+    "user": "diegooooo",
+    "nacimiento": "0222-02-22",
+    "avatar": "avatar-1660859328048.jpg",
     "email": "diegofranco2001@gmail.com",
-    "password": "$2a$10$cYY78QzvX2V5mNm0YbH7V.L.dS2SFvjG329GQWP3TOkoWFuxH2zAm"
+    "password": "$2a$10$iPdmq3tIfKuX5IOpH4SGH.zWDWdNhgy0kA1HaGr6XQDx4rMSbTX2q"
   },
   {
     "id": 1659119535220,
@@ -43,23 +43,5 @@
     "email": "jennifer@gmail.com",
     "avatar": "avatar-1659212452502.jpg",
     "password": "$2a$10$r6O43Q9HYMCHarIuEkp4FOBbv0GZ75zfqy0maj76GD.nb6V.lJyZ6"
-  },
-  {
-    "id": 1659804286177,
-    "nombre": "Rosario",
-    "user": "rosario",
-    "nacimiento": "2222-02-25",
-    "email": "rosariohuertaf@gmail.com",
-    "avatar": "avatar-1659804286047.jpg",
-    "password": "$2a$10$hUziE7gsdCGvcvDy7iXdPupl3JEH0gxoOrFNBkXk0xy2lzi0xZMwC"
-  },
-  {
-    "id": 1659831664982,
-    "nombre": "ro huerta",
-    "user": "ro",
-    "nacimiento": "2222-02-22",
-    "email": "rosariohuertaf@gmail.com",
-    "avatar": "avatar-1659831664822.jpg",
-    "password": "$2a$10$JvOPjx.tbpattq33esMZvO91kc9nOt.eU9lcN9z6XShdfUuNYQpV6"
   }
 ]

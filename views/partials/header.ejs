@@ -36,9 +36,10 @@
     </ul>
     <ul class="ul-der">
       <% if (locals.isLogged){ %> 
-        <%=locals.userLogged.nombre%>
-        <img src="/img/<%=locals.userLogged.avatar%>" width="70">
+      <li><a href=""><%=locals.userLogged.nombre%></a></li>
+      <img class="avatar5" src="/img/<%=locals.userLogged.avatar%>" width="70">
       <li><a href="/users/logout">Logout</a></li>
+      <li><a href="/users/detalleUsuario/<%=locals.userLogged.id%>">Detalle Usuario</a></li>
       <li><a href="/users/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
 
       <% } else {%>

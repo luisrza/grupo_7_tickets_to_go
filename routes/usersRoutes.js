@@ -23,6 +23,7 @@ router.get('/login', guestMiddleware, usersController.login);
 router.post('/logueando', usersController.logueando);
 router.get('/usuarioNoExiste', usersController.usuarioNoExiste);
 router.get('/detalleUsuario/:id', authMiddleware, usersController.detalleUsuario);
+//router.get('/detalleUsuario', authMiddleware, usersController.detalleUsuario);
 router.get('/eliminarUsuario/:id', usersController.eliminarUsuario);
 router.get('/editarUsuario/:id', usersController.editarUsuario);
 router.post('/editandoUsuario/:id',upload.single('avatar'), usersController.editandoUsuario);

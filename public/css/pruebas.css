@@ -8,6 +8,10 @@
     --fondo: #222222;
     --barra: #ac881ccc;
 }
+.avatar5 {
+    border-radius: 50%;
+  }
+  
 
 :root { /*TODO: Customizar*/
     --header-font-size: 14px;
