@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/head.ejs') %>
+  <link rel="stylesheet" href="/css/style.css">
+  <title>404 error</title>
+</head>
+<body>
+  <section class="contenedor__404">
+  <h1 class="error">Esta pagina no funciona vuelve al incio</h1>
+  <video autoplay loop muted> 
+    <source src="/img/404video.mp4" autoplay="autoplay" type="video/mp4">
+    Tu navegador no soporta videos.
+  </video>
+  <div class="contenedor-boton">
+    <a href="/" class="boton">Volver al Inicio</a>
+  </div>
+</section>
+</body>
+<footer>
+  <%-include('./partials/footer.ejs')%>
+</footer>
+</html>
+
+

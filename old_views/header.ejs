@@ -1,0 +1,58 @@
+
+<header>
+
+  <div class="contenedor-logo">
+    <a href="/">
+      <img class="logo" src="/img/Logo_transparente.png" alt=""/>
+    </a>
+  </div>
+
+  <div class="burger-menu">
+    <i class="fa fa-bars burger"></i>
+  </div>
+
+  <nav class="nav-bar"> 
+    <ul class="ul-izq">
+      <li>
+        <a href="/">
+          <i class="fa-solid fa-house"></i><span>INICIO</span>
+        </a>
+      </li>
+      <li>
+        <a href="/products/eventos">
+          <i class="fa-solid fa-calendar-days"></i><span>EVENTOS</span>
+        </a>
+      </li>
+      <li>
+        <a href="/nosotros">
+          <i class="fa-solid fa-people-group"></i><span>NOSOTROS</span>
+        </a>
+      </li>
+      <li>
+        <a href="/contacto">
+          <i class="fa-solid fa-comment"></i><span>CONTACTO</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="ul-der">
+      <% if (locals.isLogged){ %> 
+      <li><a href=""><%=locals.userLogged.nombre%></a></li>
+      <img class="avatar5" src="/img/<%=locals.userLogged.avatar%>" width="70">
+      <li><a href="/users/logout">Logout</a></li>
+      <li><a href="/users/detalleUsuario/<%=locals.userLogged.id%>">Detalle Usuario</a></li>
+      <li><a href="/users/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
+
+      <% } else {%>
+       
+
+      <li><a href="/users/register">Registrarme</a></li>
+      <li><a href="/users/login"><i class="fa-solid fa-user"></i></a></li>
+      
+      <% } %>
+
+      
+    </ul>
+  </nav>
+</header>
+
+<div id="top"></div>

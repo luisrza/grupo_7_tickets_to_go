@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="/css/styleEve.css" />
+  <%- include('../partials/head.ejs') %>
+  <title>Eventos</title>
+</head>
+
+<body>
+
+  <%-include('../partials/header.ejs')%>
+
+  <main>
+
+    <div class="espacio-header"></div>
+
+    <section class="conciertos-container">
+      <%for (let i=0;i < eventos.length ;i++){ %>
+        <div class="conciertos">
+          <a href="/products/eventos/detalles/<%=eventos[i].place%>" class="evento-link">
+            <img class="image" src="/img/<%=eventos[i].image%>" alt="foto_concierto">
+            <h2 class="place"><%= eventos[i].place %></h2>
+            <h3 class="date"><%=eventos[i].date%></h3>
+            <p class="description"> <%=eventos[i].description%></p>
+            <p class="prize"><%=eventos[i].currency%><%=eventos[i].prize%></p>
+          </a>
+        </div>
+      <%}%>
+    </section>
+    <% if (locals.isLogged){ %> 
+  <div class="contenedor-boton">
+    <a href="/products/crearEvento" class="boton">Crear Evento Nuevo</a>
+  </div>
+   <%}%>
+
+  </main>
+
+
+  <%-include('../partials/footer.ejs')%>
+
+</body>
+</html>

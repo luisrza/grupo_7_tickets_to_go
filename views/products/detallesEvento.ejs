@@ -2,48 +2,77 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="/css/styleDatEve.css" />
+  <link rel="stylesheet" href="/css/style.css" />
   <%- include('../partials/head.ejs') %>
   <title>Detalles Eventos</title>
 </head>
 
 <body>
-
   <%-include('../partials/header.ejs')%>
-
-  <main>
-
-    <div class="espacio-header"></div>
-
-    <section class="contenedor">
-      <div class="tarjeta_eve">
-        <div class="img-container">
-          <img class="image" src="/img/<%=evento.image%>" alt="foto_concierto">
-        </div>
-        <h2 class="place"><%= evento.place %></h2>
-        <h3 class="date"><%=evento.date%></h3>
-        <h3 class="prize"><%=evento.currency%> <%=evento.prize%></h3>
-        <p class="description"> <%=evento.description%></p>
+    <main class="main-concierto">
+      <div class="titulo-d">
+        <h1 class="concierto-d"><%= evento.place %></h1>
       </div>
-    </section>
-    <% if (locals.isLogged){ %> 
-    <div class="div-abajo">
+    <section class="contenedor-concierto">
+      <div class="imagen_contenedor">
+          <img src="/img/<%=evento.image%>" class="imagen_concierto" alt="">
+      </div>
+      <div class="texto_concierto">
+          <h2><%=evento.date%></h2>
+            <br>
+          <p>   <%=evento.description%> </p>
+            <br>
+          <h2><%=evento.currency%> <%=evento.prize%></h2>
+            <br>
+        <div class="contenedor-ciudad">
+        <% if (evento.agotado == "No"){%> 
+          <a type="button" href="/users/carrito" class="boton">Comprar</a>
+        <%}else{%>
+          <a type="button" href="#" class="boton bot-agoado">AGOTADO</a>
+        <%}%>
+      
+        </div>
+      </div>
+  </section>
+<% if (locals.isLogged){ %> 
 
-      <form action="/products/editarEvento/<%=evento.id%>" method="GET">   
-        <div class="contenedor-boton">
-        <input type="submit" class="boton" value="Editar Evento">
-      </form>
+    <form action="/products/editarEvento/<%=evento.id%>" method="GET">   
+      <input type="submit" class="boton editar" value="Editar Evento">
+    </form>
 
-      <form action="/products/eliminarEvento/<%=evento.id%>?_method=DELETE" method="POST">   
-        <div class="contenedor-boton">
-        <input type="submit" class="boton" value="Eliminar Evento">
-      </form>
+    <form action="/products/eliminarEvento/<%=evento.id%>?_method=DELETE" method="POST">   
+      <input type="submit" class="boton editar" value="Eliminar Evento">
+    </form>
+<%}%>
+    </main>
 
+  
+
+  <footer>
+    <div class="inferior">
+    <ul class="redes">
+        <li>
+        <a href="https://www.facebook.com" target="_blank"><img class="iconos" src="/img/facebook.png" alt=""></a>
+        </li>
+        <li>
+        <a href="https://www.twitter.com" target="_blank"><img class="iconos" src="/img/twitter.png" alt=""></a>
+        </li>
+        <li>
+        <a href="https://www.instagram.com"><img class="iconos" src="/img/instagram.png" alt="Instagram"></a>
+        </li>
+        <li>
+        <a href="https://www.youtube.com"><img class="iconos" src="/img/youtube.png" alt="YouTube"></a>
+        </li>
+        <li>
+        <a href="https://www.spotify.com"><img class="iconos" src="/img/spotify.png" alt="spotify"></a>
+        </li>
+    </ul>
+    <div class="derechos">
+        <p>Copyright © 2022 TicketsToGo S.R.L</p>
+        <p>Diseño: Diego Franco, Lautaro González, Luis Garza, Nicolas Del Giovannino.</p>
     </div>
-    <%}%>
-  </main>
-
-  <%-include('../partials/footer.ejs')%>
+    </div>
+  </footer>
 
 </body>
 </html>

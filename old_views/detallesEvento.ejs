@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="/css/styleDatEve.css" />
+  <%- include('../partials/head.ejs') %>
+  <title>Detalles Eventos</title>
+</head>
+
+<body>
+
+  <%-include('../partials/header.ejs')%>
+
+  <main>
+
+    <div class="espacio-header"></div>
+
+    <section class="contenedor">
+      <div class="tarjeta_eve">
+        <div class="img-container">
+          <img class="image" src="/img/<%=evento.image%>" alt="foto_concierto">
+        </div>
+        <h2 class="place"><%= evento.place %></h2>
+        <h3 class="date"><%=evento.date%></h3>
+        <h3 class="prize"><%=evento.currency%> <%=evento.prize%></h3>
+        <p class="description"> <%=evento.description%></p>
+      </div>
+    </section>
+    <% if (locals.isLogged){ %> 
+    <div class="div-abajo">
+
+      <form action="/products/editarEvento/<%=evento.id%>" method="GET">   
+        <div class="contenedor-boton">
+        <input type="submit" class="boton" value="Editar Evento">
+      </form>
+
+      <form action="/products/eliminarEvento/<%=evento.id%>?_method=DELETE" method="POST">   
+        <div class="contenedor-boton">
+        <input type="submit" class="boton" value="Eliminar Evento">
+      </form>
+
+    </div>
+    <%}%>
+  </main>
+
+  <%-include('../partials/footer.ejs')%>
+
+</body>
+</html>
