@@ -1,7 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const usersFilePath = path.join(__dirname, '../data/users.json');
-var users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+let db = require("../database/models")
 const bcrypt = require('bcryptjs');
 
 const usersController = {
@@ -12,127 +11,86 @@ const usersController = {
     logueando: (req, res) => {
         
      email = req.body.email
-     noExiste = true
-    
-     for (i=0;i<users.length;i++){
-        if (users[i].email==email){
-         userLogin = users[i]
-        noExiste=false
-        passEncriptada =userLogin.password 
-        let check = bcrypt.compareSync(req.body.pass, passEncriptada);
-        if (check==true){
-            delete userLogin.pass
-            req.session.userLogged = userLogin  
-            userLogged = req.session.userLogged  
-            
-            if (req.body.recordarMiUsuario){
-                
-                res.cookie('emailCookie',req.body.email,{maxAge : 1000*60*3})
+     
+      db.Usuario.findOne({where: {email}}).then(function(resul)
+        
+       { if (!resul){res.redirect('usuarioNoExiste')} //aca verifica que el email exista en la base de datos
+       else {
+        
+            let check = bcrypt.compareSync(req.body.pass, resul.password);
+            if (check!=true){ //aca verifica si esta bien la contraseña
+                res.send("contraseña invalida... falta escribir el codigo bien") //aca entra si esta mal la contraseña
+                }
+            else{   //aca entra si esta ok la contraseña
+               userLogin = resul
                
-            }
-            
-            //res.render('users/detalleUsuario',{userLogged})
-            //console.log(userLogged, "logueando")
-            res.redirect('/')
+            req.session.userLogged = userLogin 
+            //res.send(req.session)
+            userLogged = req.session.userLogged  
+                     
+                     if (req.body.recordarMiUsuario){  //pregunta si aceptó cooquies
+                    res.cookie('emailCookie',req.body.email,{maxAge : 1000*60*3})    
+                    }
+                    res.redirect('/')
+                    //res.render('users/detalleUsuario',{userLogged})   
+                }       
         }
-        else {
-            oldData = {email: 'sin_email'}
-            if(req.body.email){oldData.email=req.body.email}
-           
-            res.render('./users/login',{oldData})}
-         
-     } 
-    } 
-     if (noExiste == true){res.redirect('usuarioNoExiste')}
+        }
+        )
     },
 
 
     detalleUsuario: (req,res) => {
         userLogged = req.session.userLogged 
-        //console.log(userLogged,'renderizando')
         res.render('./users/detalleUsuario',{userLogged})
         
-
     },
     editarUsuario: (req,res) => {
 
         id = req.params.id
         
-        for (i=0;i<users.length;i++){
-            if (users[i].id==id){
-                userToEdit = users[i]
-            }
-        }
+        db.Usuario.findByPk(id)
+        .then((resul)=>{
+        userToEdit = resul
         error = {pass: ''}
-    res.render('users/editarUsuario',{userToEdit,error})
-
+        res.render('users/editarUsuario',{userToEdit,error})
+        })
         
     },    
     editandoUsuario: (req,res) => {
-
-        id = req.params.id
-        console.log(id)
-        for (i=0;i<users.length;i++){
-            if (users[i].id==id){
-                userToEdit = users[i]
-            }
-        }
-        userEdited = {
-            id: userToEdit.id,
-            nombre: userToEdit.nombre,
-            user: userToEdit.user,
-            nacimiento: userToEdit.nacimiento,
-            pass: userToEdit.pass,
-            avatar: userToEdit.avatar,
-            email: userToEdit.email
-
-        }
         
-        if (req.body.nombre){userEdited.nombre=req.body.nombre}
+      if(req.body.pass===req.body.pass_confirm) {//si las contraseñas ingresadas coinciden
+
+        userEdited = {} //en los siguientes renglones verifica que campos desea editar, el resto queda igual
+        if (req.body.nombre){userEdited.nombre = req.body.nombre}
         if (req.body.user){userEdited.user=req.body.user}
         if (req.body.nacimiento){userEdited.nacimiento=req.body.nacimiento}
         if (req.body.email){userEdited.email=req.body.email}
         if (req.file) {userEdited.avatar = req.file.filename}
-
         if (req.body.pass && req.body.pass_confirm && req.body.pass===req.body.pass_confirm) {
-            userEdited.password = bcrypt.hashSync(req.body.pass, 10)
-            
-        newUsers = [];
-        newUsers.push(userEdited)
-            for (i=0;i<users.length;i++){
-                if (users[i].id!=id){
-                    newUsers.push(users[i]) 
-                }
-            }
-        users= newUsers
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-            
-        
-        req.session.destroy();
-        res.redirect('/')
-
-        }
-        else {
-            error = {pass : 'pass_no_coinciden'}
-            res.render('users/editarUsuario',{userToEdit})
-        }
-
+        userEdited.password = bcrypt.hashSync(req.body.pass, 10)}
+        if (req.body.admin){userEdited.admin=req.body.admin}
        
-
+        db.Usuario.update(userEdited,{where:{id:req.params.id}})
+        .then(()=>{
+        req.session.destroy();
+        return res.redirect('/')
         
+        })
+           
+    } 
+    else{ //si las contraseñas no coinciden entre si
+        error = {pass : 'pass_no_coinciden'}
+        res.render('users/editarUsuario',{userToEdit})
+    }
+   
     },  
     eliminarUsuario: (req,res) => {
 
         id = req.params.id
-        newUsers=[]
-        for (i=0;i<users.length;i++){
-            if (users[i].id!=id){
-                newUsers.push(users[i])
-            }
-        }
-        users = newUsers
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-        res.render('users/eliminarUsuario')
+        db.Usuario.destroy({where: {id}})
+        .then (()=> {return res.render('users/eliminarUsuario')})
+        
 
     },
     usuarioNoExiste: (req,res) => {
@@ -156,46 +114,36 @@ const usersController = {
     },
     
     create: (req, res) => {
-    let passEncriptada = bcrypt.hashSync(req.body.pass, 10);  
-     
+    //VERIFICAMOS QUE AMBAS CONTRASEÑAS COINCIDAN
+    if (req.body.pass===req.body.pass_confirm){
 
-        let newUsuario = {
-            id: Date.now(),
+        //acá encriptamos la contraseña    
+        let passEncriptada = bcrypt.hashSync(req.body.pass, 10); 
+
+        //acá cargamos foto si el usuario la carga, sino queda una foto por default
+        if (req.file){avatar_user = req.file.filename} 
+        else {avatar_user = 'default.png'}    
+
+        //ahora verificamos que el mail no exista ya en la base de datos (FALTA HACER)
+        
+        db.Usuario.create({
             nombre: req.body.nombre,
-            user: req.body.user,  
-            nacimiento: req.body.nacimiento,
+            user: req.body.user,
             email: req.body.email,
-            
-        }
+            nacimiento: req.body.nacimiento,
+            admin: req.body.admin,
+            password: passEncriptada,
+            avatar: avatar_user
 
-        for (i=0;i<users.length;i++){
-            if(users[i].email==newUsuario.email){
-                error = {email: 'repetido'}
-                res.render('./users/register',{error})
-            }
-        }
-
-        if (req.file){let avatar = req.file;
-            newUsuario.avatar = avatar.filename;}
-        else {newUsuario.avatar = 'default.png'}    
-        
-        
-        if (req.body.pass===req.body.pass_confirm){
-        newUsuario.password=passEncriptada
-        users.push(newUsuario)
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-           
-        res.redirect('./registrado'); 
-        }
-        else {
-            error = {email: 'contrasenias'}
-            
-            res.render('./users/register',{error,newUsuario});
-        }
-
+        }).then(()=> {return res.redirect('./registrado')})
        
+     
+    } //ESTA LLAVE CIERRA VERIFICACION DE AMBAS CONTRASENIAS
+    else {
+        res.send("Falta hacer el codigo si ambas contraseñas no coinciden... sorry!")
 
-    },
+    }
+},
 
     registrado:  (req, res) => {
        

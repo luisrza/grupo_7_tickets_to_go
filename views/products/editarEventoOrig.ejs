@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="/css/styleEve.css" />
+  <%- include('../partials/head.ejs') %>
+  <title>Eventos</title>
+</head>
+
+
+<body>
+
+<%-include('../partials/header.ejs')%>
+
+<main>
+
+    <div class="espacio-header"></div>
+
+    <h1>Editando Evento: <%=eventoToEdit.place ?? ''%></h1>
+    <div class="div-container">
+        <div class="div-izq">
+
+            <form
+            action="/products/editarEvento/<%=eventoToEdit.id ?? ''%>?_method=PUT"
+            method="POST"
+            enctype="multipart/form-data"
+            >
+
+            <div class="label-container">    
+                <label>Lugar del Evento:</label>
+                    <input
+                    class="inputs" 
+                    type="text" 
+                    name="place" 
+                    value="<%=eventoToEdit.place ?? ''%>" 
+                    />
+            </div>
+
+            <div class="label-container">
+                <label for="fechaEvento">Fecha del Evento:</label>
+                    <input
+                    class="inputs"
+                    type="date"
+                    name="date"
+                    id="date"
+                    value="<%=eventoToEdit.date ?? ''%>"
+                    />
+            </div>
+
+            <div class="label-container">
+                <label for="bannerEvento">Banner del Evento:</label>
+                    <input
+                    class="inputs"
+                    type="file"
+                    name="image"
+                    id="image"
+                    accept="image/png, image/jpeg"
+                    />
+            </div>
+
+            <div class="label-container">
+                <label>Precio:</label>
+                    <input
+                    class="inputs" 
+                    type="text" 
+                    name="prize" 
+                    value="<%=eventoToEdit.prize ?? ''%>" 
+                    />
+            </div>
+
+            <div class="label-container">
+                <label>Moneda:</label>
+                    <input
+                    class="inputs"
+                    type="text"
+                    name="currency"
+                    value="<%=eventoToEdit.currency ?? ''%>"
+                    />
+            </div>
+
+            <div class="label-container">
+                <label>Description:</label>
+                    <input
+                    class="inputs"
+                    type="text"
+                    name="description"
+                    value="<%=eventoToEdit.description ?? ''%>"
+                    />
+            </div>
+
+            <div class="label-container">
+                <label>Agotado:</label>
+                <input
+                    class="inputs"
+                    type="text"
+                    name="agotado"
+                    value="<%=eventoToEdit.agotado ?? ''%>"
+                    />
+            </div>
+
+            <div class="contenedor-boton">
+                <input
+                    type="submit" class="boton" value="Editar" />
+            </div>
+
+            </form>
+
+        </div>
+
+        <div class="div-der">
+            <img src="#" alt="imagen del evento" class="image">
+        </div>
+
+    </div>
+
+</main>
+
+<%-include('../partials/footer.ejs')%>
+
+</body>
+</html>

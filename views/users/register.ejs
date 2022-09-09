@@ -47,6 +47,13 @@
         <input type="email" name="email" placeholder='<%=newUsuario.email%>' required />
         <%= error.email=='repetido'? 'Este email ya se encuentra en nuestra base de datos':''%>
         <br />
+        <label>Administrador:</label>
+        <select name="admin" required >
+          <option value=0>No</option>
+          <option value=1>Si</option>
+        </select>
+        
+        <br />
         <br />
         <label for="avatar">Foto de perfil:</label>
         <input

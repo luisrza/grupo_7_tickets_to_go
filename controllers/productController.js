@@ -1,93 +1,67 @@
 const fs = require('fs');
 const path = require('path');
-const productsFilePath = path.join(__dirname, '../data/eventos.json');
-var eventos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+let db = require("../database/models")
 
 const productController = {
     eventos: (req, res) => {
-        
-        res.render('./products/eventos',{eventos})
+        db.Evento.findAll().
+        then(function(eventos){
+           //return res.json(eventos)
+           return res.render('./products/eventos',{eventos})
+        })
     },
     detalleEventos: (req, res) => {
-        let place = req.params.id;
-        for (i=0;i<eventos.length;i++){
-            if(eventos[i].place == place)
-            {evento=eventos[i]}
-        }
+        let id = req.params.id;
+        db.Evento.findByPk(id).then(function(evento){
+            //return res.json(evento)
+            return res.render('./products/detallesEvento',{evento})
+        })
         
-        res.render('./products/detallesEvento',{evento})
     },
    
     crearEvento: (req, res) => {
         res.render('./products/crearEvento')
     },
     creandoEvento: (req, res) => {
-        let newEvento = req.body;
+        db.Evento.create({
+            city: req.body.city,
+            country: req.body.country,
+            date: req.body.date,
+            prize: req.body.prize,
+            currency: req.body.currency,
+            description: req.body.description,
+            agotado: 0,
+            image: req.file.filename
+        }).then(function(){
+            return res.redirect('eventos'); 
+        })
         
-
-        newEvento.id = Date.now();
-        newEvento.agotado = "No";
-
-        let imagen = req.file;
-		newEvento.image = imagen.filename;
-		
-   
-        eventos.push(newEvento);
-
-        fs.writeFileSync(productsFilePath, JSON.stringify(eventos, null, 2));
-
-        res.redirect('eventos');
-
-
       
     },
     editarEvento: (req, res) => {
         let id= req.params.id;
-        let eventoToEdit = eventos.find(eventoToEdit=> eventoToEdit.id == id);
-        console.log("Evento a EDITAR",eventoToEdit);
-        /*
-        for(i=0;i<eventos.length;i++){
-            if(eventos[i].id==id){
-                eventoToEdit=eventos[i];
-            }
-        }
-        */
 
-        res.render('./products/editarEvento', {eventoToEdit: eventoToEdit});
+        db.Evento.findByPk(id).then(function(eventoToEdit){
+            return res.render('./products/editarEvento', {eventoToEdit});
+
+        })
            
     },
     editandoEvento: (req, res) => {
         let id= req.params.id;
-        let newProduct = req.body;
-        let eventoToEdit = eventos.find(eventoToEdit=> eventoToEdit.id == id);
-        console.log("id", id);
-        console.log("Evento a Editar", eventoToEdit);
         
-        let imagen = req.file;
-        console.log("valor de imagen",imagen);
-        //newProduct.image= eventoToEdit.image;
-        
-        if (imagen==undefined){
-            newProduct.image= eventoToEdit.image;
-        }
-        else{
-            let imagen = req.file;
-            newProduct.image = imagen.filename;
-        };
-        //let imagen = req.file;
-        //console.log(imagen);
-
-        
-        newProduct.id= id;
-        console.log("Nuevos valores",newProduct);
-        for (let i=0; i<eventos.length; i++){
-            const element= eventos[i];
-            if (element.id==id){
-               eventos[i] = newProduct;
-             };
-         };
-         fs.writeFileSync(productsFilePath, JSON.stringify(eventos, null, 2));
-         
+        db.Evento.update({
+            city: req.body.city,
+            country: req.body.country,
+            date: req.body.date,
+            prize: req.body.prize,
+            currency: req.body.currency,
+            description: req.body.description,
+            agotado: req.body.agotado,
+            image: req.file.filename
+        },
+        {where:{id}})
         
          res.redirect('/products/eventos');
            
@@ -96,16 +70,11 @@ const productController = {
     eliminarEvento: (req, res) => {
         
         id = req.params.id
-        newEventos = [];
-        for (i=0;i<eventos.length;i++) {
-            if (eventos[i].id!=id){
-                newEventos.push(eventos[i])
-            }
-        }
-        eventos = newEventos;
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(eventos, null, 2));
-
+        db.Evento.destroy({
+            where: {id}
+        })
+        
         res.redirect('/products/eventos');
            
     }

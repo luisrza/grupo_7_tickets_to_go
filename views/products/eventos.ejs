@@ -10,7 +10,7 @@
 <main>
   <%for (let i = 0; i < eventos.length ;i++){ %>
   <section class="contenedor-eventos">
-    <% if (eventos[i].agotado == "Yes"){%> 
+    <% if (eventos[i].agotado == 1){%> 
         <div><img class="image gris" src="/img/<%=eventos[i].image%>" alt="foto_concierto"></div>
     <%}else{%>
         <div ><img class="image" src="/img/<%=eventos[i].image%>" alt="foto_concierto"></div>
@@ -21,7 +21,7 @@
           <h2 class="date"><%=eventos[i].date%></h2>
           <p class="description"><%=eventos[i].description%></p>
           <div class="contenedor-botones evento-boton">
-              <a href="/products/eventos/detalles/<%=eventos[i].place%>" class="boton boton-eventos">Leer más</a>
+              <a href="/products/eventos/detalles/<%=eventos[i].id%>" class="boton boton-eventos">Leer más</a>
           </div>   
           <% if (locals.isLogged){ %> 
           <div class="contenedor-editar">
@@ -33,15 +33,24 @@
 
       </div>
 
-      <% if (eventos[i].agotado == "Yes"){%> 
-        <h3 class="place"><%= eventos[i].place %><span class="agotado">AGOTADO</span></h3>
+      <% if (eventos[i].agotado == 1){%> 
+        <h3 class="place"><%= eventos[i].city + ', '+ eventos[i].country%><span class="agotado">AGOTADO</span></h3>
 
-      <%} else if (eventos[i].agotado == "No"){%>
-        <h3 class="place h3-imagen"><%= eventos[i].place %></h3>
+      <%} else if (eventos[i].agotado == 0){%>
+        <h3 class="place h3-imagen"><%= eventos[i].city + ', '+ eventos[i].country%></h3>
+        
         <%}%>
 
   </section>
   <%}%>
+
+  <% if (locals.isLogged){ %> 
+
+      <a href="/products/crearevento">Crear Evento Nuevo</a>
+    
+
+    
+<%}%>
 
   </main>
   <%-include('../partials/footer.ejs')%>
