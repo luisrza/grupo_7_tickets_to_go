@@ -11,7 +11,7 @@
   <%-include('../partials/header.ejs')%>
     <main class="main-concierto">
       <div class="titulo-d">
-        <h1 class="concierto-d"><%= evento.place %></h1>
+        <h1 class="concierto-d"><%= evento.city +', '+ evento.country%></h1>
       </div>
     <section class="contenedor-concierto">
       <div class="imagen_contenedor">
@@ -25,7 +25,7 @@
           <h2><%=evento.currency%> <%=evento.prize%></h2>
             <br>
         <div class="contenedor-ciudad">
-        <% if (evento.agotado == "No"){%> 
+        <% if (evento.agotado == 0){%> 
           <a type="button" href="/users/carrito" class="boton">Comprar</a>
         <%}else{%>
           <a type="button" href="#" class="boton bot-agoado">AGOTADO</a>

@@ -2,120 +2,121 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="/css/styleEve.css" />
-  <%- include('../partials/head.ejs') %>
-  <title>Eventos</title>
+    <link rel="stylesheet" href="/css/style.css" />
+        <%- include('../partials/head.ejs') %>
+    <title>Eventos</title>
 </head>
 
+<body class="registro">
 
-<body>
-
-<%-include('../partials/header.ejs')%>
-
-<main>
+    <%-include('../partials/header.ejs')%>
 
     <div class="espacio-header"></div>
 
-    <h1>Editando Evento: <%=eventoToEdit.place ?? ''%></h1>
-    <div class="div-container">
-        <div class="div-izq">
+    <main>
+            <br>
+            <br>
+            <h1 class="titulo">Editar Evento</h2>
 
-            <form
-            action="/products/editarEvento/<%=eventoToEdit.id ?? ''%>?_method=PUT"
-            method="POST"
-            enctype="multipart/form-data"
-            >
-
-            <div class="label-container">    
-                <label>Lugar del Evento:</label>
+                <form
+                action="/products/editarEvento/<%=eventoToEdit.id ?? ''%>?_method=PUT"
+                method="POST"
+                enctype="multipart/form-data"
+                >
+    
+                <div class="label-container">    
+                    <label>Ciudad:</label>
+                        <input
+                        class="inputs" 
+                        type="text" 
+                        name="city" 
+                        value="<%=eventoToEdit.city ?? ''%>" 
+                        />
+                </div>
+                <div class="label-container">    
+                    <label>Pais:</label>
+                        <input
+                        class="inputs" 
+                        type="text" 
+                        name="country" 
+                        value="<%=eventoToEdit.country ?? ''%>" 
+                        />
+                </div>
+    
+                <div class="label-container">
+                    <label for="fechaEvento">Fecha del Evento:</label>
+                        <input
+                        class="inputs"
+                        type="date"
+                        name="date"
+                        id="date"
+                        value="<%=eventoToEdit.date ?? ''%>"
+                        />
+                </div>
+    
+                <div class="label-container">
+                    <label for="bannerEvento">Banner del Evento:</label>
+                        <input
+                        class="inputs"
+                        type="file"
+                        name="image"
+                        id="image"
+                        accept="image/png, image/jpeg"
+                        required
+                        />
+                </div>
+    
+                <div class="label-container">
+                    <label>Precio:</label>
+                        <input
+                        class="inputs" 
+                        type="text" 
+                        name="prize" 
+                        value="<%=eventoToEdit.prize ?? ''%>" 
+                        />
+                </div>
+    
+                <div class="label-container">
+                    <label>Moneda:</label>
+                        <input
+                        class="inputs"
+                        type="text"
+                        name="currency"
+                        value="<%=eventoToEdit.currency ?? ''%>"
+                        />
+                </div>
+    
+                <div class="label-container">
+                    <label>Descripción:</label>
+                        <input
+                        class="inputs"
+                        type="text"
+                        name="description"
+                        value="<%=eventoToEdit.description ?? ''%>"
+                        />
+                </div>
+    
+                <div class="label-container">
+                    <label>Agotado:</label>
+                                                          
+                        <select name="agotado">
+                        <option value=0>No</option>
+                        <option value=1>Si</option>
+                        
+                        </select>
+                </div>
+    
+                <div class="contenedor-boton">
                     <input
-                    class="inputs" 
-                    type="text" 
-                    name="place" 
-                    value="<%=eventoToEdit.place ?? ''%>" 
-                    />
-            </div>
+                        type="submit" class="boton" value="Editar" />
+                </div>
+    
+                </form>
 
-            <div class="label-container">
-                <label for="fechaEvento">Fecha del Evento:</label>
-                    <input
-                    class="inputs"
-                    type="date"
-                    name="date"
-                    id="date"
-                    value="<%=eventoToEdit.date ?? ''%>"
-                    />
-            </div>
+    </main>
 
-            <div class="label-container">
-                <label for="bannerEvento">Banner del Evento:</label>
-                    <input
-                    class="inputs"
-                    type="file"
-                    name="image"
-                    id="image"
-                    accept="image/png, image/jpeg"
-                    />
-            </div>
 
-            <div class="label-container">
-                <label>Precio:</label>
-                    <input
-                    class="inputs" 
-                    type="text" 
-                    name="prize" 
-                    value="<%=eventoToEdit.prize ?? ''%>" 
-                    />
-            </div>
-
-            <div class="label-container">
-                <label>Moneda:</label>
-                    <input
-                    class="inputs"
-                    type="text"
-                    name="currency"
-                    value="<%=eventoToEdit.currency ?? ''%>"
-                    />
-            </div>
-
-            <div class="label-container">
-                <label>Description:</label>
-                    <input
-                    class="inputs"
-                    type="text"
-                    name="description"
-                    value="<%=eventoToEdit.description ?? ''%>"
-                    />
-            </div>
-
-            <div class="label-container">
-                <label>Agotado:</label>
-                <input
-                    class="inputs"
-                    type="text"
-                    name="agotado"
-                    value="<%=eventoToEdit.agotado ?? ''%>"
-                    />
-            </div>
-
-            <div class="contenedor-boton">
-                <input
-                    type="submit" class="boton" value="Editar" />
-            </div>
-
-            </form>
-
-        </div>
-
-        <div class="div-der">
-            <img src="#" alt="imagen del evento" class="image">
-        </div>
-
-    </div>
-
-</main>
-
-<%-include('../partials/footer.ejs')%>
+    <%-include('../partials/footer.ejs')%>
 
 </body>
 </html>
