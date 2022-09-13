@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <link rel="stylesheet" href="/css/styleUser.css">
+    <%- include('../partials/head.ejs') %>
+    <title>Tickets To Go</title>
+  </head>
+
+  
+  <body>
+    <header>
+      <%- include('../partials/header.ejs') %>
+    </header>
+    <body>
+      <main>
+        <h1>Carrito</h1>
+        <section class="contenedorCon">
+        <div class="imgConcierto">
+            <img src="img/concierto 2.jpg" alt="concierto_4">
+        </div>
+        <div class="contenedor">
+            <h3><span>Fecha:</span> Marzo 30 del 2022</h3>
+            <div class="contenedorDeCompra">
+                <label for="quantity">Cantidad de boletos (Max 5):</label>
+                <input  type="number" id="quantity" name="quantity" min="1" max="5">
+            </div>
+            <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ratione quas nisi vero vel similique molestiae corporis corrupti, tempore eos facere facilis, eum maiores dolores ad enim quo. Blanditiis, dolorum.
+            </p>
+            <div class="contenedor-boton">
+                <a href="#" class="boton">Comprar</a>
+        </section>
+        </div>
+      </main>
+        <footer>
+            <section class="redes">
+                <li>
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
+                </li>
+                <li>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
+                </li>
+                <li>
+                <a href="https://www.instagram.com"><i class="fa-brands fa-instagram-square"></i></a>
+                </li>
+                <li>
+                <a href="https://www.youtube.com"><i class="fa-brands fa-youtube-square"></i></a>
+                </li>
+                <li>
+                <a href="https://www.spotify.com"><i class="fa-brands fa-spotify"></i></a>
+                </li>
+                
+            </section>
+            <div class="derechos">
+            <p>Todos los derechos Reservados</p>
+            <p>Diseño: Diego Franco, Lautaro González, Luis Garza, Nico Del Gio, Sebastián Perez.</p>
+            </div>
+        </footer>
+      </body>
+    </html>    

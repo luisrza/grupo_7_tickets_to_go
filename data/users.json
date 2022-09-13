@@ -43,5 +43,23 @@
     "email": "jennifer@gmail.com",
     "avatar": "avatar-1659212452502.jpg",
     "password": "$2a$10$r6O43Q9HYMCHarIuEkp4FOBbv0GZ75zfqy0maj76GD.nb6V.lJyZ6"
+  },
+  {
+    "id": 1663101393134,
+    "nombre": "luis garza",
+    "user": "werox51@gmail.com",
+    "nacimiento": "2022-09-07",
+    "email": "werox51@gmail.com",
+    "avatar": "avatar-1663101393054.png",
+    "password": "$2a$10$0SPixGfNbWRYY6k.UIQzOOUSQowPZJz/1QPOlfCjWeSDBGxo00meG"
+  },
+  {
+    "id": 1663102519286,
+    "nombre": "luis garza",
+    "user": "wer2ox51@gmail.com",
+    "nacimiento": "2022-10-04",
+    "email": "werox51@gmail.com",
+    "avatar": "avatar-1663102519213.png",
+    "password": "$2a$10$8fYxJ2JPmatkyMSCWR5vouXuPdt.Nl1rxBzXEEbQqP7cSbzZbI4L."
   }
 ]

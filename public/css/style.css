@@ -101,8 +101,13 @@ body{
     .navicon li{
         margin-left: 15px;
     }
-    
 }
+/*icono de carrito*/
+.navicon li a i{
+    font-size: 25px;
+    text-shadow: var(--blanco2);
+}
+
 
 span{
     color: var(--solido);
@@ -188,7 +193,7 @@ span{
     }
     .nav-bar a:hover{
         transition: ease-in-out .75s;
-        filter: drop-shadow(.5px 5px 1px var(--blanco2));
+        filter: drop-shadow(.5px 1px 2px var(--blanco2));
     }
     .boton:hover{
         transition: ease-in-out .5s;
@@ -256,6 +261,7 @@ p{
     align-items: center;
     font-family: 'Roboto Mono', monospace;
     font: 100;
+    background-color: var(--gris);
 }
 
 .boton a{
@@ -971,8 +977,9 @@ h4{
 }
 
 .btn-regis{
-    width: 500px;
+    width: auto;
     margin: 0 auto;
+    cursor: pointer;
 }
 .container-404{
     margin: 50px;
@@ -1024,5 +1031,45 @@ button{
 
         color: var(--blanco1);
         
+    }
+}
+
+/* eventos de usuario */
+.h1-reg{
+    color: var(--barra);
+    font-size: var( --h1-font-size);
+    font-family: 'Uchen', serif;
+    text-shadow: 1px 1px 2px black;
+}
+.h2-reg{
+    color: var(--blanco2);
+    text-shadow: 1px 1px 1px var(--fondo);
+    font-family: 'Roboto Mono', monospace;
+}
+
+.h2-reg a{
+    text-decoration: none;
+    color: var(--barra);
+}
+
+.body-f i{
+    color: var(--barra);
+    font-size: 75px;
+    text-shadow: 1px 1px 2px black;
+}
+
+/*seccion del carrito*/
+.texto{
+    color: var(--blanco2);
+}
+.imgConcierto img{
+    display: block;
+    width: 300px;
+    border: solid 2px var(--barra);
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .imgConcierto img{
+    width: 600px;
     }
 }

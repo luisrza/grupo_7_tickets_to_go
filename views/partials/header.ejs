@@ -15,10 +15,11 @@
       </li>
       <li>
         <div class="avatar-nav">
-          <img src="/img/<%=locals.userLogged.avatar%>" width="70">
+          <a href="/users/editarUsuario/<%=userLogged.id%>">
+            <img src="/img/<%=locals.userLogged.avatar%>" width="70"></a>
         </div>
       </li>
-        <li><a href="/users/carrito"></a><img class="carrito" src="./img/shopping-cart.png" alt=""></a></li>
+        <li><a href="/users/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
         <li><a href="/users/logout">Logout</a></li>
         <li><a href="#">Registrate</a></li>
       </div>

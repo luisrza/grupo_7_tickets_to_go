@@ -7,7 +7,7 @@
     <title>Register</title>
   </head>
 
-  <body class="body-f">
+  <body>
 
   <header>
       <%- include('../partials/header.ejs') %>
@@ -18,9 +18,8 @@
       <!--<div class="img_reg">
         <img src="../img/registrar.png" alt="registrar"/>
       </div>-->
-      <br>
-      <br>
-      <h2 class="h1-reg">EDITAR USUARIO</h2>
+
+      <h2>EDITAR USUARIO</h2>
       <br>
       <form action="/users/editandoUsuario/<%=userToEdit.id%>" method="POST" enctype="multipart/form-data" class="form_reg">
         <label>Nombre y Apellido:</label>
@@ -69,11 +68,10 @@
         <br />
         
         <br />
-        <div class="evento-boton">
-          <input type="reset" value="Borrar" class="boton btn-regis"/>
-          <br>
-          <input type="submit" value="Editar" class="boton btn-regis""/>
-          <br>
+        <div class="botones">
+          <input type="reset" value="Borrar" class="boton"/>
+          <input type="submit" value="Editar" class="boton"/>
+        <p>Si editás tu usuario deberás loguearte de nuevo...</p>
         </div>
       </form>
     </main>

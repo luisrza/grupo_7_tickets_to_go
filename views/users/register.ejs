@@ -2,29 +2,27 @@
 <html lang="en">
 
   <head>
-    <link rel="stylesheet" href="/css/styleReg.css"> 
+    <link rel="stylesheet" href="/css/style.css"> 
     <%- include('../partials/head.ejs') %>
     <title>Register</title>
   </head>
 
-  <body>
+  <body class="registro">
 
   <header>
       <%- include('../partials/header.ejs') %>
   </header>
 
     <main>
-
       <!--<div class="img_reg">
         <img src="../img/registrar.png" alt="registrar"/>
       </div>-->
-
-      <h2>Registrate:</h2>
-      
       <br>
+      <br>
+      <h5 class="titulo" >Registrate:</h5>
       <form action="/users/register" method="POST" enctype="multipart/form-data" class="form_reg">
         <label>Nombre y Apellido:</label>
-        <input type="text" 
+        <input type="text" s
         name="nombre" 
         placeholder='<%=newUsuario.nombre%>'
         required />
@@ -54,7 +52,6 @@
           name="avatar"
           id="avatar"
           accept="image/png, image/jpeg"
-          
         />
         <br />
         <br />
@@ -73,7 +70,6 @@
           required><%=error.email=='contrasenias'?'Las contraseñas ingresadas no coinciden':''%>
       </input>
         <br />
-        <br />
         <input
           type="checkbox"
           name="TerminosYCondiciones"
@@ -84,16 +80,14 @@
         <label for="si">Aceptar terminos y condiciones</label>
         <br />
         <br />
-        <div class="botones">
-          <input type="reset" value="Borrar" class="boton"/>
-          <input type="submit" value="Enviar" class="boton"/>
-        </div>
+          <div class="botones-registro">
+            <input type="reset" value="Borrar" class="botones btn-regis"/>
+            <input type="submit" value="Enviar" class="botones btn-regis"/>
+          </div>
       </form>
+
     </main>
-
-  <footer>
     <%-include('../partials/footer.ejs')%>
-  </footer>
-
   </body>
+  
 </html>

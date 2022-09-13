@@ -7,7 +7,7 @@
     <title>Register</title>
   </head>
 
-  <body class="body-f">
+  <body>
 
   <header>
       <%- include('../partials/header.ejs') %>
@@ -18,36 +18,43 @@
       <!--<div class="img_reg">
         <img src="../img/registrar.png" alt="registrar"/>
       </div>-->
+
+      <h2>Registrate:</h2>
+      
       <br>
-      <br>
-      <h2 class="h1-reg">EDITAR USUARIO</h2>
-      <br>
-      <form action="/users/editandoUsuario/<%=userToEdit.id%>" method="POST" enctype="multipart/form-data" class="form_reg">
+      <form action="/users/register" method="POST" enctype="multipart/form-data" class="form_reg">
         <label>Nombre y Apellido:</label>
-        <input type="text" name="nombre" placeholder="<%=userToEdit.nombre%>" />
+        <input type="text" 
+        name="nombre" 
+        placeholder='<%=newUsuario.nombre%>'
+        required />
         <br />
         <br />
         <label>Nombre de usuario:</label>
         <input
           type="text"
           name="user"
-          placeholder="<%=userToEdit.user%>"
-          
+          placeholder= '<%=newUsuario.user%>'
+          required
         />
         <br />
         <br />
         <label for="nacimiento">Fecha de nacimiento:</label>
-        <input type="date" name="nacimiento" id="fechaNacimiento" placeholder="<%=userToEdit.nacimiento%>"/>
+        <input type="date" name="nacimiento" id="fechaNacimiento" required />
         <br />
         <br />
-        
+        <label>Email:</label>
+        <input type="email" name="email" placeholder='<%=newUsuario.email%>' required />
+        <%= error.email=='repetido'? 'Este email ya se encuentra en nuestra base de datos':''%>
+        <br />
         <br />
         <label for="avatar">Foto de perfil:</label>
         <input
           type="file"
           name="avatar"
           id="avatar"
-                    accept="image/png, image/jpeg"
+          accept="image/png, image/jpeg"
+          
         />
         <br />
         <br />
@@ -63,17 +70,23 @@
           type="password"
           name="pass_confirm"
           placeholder="Confirmá tu contraseña"
+          required><%=error.email=='contrasenias'?'Las contraseñas ingresadas no coinciden':''%>
+      </input>
+        <br />
+        <br />
+        <input
+          type="checkbox"
+          name="TerminosYCondiciones"
+          value="si"
+          id="si"
           required
-        ><%=error.pass=='pass_no_coinciden'?'Las contraseñas ingresadas no coindicen':''%></inptu>
+        />
+        <label for="si">Aceptar terminos y condiciones</label>
         <br />
         <br />
-        
-        <br />
-        <div class="evento-boton">
-          <input type="reset" value="Borrar" class="boton btn-regis"/>
-          <br>
-          <input type="submit" value="Editar" class="boton btn-regis""/>
-          <br>
+        <div class="botones">
+          <input type="reset" value="Borrar" class="boton"/>
+          <input type="submit" value="Enviar" class="boton"/>
         </div>
       </form>
     </main>
