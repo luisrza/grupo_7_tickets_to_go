@@ -7,7 +7,7 @@ const productController = {
     eventos: (req, res) => {
         db.Evento.findAll().
         then(function(eventos){
-           //return res.json(eventos)
+           
            return res.render('./products/eventos',{eventos})
         })
     },
