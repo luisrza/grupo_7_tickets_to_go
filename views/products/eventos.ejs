@@ -23,13 +23,13 @@
           <div class="contenedor-botones evento-boton">
               <a href="/products/eventos/detalles/<%=eventos[i].id%>" class="boton boton-eventos">Leer más</a>
           </div>   
-          <% if (locals.isLogged){ %> 
-          <div class="contenedor-editar">
+          <!--  <% if (locals.isLogged){ %> 
+           <div class="contenedor-editar">
             <button type="button" class="boton-editar"><img class="mas" src="../img/editar.png" alt="editar"></button>
             <button type="button" class="boton-editar"><img class="mas" src="../img/mas.png" alt="agregar"></button>
             <button type="button" class="boton-editar"><img class="menos" src="../img/menos.png" alt="eliminar"></button>
-          </div>
-          <%}%>
+          </div> 
+          <%}%> -->
 
       </div>
 
@@ -44,7 +44,7 @@
   </section>
   <%}%>
 
-  <% if (locals.isLogged){ %> 
+  <% if (locals.isLogged && userLogged.admin == 1){ %> 
 
       <a class="boton btn-regis" href="/products/crearevento">Crear Evento Nuevo</a>
     

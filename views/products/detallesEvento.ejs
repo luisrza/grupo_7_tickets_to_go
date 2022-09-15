@@ -34,7 +34,7 @@
         </div>
       </div>
   </section>
-<% if (locals.isLogged){ %> 
+<% if (locals.isLogged && userLogged.admin == 1){ %> 
 
     <form action="/products/editarEvento/<%=evento.id%>" method="GET">   
       <input type="submit" class="boton editar" value="Editar Evento">

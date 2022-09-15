@@ -5,17 +5,26 @@ let db = require("../database/models")
 
 const productController = {
     eventos: (req, res) => {
+        userLogged = req.session.userLogged
         db.Evento.findAll().
         then(function(eventos){
            
-           return res.render('./products/eventos',{eventos})
+           return res.render('./products/eventos',{
+            eventos,
+            userLogged
+        })
         })
     },
     detalleEventos: (req, res) => {
+        userLogged = req.session.userLogged
+        
         let id = req.params.id;
         db.Evento.findByPk(id).then(function(evento){
             //return res.json(evento)
-            return res.render('./products/detallesEvento',{evento})
+            return res.render('./products/detallesEvento',{
+                evento, 
+                userLogged
+            })
         })
         
     },
