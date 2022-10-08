@@ -2,11 +2,13 @@ const path = require('path');
 const fs = require('fs');
 let db = require("../database/models")
 const bcrypt = require('bcryptjs');
+const { validationResult } = require('express-validator')
+
 
 const usersController = {
     login: (req, res) => {
-        oldData = {email: 'sin_email'}
-        res.render('./users/login',{oldData});
+        
+        res.render('./users/login');
     },
     logueando: (req, res) => {
         
@@ -14,12 +16,20 @@ const usersController = {
      
       db.Usuario.findOne({where: {email}}).then(function(resul)
         
-       { if (!resul){res.redirect('usuarioNoExiste')} //aca verifica que el email exista en la base de datos
+       { if (!resul){
+        errors = {}
+        errors.emailNoExiste = {msg : 'El email ingresado no pertenece a nuestra Base de Datos'}
+        res.render('./users/login',{errors});
+       }
        else {
         
             let check = bcrypt.compareSync(req.body.pass, resul.password);
-            if (check!=true){ //aca verifica si esta bien la contraseña
-                res.send("contraseña invalida... falta escribir el codigo bien") //aca entra si esta mal la contraseña
+            if (check!=true){ //aca entra si esta mal la contraseña
+                errors = {}
+                errors.passInv = {msg : 'La contraseña ingresada no es válida'}
+                oldData = req.body
+                res.render('./users/login',{errors, oldData});
+                
                 }
             else{   //aca entra si esta ok la contraseña
                userLogin = resul
@@ -93,19 +103,13 @@ const usersController = {
         
 
     },
-    usuarioNoExiste: (req,res) => {
-        res.render('users/usuarioNoExiste')
+    usuarioYaExiste: (req,res) => {
+        res.render('users/usuarioYaExiste')
 
     },
     register: (req, res) => {
-        error = {email: ''}
-        newUsuario = {
-            nombre: 'Nombre y Apellido',
-            user: 'Nombre de usuario',
-            nacimiento: 'Fecha de Nacimiento',
-            email: 'ejemplo@gmail.com'
-        }
-        res.render('./users/register',{error,newUsuario});
+        
+        res.render('./users/register');
     },
 
     carrito: (req, res) => {
@@ -114,35 +118,61 @@ const usersController = {
     },
     
     create: (req, res) => {
-    //VERIFICAMOS QUE AMBAS CONTRASEÑAS COINCIDAN
-    if (req.body.pass===req.body.pass_confirm){
-
-        //acá encriptamos la contraseña    
-        let passEncriptada = bcrypt.hashSync(req.body.pass, 10); 
-
-        //acá cargamos foto si el usuario la carga, sino queda una foto por default
-        if (req.file){avatar_user = req.file.filename} 
-        else {avatar_user = 'default.png'}    
-
-        //ahora verificamos que el mail no exista ya en la base de datos (FALTA HACER)
         
-        db.Usuario.create({
-            nombre: req.body.nombre,
-            user: req.body.user,
-            email: req.body.email,
-            nacimiento: req.body.nacimiento,
-            admin: req.body.admin,
-            password: passEncriptada,
-            avatar: avatar_user
+        
+        email = req.body.email
+        db.Usuario.findOne({where: {email}})
+            .then(resul => {
+               
+               if (resul){res.redirect('/users/usuarioYaExiste')}  //primero verificamos que no exista el mail en la base de datos
+              
+               else {  //de aqui en adelante si no existe en mail en la base de datos
+                const resultValidReg = validationResult(req)
+        
+        
+                if (resultValidReg.errors.length > 0){ //aca ingresa si se detecta algun error de validacion
+            
+            
+                    return res.render ('./users/register',{
+                        errors : resultValidReg.mapped(),
+                        oldData : req.body
+                    })
+                }
+            
+                //VERIFICAMOS QUE AMBAS CONTRASEÑAS COINCIDAN
+                if (req.body.pass===req.body.pass_confirm){
+            
+                    //acá encriptamos la contraseña    
+                    let passEncriptada = bcrypt.hashSync(req.body.pass, 10); 
+            
+                    //acá cargamos foto si el usuario la carga, sino queda una foto por default
+                    if (req.file){avatar_user = req.file.filename} 
+                    else {avatar_user = 'default.png'}    
+            
+                    
+                    db.Usuario.create({
+                        nombre: req.body.nombre,
+                        user: req.body.user,
+                        email: req.body.email,
+                        nacimiento: req.body.nacimiento,
+                        admin: req.body.admin,
+                        password: passEncriptada,
+                        avatar: avatar_user
+            
+                    }).then(()=> {return res.redirect('./registrado')})
+                   
+                 
+                } 
+                
+               }            
 
-        }).then(()=> {return res.redirect('./registrado')})
-       
-     
-    } //ESTA LLAVE CIERRA VERIFICACION DE AMBAS CONTRASENIAS
-    else {
-        res.send("Falta hacer el codigo si ambas contraseñas no coinciden... sorry!")
 
-    }
+                    })
+        
+                    
+                  
+        
+    
 },
 
     registrado:  (req, res) => {

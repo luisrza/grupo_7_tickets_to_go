@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator')
 
 let db = require("../database/models")
 
@@ -33,6 +34,15 @@ const productController = {
         res.render('./products/crearEvento')
     },
     creandoEvento: (req, res) => {
+        const validaciones = validationResult(req)
+        if (validaciones.errors.length > 0){
+
+
+            return res.render ('./products/crearEvento',{
+                errors : validaciones.mapped(),
+                oldData : req.body
+            })
+        }
         db.Evento.create({
             city: req.body.city,
             country: req.body.country,

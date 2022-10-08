@@ -22,16 +22,50 @@
             class="form_reg">
                 <label>Ciudad:</label>
                 <br>
-                    <input class="inputs" type="text" name="city" placeholder="city" required />
+                    <input 
+                    class="inputs" 
+                    type="text" 
+                    name="city" 
+                    placeholder="city" 
+                    value = '<%= locals.errors && oldData.city ? oldData.city : ''%>'
+                    
+                    />
+                    <div class="danger">
+                    <% if (locals.errors && errors.city) {%>
+                        <%=errors.city.msg%>
+                    <%}%>
+                    </div>
                 <br>
                 <label>Pais:</label>
                 <br>
-                    <input class="inputs" type="text" name="country" placeholder="country" required />
+                    <input 
+                    class="inputs" 
+                    type="text" 
+                    name="country" 
+                    placeholder="country" 
+                    value = '<%= locals.errors && oldData.country ? oldData.country : ''%>'
+                     />
+                     <div class="danger">
+                        <% if (locals.errors && errors.country) {%>
+                            <%=errors.country.msg%>
+                        <%}%>
+                        </div>
                 <br>
                 <br>
                 <label for="fechaEvento">Fecha del Evento:</label>
                 <br>
-                    <input class="inputs" type="date" name="date" id="date" required />
+                    <input 
+                    class="inputs" 
+                    type="date" 
+                    name="date" 
+                    id="date" 
+                    value = '<%= locals.errors && oldData.date ? oldData.date : ''%>'
+                     />
+                     <div class="danger">
+                        <% if (locals.errors && errors.date) {%>
+                            <%=errors.date.msg%>
+                        <%}%>
+                        </div>
                 <br>
                 <br>
                 <label for="bannerEvento">Banner del Evento:</label>
@@ -41,22 +75,61 @@
                         name="image"
                         id="image"
                         accept="image/png, image/jpeg"
+                        value = '<%= locals.errors && oldData.image ? oldData.image : ''%>'
                     />
+                    <div class="danger">
+                        <% if (locals.errors && errors.image) {%>
+                            <%=errors.image.msg%>
+                        <%}%>
+                        </div>
                 <br>
                 <br>
                 <label>Precio:</label>
                 <br>
-                    <input class="inputs" type="text" name="prize" placeholder="precio" required />
+                    <input 
+                    class="inputs" 
+                    type="text" 
+                    name="prize" 
+                    placeholder="precio" 
+                    value = '<%= locals.errors && oldData.prize ? oldData.prize : ''%>'
+                     />
+                     <div class="danger">
+                        <% if (locals.errors && errors.prize) {%>
+                            <%=errors.prize.msg%>
+                        <%}%>
+                        </div>
                 <br>
                 <br>
                     <label>Moneda:</label>
                 <br>
-                    <input class="inputs" type="text" name="currency" placeholder="moneda" required />
+                    <input 
+                    class="inputs" 
+                    type="text" 
+                    name="currency" 
+                    placeholder="moneda" 
+                    value = '<%= locals.errors && oldData.currency ? oldData.currency : ''%>'
+                    />
+                    <div class="danger">
+                        <% if (locals.errors && errors.currency) {%>
+                            <%=errors.currency.msg%>
+                        <%}%>
+                        </div>
                 <br>
                 <br>
                     <label>Descripción:</label>
                 <br>
-                    <input class="inputs" type="textarea" name="description" placeholder="" required />
+                    <input 
+                    class="inputs" 
+                    type="textarea" 
+                    name="description" 
+                    placeholder="" 
+                    value = '<%= locals.errors && oldData.description ? oldData.description : ''%>'
+                    />
+                    <div class="danger">
+                        <% if (locals.errors && errors.description) {%>
+                            <%=errors.description.msg%>
+                        <%}%>
+                        </div>
                 <br>
                 <br>
                 <div class="botones-registro">

@@ -19,8 +19,12 @@
               type="email"
               name="email"
               id="email"
-              placeholder=<%= oldData.email!="sin_email" ? oldData.email : 'ejemplo@gmail.com' %>
+              value = '<%= locals.oldData ? oldData.email : ''%>'
+              placeholder= 'ejemplo@gmail.com' 
+              
             />
+            <div class="danger"> <%= (locals.errors && errors.emailNoExiste) ? errors.emailNoExiste.msg : ''%></div>
+            
             <br/>
             <br/>
             <label>Contraseña:</label>
@@ -31,7 +35,12 @@
               name="pass"
               placeholder=""
               required
-            ><%= oldData.email!="sin_email" ? 'OPS...!! Contraseña Incorrecta...' : '' %></input>
+            ></input>
+            <% if (locals.errors && errors.passInv) {%>
+            <div class = "danger">
+              <%=errors.passInv.msg%>
+              <%}%>
+            </div>
 
           <label class="check-log"> Recordar mi usuario
             <input type="checkbox" 

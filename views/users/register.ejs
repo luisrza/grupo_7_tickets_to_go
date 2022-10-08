@@ -22,28 +22,56 @@
       <h5 class="titulo" >Registrate:</h5>
       <form action="/users/register" method="POST" enctype="multipart/form-data" class="form_reg">
         <label>Nombre y Apellido:</label>
-        <input type="text" s
+        <input type="text" 
         name="nombre" 
-        placeholder='<%=newUsuario.nombre%>'
-        required />
+        placeholder="Ingresá tu Nombre y Apellido"
+        value='<%=locals.errors && oldData.nombre ? oldData.nombre : ''%>'
+         />
+         <% if (locals.errors && errors.nombre) {%>
+          <div class = "danger">
+            <%=errors.nombre.msg%>
+            <%}%>
+          </div>
         <br />
         <br />
         <label>Nombre de usuario:</label>
         <input
           type="text"
           name="user"
-          placeholder= '<%=newUsuario.user%>'
-          required
+          placeholder="Ingresá tu Usuario"
+          value='<%=locals.errors && oldData.user ? oldData.user : ''%>' 
         />
+        <% if (locals.errors && errors.user) {%>
+        <div class = "danger">
+          <%=errors.user.msg%>
+          <%}%>
+        </div>
         <br />
         <br />
         <label for="nacimiento">Fecha de nacimiento:</label>
-        <input type="date" name="nacimiento" id="fechaNacimiento" required />
+        <input type="date" name="nacimiento" id="fechaNacimiento"  
+        
+        value='<%=locals.errors && oldData.nacimiento ? oldData.nacimiento : ''%>'
+        />
+        <% if (locals.errors && errors.nacimiento) {%>
+          <div class = "danger">
+            <%=errors.nacimiento.msg%>
+            <%}%>
+          </div>
         <br />
         <br />
         <label>Email:</label>
-        <input type="email" name="email" placeholder='<%=newUsuario.email%>' required />
-        <%= error.email=='repetido'? 'Este email ya se encuentra en nuestra base de datos':''%>
+        <input type="email" name="email" placeholder=''  
+        placeholder="Ingresá tu email"
+        value='<%=locals.errors && oldData.email ? oldData.email : ''%>'
+
+        />
+        
+        <% if (locals.errors && errors.email) {%>
+          <div class = "danger">
+            <%=errors.email.msg%>
+            <%}%>
+          </div>
         <br />
         <label>Administrador:</label>
         <select name="admin" required >
@@ -70,11 +98,16 @@
           placeholder="Elegí tu contraseña"
           required
         />
+        <% if (locals.errors && errors.password) {%>
+          <div class = "danger">
+            <%=errors.password.msg%>
+            <%}%>
+          </div>
         <input
           type="password"
           name="pass_confirm"
           placeholder="Confirmá tu contraseña"
-          required><%=error.email=='contrasenias'?'Las contraseñas ingresadas no coinciden':''%>
+          required>
       </input>
         <br />
         <input

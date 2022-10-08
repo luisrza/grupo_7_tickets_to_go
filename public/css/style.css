@@ -84,6 +84,10 @@ body{
     background-size: cover;
 }
 
+.danger{
+    color : red
+}
+
 .logo{
     margin: auto 0;
     justify-content: center;

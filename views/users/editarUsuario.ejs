@@ -69,7 +69,10 @@
           name="pass_confirm"
           placeholder="Confirmá tu contraseña"
           required
-        ><%=error.pass=='pass_no_coinciden'?'Las contraseñas ingresadas no coindicen':''%></inptu>
+        ></input>
+        <div class="danger">
+        <%=error.pass=='pass_no_coinciden'?'Las contraseñas ingresadas no coindicen':''%>
+      </div>
         <br />
         <br />
         
@@ -77,7 +80,7 @@
         <div class="evento-boton">
           <input type="reset" value="Borrar" class="boton btn-regis"/>
           <br>
-          <input type="submit" value="Editar" class="boton btn-regis""/>
+          <input type="submit" value="Editar" class="boton btn-regis"/>
           <br>
         </div>
       </form>
