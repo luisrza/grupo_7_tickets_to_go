@@ -44,12 +44,15 @@ const HOST = process.env.HOST || 'localhost';
 const mainRoutes = require('./routes/mainRoutes');
 const productRoutes = require('./routes/productRoutes');
 const usersRoutes = require('./routes/usersRoutes');
+const apiRoutes = require('./routes/apiRoutes');
 
 // usamos las rutas
 
 app.use('/products', productRoutes );
 app.use('/users', usersRoutes);
+app.use('/api', apiRoutes);
 app.use('/', mainRoutes);
+
 
 //escuchando
 
