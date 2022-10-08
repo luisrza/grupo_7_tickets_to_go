@@ -1075,3 +1075,37 @@ button{
 }
 
 /*Detalles de usuario*/
+
+/*burger*/
+
+.burger {
+    display: none;
+}
+
+@media (min-width: 425px) {
+
+    .burger { 
+        display: block ;
+        height: 5vh;
+        border: 0;
+        background: var(--fondo);
+        list-style-type: none;
+        padding: 10px;
+        color: var(--blanco1);
+    }
+
+    .nav-bar {
+        display: none;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background: var(--fondo);
+        list-style-type: none;
+        padding: 10px;
+        color: var(--blanco1);
+    }
+
+    .new-burger {
+
+    }
+}
