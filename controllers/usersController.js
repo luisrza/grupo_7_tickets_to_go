@@ -62,14 +62,25 @@ const usersController = {
         db.Usuario.findByPk(id)
         .then((resul)=>{
         userToEdit = resul
-        error = {pass: ''}
-        res.render('users/editarUsuario',{userToEdit,error})
+        res.render('users/editarUsuario',{userToEdit})
         })
         
     },    
     editandoUsuario: (req,res) => {
+
+      resulValidaciones = validationResult(req) 
+      
+      if (resulValidaciones.errors.length > 0) {
+        id = req.params.id
         
-      if(req.body.pass===req.body.pass_confirm) {//si las contraseñas ingresadas coinciden
+        db.Usuario.findByPk(id)
+        .then((resul)=>{
+        userToEdit = resul
+        res.render('users/editarUsuario',{userToEdit, errors : resulValidaciones.mapped()})
+        })
+      }
+    else {  
+      //si las contraseñas ingresadas coinciden
 
         userEdited = {} //en los siguientes renglones verifica que campos desea editar, el resto queda igual
         if (req.body.nombre){userEdited.nombre = req.body.nombre}
@@ -88,12 +99,7 @@ const usersController = {
         
         })
            
-    } 
-    else{ //si las contraseñas no coinciden entre si
-        error = {pass : 'pass_no_coinciden'}
-        res.render('users/editarUsuario',{userToEdit})
     }
-   
     },  
     eliminarUsuario: (req,res) => {
 

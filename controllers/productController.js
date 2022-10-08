@@ -68,6 +68,8 @@ const productController = {
            
     },
     editandoEvento: (req, res) => {
+        
+
         let id= req.params.id;
         
         db.Evento.update({

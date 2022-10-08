@@ -24,6 +24,18 @@ const validationsReg = [
     
 ]
 
+const validationsEdit = [
+    
+        check('password').custom((value, { req }) => {
+        if (req.body.pass != req.body.pass_confirm){
+        throw new Error('Las contraseñas ingresadas no coinciden entre sí')
+             
+        } return true;  
+        
+    })              
+    
+]
+
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -44,7 +56,7 @@ router.get('/detalleUsuario/:id', authMiddleware, usersController.detalleUsuario
 //router.get('/detalleUsuario', authMiddleware, usersController.detalleUsuario);
 router.get('/eliminarUsuario/:id', usersController.eliminarUsuario);
 router.get('/editarUsuario/:id', usersController.editarUsuario);
-router.post('/editandoUsuario/:id',upload.single('avatar'), usersController.editandoUsuario);
+router.post('/editandoUsuario/:id',upload.single('avatar'), validationsEdit, usersController.editandoUsuario);
 
 router.get('/register', guestMiddleware, usersController.register);
 router.post('/register',  upload.single('avatar'), validationsReg, usersController.create);
