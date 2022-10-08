@@ -13,18 +13,8 @@ const validationsReg = [
     check('user').notEmpty().withMessage('Debe ingresar un nombre de usuario'),
     check('nacimiento').notEmpty().withMessage('Debe ingresar su fecha de nacimiento'),
     check('email').notEmpty().withMessage('Debe ingresar un email').bail()
-                  .isEmail().withMessage("Debe ingresar un email válido")
-                // .bail()
-                //   .custom((value) => {
-                    
-                //     db.Usuario.findOne({where: {email:value}})
-                //     .then(resul => {
-                //             if (resul){return Promise.reject('E-mail already in use')}
-                //             });
-                //     return true;
-                //   })
-                  ,
-    check('password').custom((value, { req }) => {
+                  .isEmail().withMessage("Debe ingresar un email válido"),
+                check('password').custom((value, { req }) => {
         if (req.body.pass != req.body.pass_confirm){
         throw new Error('Las contraseñas ingresadas no coinciden entre sí')
              
