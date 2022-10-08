@@ -20,7 +20,7 @@ validEvento = [
     check('city').notEmpty().withMessage('Debe ingresar la ciudad donde se realizará el evento'),
     check('country').notEmpty().withMessage('Debe ingresar el pais donde se realizará el evento'),
     check('date').notEmpty().withMessage('Debe ingresar la fecha en que se realizará el evento'),
-    check('prize').notEmpty().withMessage('Debe ingresar el precio que cuesta el ingreso').bail().
+    check('price').notEmpty().withMessage('Debe ingresar el precio que cuesta el ingreso').bail().
         isNumeric().withMessage("Debe ingresar un número no letras"),
     check('currency').notEmpty().withMessage('Debe ingresar la moneda en que se paga'),
     check('description').notEmpty().withMessage('Debe ingresar la descripción del evento').bail().

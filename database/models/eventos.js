@@ -17,7 +17,7 @@ module.exports = function(sequelize, dataTypes){
         date: {
             type: dataTypes.DATE
         },
-        prize: {
+        price: {
             type: dataTypes.INTEGER
         },
         currency: {

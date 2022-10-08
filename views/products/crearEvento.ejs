@@ -89,13 +89,13 @@
                     <input 
                     class="inputs" 
                     type="text" 
-                    name="prize" 
+                    name="price" 
                     placeholder="precio" 
-                    value = '<%= locals.errors && oldData.prize ? oldData.prize : ''%>'
+                    value = '<%= locals.errors && oldData.price ? oldData.price : ''%>'
                      />
                      <div class="danger">
-                        <% if (locals.errors && errors.prize) {%>
-                            <%=errors.prize.msg%>
+                        <% if (locals.errors && errors.price) {%>
+                            <%=errors.price.msg%>
                         <%}%>
                         </div>
                 <br>
