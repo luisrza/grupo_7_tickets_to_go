@@ -46,12 +46,24 @@ const productRoutes = require('./routes/productRoutes');
 const usersRoutes = require('./routes/usersRoutes');
 const apiRoutes = require('./routes/apiRoutes');
 
+// para poder acceder a las apis desde otras aplicaciones
+
+app.use(function(req,res,next) {
+    res.header("Access-Control-Allow-Origin",'*');
+    res.header('Access-Control-Allow-Methods','GER, POST, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers','Content-Type');
+    next();
+})
+
+
 // usamos las rutas
 
 app.use('/products', productRoutes );
 app.use('/users', usersRoutes);
 app.use('/api', apiRoutes);
 app.use('/', mainRoutes);
+
+
 
 
 //escuchando

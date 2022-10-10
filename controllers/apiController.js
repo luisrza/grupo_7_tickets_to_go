@@ -8,7 +8,7 @@ eventos: (req, res) => {
        then(eventos=> {
         return res.json({
             count: eventos.length,
-            users : eventos,
+            eventos : eventos,
             status: 200
 
         })

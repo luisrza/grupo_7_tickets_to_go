@@ -95,8 +95,10 @@ const productController = {
         db.Evento.destroy({
             where: {id}
         })
+        .then(
+            res.redirect('/products/eventos')
+        )
         
-        res.redirect('/products/eventos');
            
     }
 
