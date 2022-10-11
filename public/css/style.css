@@ -1087,6 +1087,10 @@ button{
     display: none;
 }
 
+.arrowOut{
+    display: none;
+}
+
 @media (max-width: 425px) {
 
     .burger { 
