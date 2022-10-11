@@ -619,6 +619,7 @@ body{
     font-family: 'Roboto Mono', monospace;
 }
 main{
+    background-color: var(--fondo);
     width: 100%;
 }
 

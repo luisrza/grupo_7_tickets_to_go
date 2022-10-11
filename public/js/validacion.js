@@ -1,5 +1,3 @@
-const e = require("express");
-
 window.addEventListener("load", function(){
 
     const form = document.querySelector('#form_reg');
@@ -11,17 +9,18 @@ window.addEventListener("load", function(){
     const terms = document.querySelector('#terms');
     const pass_min = 6;
 
-    form.addEventListener('submit', function(e){
+    form.addEventListener('submit', function(evento){
+        evento.preventDefault();
         if (nombre.value == ""){
             console.log('El nombre no puede estar vacio');
         }
-        if (password.value.length < 8){
+        if (password.value.length < pass_min){
             console.log('Hubo un error en el password')
-            evento.preventDefault();
-          }
+            
+        }
         nombre.addEventListener('focus', function(){
             console.log('hola');
             nombre.style.backgroundColor = 'pearl';
-          })
+        })
     })
 })
