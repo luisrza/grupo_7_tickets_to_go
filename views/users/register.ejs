@@ -20,9 +20,10 @@
       <br>
       <br>
       <h5 class="titulo" >Registrate:</h5>
-      <form action="/users/register" method="POST" enctype="multipart/form-data" class="form_reg">
+      <form action="/users/register" method="POST" enctype="multipart/form-data" id='form_reg' class="form_reg">
         <label>Nombre y Apellido:</label>
-        <input type="text" 
+        <input type="text"
+        id="nombre"
         name="nombre" 
         placeholder="Ingresá tu Nombre y Apellido"
         value='<%=locals.errors && oldData.nombre ? oldData.nombre : ''%>'
@@ -128,6 +129,7 @@
 
     </main>
     <%-include('../partials/footer.ejs')%>
+    <script type="text/javascript" src="/js/validacion.js"></script>
   </body>
   
 </html>
