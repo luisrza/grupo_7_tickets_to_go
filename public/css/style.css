@@ -1118,3 +1118,25 @@ button{
 
     }
 }
+
+/*js*/
+
+.pass-hidden{
+    display: none;
+    color: var(--barra);
+    font-size: 15px;
+}
+.nombre-hidden
+{   display: none;
+    color: var(--barra);
+    font-size: 15px;
+}
+.usuario-hidden{
+    display: none;
+    color: var(--barra);
+    font-size: 15px;
+}
+
+.admin{
+    display: none;
+}

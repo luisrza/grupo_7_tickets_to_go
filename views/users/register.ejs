@@ -27,8 +27,9 @@
         name="nombre" 
         placeholder="Ingresá tu Nombre y Apellido"
         value='<%=locals.errors && oldData.nombre ? oldData.nombre : ''%>'
-         />
-         <% if (locals.errors && errors.nombre) {%>
+        />
+        <p class="nombre-hidden">El nombre no puede estar vacio</p>
+        <% if (locals.errors && errors.nombre) {%>
           <div class = "danger">
             <%=errors.nombre.msg%>
             <%}%>
@@ -38,10 +39,12 @@
         <label>Nombre de usuario:</label>
         <input
           type="text"
+          id="user"
           name="user"
           placeholder="Ingresá tu Usuario"
           value='<%=locals.errors && oldData.user ? oldData.user : ''%>' 
         />
+        <p class="usuario-hidden">El nombre no puede estar vacio</p>
         <% if (locals.errors && errors.user) {%>
         <div class = "danger">
           <%=errors.user.msg%>
@@ -62,7 +65,7 @@
         <br />
         <br />
         <label>Email:</label>
-        <input type="email" name="email" placeholder=''  
+        <input id="email" type="email" name="email" placeholder=''  
         placeholder="Ingresá tu email"
         value='<%=locals.errors && oldData.email ? oldData.email : ''%>'
 
@@ -74,11 +77,13 @@
             <%}%>
           </div>
         <br />
-        <label>Administrador:</label>
-        <select name="admin" required >
-          <option value=0>No</option>
-          <option value=1>Si</option>
-        </select>
+        <div class="admin">
+          <label>Administrador:</label>
+          <select name="admin" required >
+            <option value=0>No</option>
+            <option value=1>Si</option>
+          </select>
+        </div>
         
         <br />
         <br />
@@ -100,6 +105,7 @@
           id="password"
           required
         />
+        <p class="pass-hidden">El password necesita tener 8 caracteres</p>
         <% if (locals.errors && errors.password) {%>
           <div class = "danger">
             <%=errors.password.msg%>
