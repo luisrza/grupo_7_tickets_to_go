@@ -53,10 +53,10 @@
         <br />
         <br />
         <label for="nacimiento">Fecha de nacimiento:</label>
-        <input type="date" name="nacimiento" id="fechaNacimiento"  
-        
+        <input type="date" name="nacimiento" id="fechaNacimiento"
         value='<%=locals.errors && oldData.nacimiento ? oldData.nacimiento : ''%>'
         />
+        <p class="dob-hidden">El nombre no puede estar vacio</p>
         <% if (locals.errors && errors.nacimiento) {%>
           <div class = "danger">
             <%=errors.nacimiento.msg%>

@@ -1139,4 +1139,11 @@ button{
 
 .admin{
     display: none;
+    color: var(--barra);
+    font-size: 15px;
+}
+.dob-hidden{
+    display: none;
+    color: var(--barra);
+    font-size: 15px;
 }
