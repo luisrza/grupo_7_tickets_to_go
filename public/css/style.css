@@ -1126,6 +1126,12 @@ button{
     color: var(--barra);
     font-size: 15px;
 }
+.pass2-hidden{
+    display: none;
+    color: var(--barra);
+    font-size: 15px;
+}
+
 .nombre-hidden
 {   display: none;
     color: var(--barra);
@@ -1143,6 +1149,11 @@ button{
     font-size: 15px;
 }
 .dob-hidden{
+    display: none;
+    color: var(--barra);
+    font-size: 15px;
+}
+.email-hidden{
     display: none;
     color: var(--barra);
     font-size: 15px;

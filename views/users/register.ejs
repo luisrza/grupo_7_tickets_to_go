@@ -56,7 +56,7 @@
         <input type="date" name="nacimiento" id="fechaNacimiento"
         value='<%=locals.errors && oldData.nacimiento ? oldData.nacimiento : ''%>'
         />
-        <p class="dob-hidden">El nombre no puede estar vacio</p>
+        <p class="dob-hidden">Tienes que ser mayor de 18</p>
         <% if (locals.errors && errors.nacimiento) {%>
           <div class = "danger">
             <%=errors.nacimiento.msg%>
@@ -68,8 +68,8 @@
         <input id="email" type="email" name="email" placeholder=''  
         placeholder="Ingresá tu email"
         value='<%=locals.errors && oldData.email ? oldData.email : ''%>'
-
         />
+        <p class="email-hidden">Ingresá tu email</p>
         
         <% if (locals.errors && errors.email) {%>
           <div class = "danger">
@@ -113,10 +113,12 @@
           </div>
         <input
           type="password"
+          id="confirmacion"
           name="pass_confirm"
           placeholder="Confirmá tu contraseña"
           required>
       </input>
+        <p class="pass2-hidden">Ambos password tienen que coincidir</p>
         <br />
         <input
           type="checkbox"
