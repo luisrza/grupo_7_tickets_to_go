@@ -50,4 +50,7 @@ router.put('/editarEvento/:id', upload.single('image'), productController.editan
 //ruta para eliminar evento
 router.delete('/eliminarEvento/:id', productController.eliminarEvento);
 
+//ruta para agregar a carrito
+//router.post('/agregarACarrito/:id', productController.agregarACarrito)
+
 module.exports=router;
