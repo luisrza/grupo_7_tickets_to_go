@@ -61,6 +61,7 @@ window.addEventListener("load", function(){
     })
 
     form.addEventListener('submit', function(evento){
+        
         if (nombre.value === ""){
             console.log('El nombre no puede estar vacio');
             const name = document.querySelector('.nombre-hidden');
@@ -76,6 +77,5 @@ window.addEventListener("load", function(){
             const email = document.querySelector('.email-hidden');
             email.style.display = 'block';
         }
-        evento.preventDefault();
     })
 })

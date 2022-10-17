@@ -18,18 +18,20 @@
             <br>
             <h1 class="titulo">Subir evento nuevo</h2>
 
-            <form class="form_crear " action="/products/creandoEvento" method="POST" enctype="multipart/form-data"
+            <form class="form_crear" id="form_crear" action="/products/creandoEvento" method="POST" enctype="multipart/form-data"
             class="form_reg">
                 <label>Ciudad:</label>
                 <br>
                     <input 
+                    id="ciudad"
                     class="inputs" 
                     type="text" 
                     name="city" 
                     placeholder="city" 
                     value = '<%= locals.errors && oldData.city ? oldData.city : ''%>'
-                    
                     />
+                        <br>
+                        <p class="ciudad_v vali_hidden">El campo ciudad no puede estar vacio</p>
                     <div class="danger">
                     <% if (locals.errors && errors.city) {%>
                         <%=errors.city.msg%>
@@ -39,13 +41,16 @@
                 <label>Pais:</label>
                 <br>
                     <input 
+                    id="pais"
                     class="inputs" 
                     type="text" 
                     name="country" 
                     placeholder="country" 
                     value = '<%= locals.errors && oldData.country ? oldData.country : ''%>'
-                     />
-                     <div class="danger">
+                    />  
+                        <br>
+                        <p class="pais_v vali_hidden">El camp pais no puede estar vacio</p>
+                    <div class="danger">
                         <% if (locals.errors && errors.country) {%>
                             <%=errors.country.msg%>
                         <%}%>
@@ -60,8 +65,8 @@
                     name="date" 
                     id="date" 
                     value = '<%= locals.errors && oldData.date ? oldData.date : ''%>'
-                     />
-                     <div class="danger">
+                    />
+                    <div class="danger">
                         <% if (locals.errors && errors.date) {%>
                             <%=errors.date.msg%>
                         <%}%>
@@ -92,12 +97,12 @@
                     name="price" 
                     placeholder="precio" 
                     value = '<%= locals.errors && oldData.price ? oldData.price : ''%>'
-                     />
-                     <div class="danger">
+                    />
+                    <div class="danger">
                         <% if (locals.errors && errors.price) {%>
                             <%=errors.price.msg%>
                         <%}%>
-                        </div>
+                    </div>
                 <br>
                 <br>
                     <label>Moneda:</label>
@@ -137,9 +142,8 @@
                     <input type="submit" class="botones btn-regis" value="Enviar" />
                 </div>     
         </form>
-
     </main>
-
+    <script type="text/javascript" src="/js/validaciones_evento.js"></script>
 
     <%-include('../partials/footer.ejs')%>
 

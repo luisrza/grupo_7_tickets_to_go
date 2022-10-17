@@ -1158,3 +1158,22 @@ button{
     color: var(--barra);
     font-size: 15px;
 }
+.vali_hidden{
+    display: none;
+    color: var(--barra);
+    font-size: 15px;
+}
+.pais_hidden{
+    display: none;
+    color: var(--barra);
+    font-size: 15px;
+}
+
+/*usuarioyaexiste*/
+.imgYaExiste{
+    margin: 0 auto;
+    display: flex;
+    border: 2px solid var(--barra);
+    width: auto;
+    height: 60vh;
+}
