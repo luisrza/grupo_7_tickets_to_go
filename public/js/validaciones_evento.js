@@ -6,7 +6,7 @@ window.addEventListener("load", function(){
     const date = document.querySelector('#date');
 
     form.addEventListener('submit', function(evento){
-        evento.preventDefault();
+      
         
         if (ciudad.value === ""){
             console.log('La ciudad no puede estar vacio');
