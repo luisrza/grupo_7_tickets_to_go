@@ -24,7 +24,7 @@ validEvento = [
         isNumeric().withMessage("Debe ingresar un número no letras"),
     check('currency').notEmpty().withMessage('Debe ingresar la moneda en que se paga'),
     check('description').notEmpty().withMessage('Debe ingresar la descripción del evento').bail().
-        isLength({ min: 100 }).withMessage('Debe ingresar al menos 100 caracteres'),
+        isLength({ min: 55 }).withMessage('Debe ingresar al menos 100 caracteres'),
     check('image').custom((value, { req })=>{
         let image = req.file
         if (!image){
