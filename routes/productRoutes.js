@@ -24,7 +24,7 @@ validEvento = [
         isNumeric().withMessage("Debe ingresar un número no letras"),
     check('currency').notEmpty().withMessage('Debe ingresar la moneda en que se paga'),
     check('description').notEmpty().withMessage('Debe ingresar la descripción del evento').bail().
-        isLength({ min: 100 }).withMessage('Debe ingresar al menos 100 caracteres'),
+        isLength({ min: 55 }).withMessage('Debe ingresar al menos 100 caracteres'),
     check('image').custom((value, { req })=>{
         let image = req.file
         if (!image){
@@ -49,5 +49,8 @@ router.put('/editarEvento/:id', upload.single('image'), productController.editan
 
 //ruta para eliminar evento
 router.delete('/eliminarEvento/:id', productController.eliminarEvento);
+
+//ruta para agregar a carrito
+//router.post('/agregarACarrito/:id', productController.agregarACarrito)
 
 module.exports=router;

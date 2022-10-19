@@ -26,7 +26,21 @@
             <br>
         <div class="contenedor-ciudad">
         <% if (evento.agotado == 0){%> 
-          <a type="button" href="/users/carrito" class="boton">Comprar</a>
+          <% if (locals.isLogged){%>
+            <form id='carrito'>   
+              <label>Cantidad de Tickets </label>
+
+              <input id='nro_tickets' name="nro_tickets" type='number'>
+              <input type="submit" class="boton editar" value="Agregar a Carrito">
+              
+              <input type="hidden" id='id_evento' name="id_evento" value="<%=evento.id%>"/>
+              <input type="hidden" id='fecha_evento' name="fecha_evento" value="<%=evento.date%>"/>
+              <input type="hidden" id='ciudad_evento' name="ciudad_evento" value="<%=evento.city%>"/>
+            </form>
+            <%}else{%>
+              <a type="button" href="/users/login" class="boton">Para Comprar debe estar logueado</a>  
+            <%}%>
+           
         <%}else{%>
           <a type="button" href="/products/eventos" class="boton bot-agoado">AGOTADO</a>
         <%}%>
@@ -72,6 +86,7 @@
         <p>Diseño: Diego Franco, Lautaro González, Luis Garza, Nicolas Del Giovannino.</p>
     </div>
     </div>
+    <script type="text/javascript" src="/js/cargaCarrito.js"></script>
   </footer>
 
 </body>

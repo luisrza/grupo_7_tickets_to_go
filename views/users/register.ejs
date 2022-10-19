@@ -27,8 +27,9 @@
         name="nombre" 
         placeholder="Ingresá tu Nombre y Apellido"
         value='<%=locals.errors && oldData.nombre ? oldData.nombre : ''%>'
-         />
-         <% if (locals.errors && errors.nombre) {%>
+        />
+        <p class="nombre-hidden">El nombre no puede estar vacio</p>
+        <% if (locals.errors && errors.nombre) {%>
           <div class = "danger">
             <%=errors.nombre.msg%>
             <%}%>
@@ -38,10 +39,12 @@
         <label>Nombre de usuario:</label>
         <input
           type="text"
+          id="user"
           name="user"
           placeholder="Ingresá tu Usuario"
           value='<%=locals.errors && oldData.user ? oldData.user : ''%>' 
         />
+        <p class="usuario-hidden">El nombre no puede estar vacio</p>
         <% if (locals.errors && errors.user) {%>
         <div class = "danger">
           <%=errors.user.msg%>
@@ -50,10 +53,10 @@
         <br />
         <br />
         <label for="nacimiento">Fecha de nacimiento:</label>
-        <input type="date" name="nacimiento" id="fechaNacimiento"  
-        
+        <input type="date" name="nacimiento" id="fechaNacimiento"
         value='<%=locals.errors && oldData.nacimiento ? oldData.nacimiento : ''%>'
         />
+        <p class="dob-hidden">Tienes que ser mayor de 18</p>
         <% if (locals.errors && errors.nacimiento) {%>
           <div class = "danger">
             <%=errors.nacimiento.msg%>
@@ -62,11 +65,11 @@
         <br />
         <br />
         <label>Email:</label>
-        <input type="email" name="email" placeholder=''  
+        <input id="email" type="email" name="email" placeholder=''  
         placeholder="Ingresá tu email"
         value='<%=locals.errors && oldData.email ? oldData.email : ''%>'
-
         />
+        <p class="email-hidden">Ingresá tu email</p>
         
         <% if (locals.errors && errors.email) {%>
           <div class = "danger">
@@ -74,11 +77,13 @@
             <%}%>
           </div>
         <br />
-        <label>Administrador:</label>
-        <select name="admin" required >
-          <option value=0>No</option>
-          <option value=1>Si</option>
-        </select>
+        <div class="admin">
+          <label>Administrador:</label>
+          <select name="admin" required >
+            <option value=0>No</option>
+            <option value=1>Si</option>
+          </select>
+        </div>
         
         <br />
         <br />
@@ -97,8 +102,10 @@
           type="password"
           name="pass"
           placeholder="Elegí tu contraseña"
+          id="password"
           required
         />
+        <p class="pass-hidden">El password necesita tener 8 caracteres</p>
         <% if (locals.errors && errors.password) {%>
           <div class = "danger">
             <%=errors.password.msg%>
@@ -106,10 +113,12 @@
           </div>
         <input
           type="password"
+          id="confirmacion"
           name="pass_confirm"
           placeholder="Confirmá tu contraseña"
           required>
       </input>
+        <p class="pass2-hidden">Ambos password tienen que coincidir</p>
         <br />
         <input
           type="checkbox"
@@ -126,10 +135,11 @@
             <input type="submit" value="Enviar" class="botones btn-regis"/>
           </div>
       </form>
-
+      <BR></BR>
     </main>
     <%-include('../partials/footer.ejs')%>
     <script type="text/javascript" src="/js/validacion.js"></script>
+    <script type="text/javascript" src="/js/vaciaLocalStorage.js"></script>
   </body>
   
 </html>
