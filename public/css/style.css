@@ -1086,6 +1086,10 @@ button{
     display: none;
 }
 
+.burger i {
+    color:#cecece;
+}
+
 .arrowOut{
     display: none;
 }
@@ -1111,9 +1115,5 @@ button{
         list-style-type: none;
         padding: 10px;
         color: var(--blanco1);
-    }
-
-    .new-burger {
-
     }
 }
