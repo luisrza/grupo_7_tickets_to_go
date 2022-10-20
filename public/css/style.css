@@ -67,6 +67,23 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/*SCROLLBAR*/
+
+::-webkit-scrollbar {
+    width:  10px;
+    background-color: var(--fondo);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--blanco2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blanco1);
+}
+
 /* COMIENZA CSS*/
 body{
     text-align: center;
@@ -1090,11 +1107,13 @@ button{
 
 .burger i {
     color:#cecece;
+    cursor: pointer;
 }
 
 .arrowOut{
     display: none;
 }
+
 
 @media (max-width: 425px) {
 
