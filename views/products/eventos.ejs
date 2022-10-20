@@ -19,6 +19,7 @@
 
       <div class="evento">
           <h2 class="date"><%=eventos[i].date%></h2>
+          <h2 class="price_event"><%=eventos[i].currency%> <%=eventos[i].price%></h2>
           <p class="description"><%=eventos[i].description%></p>
           <div class="contenedor-botones evento-boton">
               <a href="/products/eventos/detalles/<%=eventos[i].id%>" class="boton boton-eventos">Leer más</a>
@@ -34,11 +35,16 @@
       </div>
 
       <% if (eventos[i].agotado == 1){%> 
-        <h3 class="place"><%= eventos[i].city + ', '+ eventos[i].country%><span class="agotado">AGOTADO</span></h3>
+        <a href="/products/eventos/detalles/<%=eventos[i].id%>">
+          <h3 class="place"><%= eventos[i].city + ', '+ eventos[i].country%>
+        </h3></a>
+        <span id="ago" class="agotado">AGOTADO</span>
+        
 
       <%} else if (eventos[i].agotado == 0){%>
-        <h3 class="place h3-imagen"><%= eventos[i].city + ', '+ eventos[i].country%></h3>
-        
+        <a href="/products/eventos/detalles/<%=eventos[i].id%>">
+          <h3 class="place h3-imagen"><%= eventos[i].city + ', '+ eventos[i].country%></h3>
+        </a>
         <%}%>
 
   </section>

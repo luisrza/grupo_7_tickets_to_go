@@ -16,11 +16,11 @@
   <li><br></li>
   <div class="navicon">
     <% if (locals.isLogged){ %> 
-      <li><%=locals.userLogged.user%>
+      <!-- <li><%=locals.userLogged.user%> -->
       </li>
       <li>
         <div class="avatar-nav">
-          <a href="/users/detalleUsuario/<%=userLogged.id%>">
+          <a class="usuario" href="/users/detalleUsuario/<%=userLogged.id%>">
             <img src="/img/<%=locals.userLogged.avatar%>" width="70"></a>
         </div>
       </li>

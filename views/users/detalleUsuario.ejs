@@ -15,17 +15,20 @@
 
     <main>
       <br>
+      <br>
       <h1 class="h1-reg">Bienvenido/a!!  <span class="span-usuario"><%=userLogged.nombre%></span></h1>
       
       <h2 class="h2-reg">Tu usuario es: <%=userLogged.user%></h2>
-      <h2>Tu fecha de Nacimiento es: <%=userLogin.nacimiento%></h2>
+      <h2 class="h2-reg">Tu fecha de Nacimiento es: <%=userLogin.nacimiento%></h2>
       <br>
       <img class="avatar-welcome" src="/img/<%=userLogged.avatar%>" alt="avatar">
-
-
-      <h2 class="links-welcome"><a href="/users/editarUsuario/<%=userLogged.id%>">Editar mi Usuario</a></h2>
-      <h2 class="links-welcome"><a href="/users/eliminarUsuario/<%=userLogged.id%>">Eliminar mi Usuario de esta Base de Datos</a></h2>
-      
+      <br>
+      <br>
+      <button class="links-welcome boton btn-regis" href="/users/editarUsuario/<%=userLogged.id%>">Editar mi Usuario</button>
+        <br>
+        <br>
+      <button class="links-welcome boton btn-regis" href="/users/eliminarUsuario/<%=userLogged.id%>">Eliminar mi Usuario de esta Base de Datos</button>
+        <BR></BR>
     </main>
 
   <footer>

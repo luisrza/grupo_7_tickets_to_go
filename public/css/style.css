@@ -91,7 +91,7 @@ body{
 .logo{
     margin: auto 0;
     justify-content: center;
-    width: 350px;
+    width: 320px;
 }
 
 @media (min-width: 768px) {
@@ -120,8 +120,35 @@ span{
 }
 .editar{
     width: 15px;
-    filter: invert(100%);
+    padding-top: 25px;
     margin-right: 0;
+}
+
+#detalles{
+    width: 35vmax;
+}
+@media (min-width: 768px) {
+    #detalles{
+        width: 25vw;
+    }
+    .texto_detalles{
+        max-width: 75vw;
+        margin: 0 auto;
+        justify-content: center;
+    }
+}
+
+#carrito{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    content: contain;
+    height: auto;
+    padding-top: 0;
+}
+#nro_tickets{
+    width: 50px;
+    margin: 25px auto;
 }
 .mas{
     width: 15px;
@@ -298,7 +325,7 @@ p{
 
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1080px) {
     .lista-servicios{
         align-items: top;
         flex-direction: row;
@@ -368,7 +395,8 @@ h4{
     background-image: url(../img/nosotros-movil.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
+    
 }
 
 @media (min-width: 768px) {
@@ -381,9 +409,14 @@ h4{
 .youtube{
     max-width: 100%;
     height: 450px;
-    background-position: top;
+    background-position: right;
     background-size: cover;
     background-image: url(../img/con-wide.jpg);
+}
+@media (min-width: 1080px) {
+    .youtube{
+    background-position: top;
+    }
 }
 
 #iframe{
@@ -391,9 +424,16 @@ h4{
     justify-content: right;
 }
 
+
 .ycontain{
     display: flex;
     justify-content: right;
+}
+@media (max-width: 320px) {
+    .ycontain{
+        justify-content: center;
+    }
+    
 }
 
 .contacto{
@@ -506,7 +546,6 @@ footer{
     font-weight: 900;
 }
 
-
 .contenedor-botonlogin{
     display: flex;
     justify-content: center;
@@ -536,6 +575,11 @@ footer{
     filter:drop-shadow(1px 1px .5px var(--fondo));
 }
 
+.fecha_conciertoh2{
+    color:red;
+    justify-content: center;
+    margin: 0 auto;
+}
 
 .botones{
     text-align: center;
@@ -617,22 +661,15 @@ body{
     text-align: center;
     font: 200 20px/1.7;
     font-family: 'Roboto Mono', monospace;
+    
 }
 main{
     background-color: var(--fondo);
     width: 100%;
 }
 
-.contenedor-eventos{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 80vmax;
-    background-color: gray;
-    border-bottom: solid 10px var(--barra);
-    contain: strict;
-}
 .image{
+    width: 100%;
     display: flex;
     position: absolute;
     margin: 0 auto;
@@ -664,6 +701,10 @@ h3{
 .place.h3-imagen{
     color: white;
     filter: drop-shadow(3px 2px 3px var(--fondo));
+    text-transform: uppercase;
+    padding-bottom: 10vmax;
+    background-size: cover;
+    margin: 0 auto;
 }
 .agotado{
     align-items: center;
@@ -679,20 +720,20 @@ h3{
     margin: 0 auto;
     filter: drop-shadow(3px 1px 1px var(--negro));
 }
-@media (min-width: 768px) {
+@media (min-width: 1080px) {
     .agotado{
-        writing-mode: vertical-lr;
-        width: 50px;
+        font-size: 55px;
+        width: auto;
         padding-right: 5px;
         height: auto;
     }
 }
-.contenedor-botones.evento-boton{
-    position: absolute;
-    bottom: -30vmax;
-    margin: 0 auto;
-    
-    right: 15vmax;
+.contenedor-botones.evento-boton/*boton eventos*/{
+    margin: auto 0;
+    position: fixed; 
+    bottom: 300px;
+    right: 250px;
+
 }
 .contenedor-botones{
     display: flex;
@@ -729,10 +770,24 @@ h4{
         padding-bottom: 20px;
         text-align: center;
     }
+    .place.h3-imagen{
+        font-size: 45px;
+        background-color: transparent;
+    }
+    .place{
+        position: absolute;
+        margin-right: 5vmax;
+        text-transform: uppercase;
+    }
 }
 .description{
+    margin-top: 1vmax;
+    display: flex;
     font-size: 12px;
     letter-spacing: 1px;
+    padding: 5px;
+    max-height: 15vmax;
+    content: contain;
 }
 .evento{
     filter: opacity(85%);
@@ -740,19 +795,60 @@ h4{
     display: flex;
     flex-direction: column;
 }
+.red:hover{
+    opacity: 25%;
+    border: black;
+    filter: drop-shadow(.5px 1px 2px var(--fondo));
+    cursor: not-allowed;
+}
+@media (max-width: 768px) {
+    h2.h2-eve{
+        font-size: 25px;
+    }
+    .red{
+        opacity: 25%;
+        border: black;
+        filter: drop-shadow(.5px 1px 2px var(--fondo));
+        cursor: not-allowed;
+        width: 10vmax;
+    }
+    section.fecha_conciertoh2{
+        max-width: 99vw;
+        contain: content;
+    }
+}
+
+
 @media (min-width: 768px) {
 
     .boton.boton-eventos{
-        position: static;
-        margin-bottom: 37vmax;
+        align-self: center;
+        position: absolute;
+        z-index: 3;
+        margin: 0 auto;
+        position: inherit;
     }
     .contenedor-eventos{
-        height: 35vmax;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border-bottom: solid 10px var(--barra);
         contain: strict;
-        flex-direction: row; 
+        max-height: 40vmax;
+        contain: strict;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 80vmax;
+        background-color: gray;
+        border-bottom: solid 10px var(--barra);
+        contain: strict;
     }
     .evento{
-        filter: opacity(85%);
         background-color: var(--fondo);
         display: flex;
         flex-direction: column;
@@ -764,22 +860,23 @@ h4{
         flex-direction: column;
         padding-right: 10PX;
         width: 36vmax;
-        height: 40vmax; 
+        height: 50vmax; 
         top: 0px;
         left: 0px;
         z-index: 1;
         border-right: solid 5px var(--negro);
+        contain: content;
+        overflow: hidden;
     }
     .place{
         display: flex;
         font-family: 'Joan', serif;
         padding-left: 50vmax;
         writing-mode: horizontal-tb;
-        font-size: 70px;
+        font-size: 45px;
         padding-top: 5vmax;
         text-align: right;
         position: absolute;
-        margin-right: 5vmax;
         top: 0px;
         right: 0px;
     }
@@ -806,7 +903,15 @@ h4{
         filter: drop-shadow(1px 1px 1px var(--negro));
         font-size: 20px;
     }
+    span.agotado{
+        font-size: 5vmax;
+        margin-top: 22vmax;
+        margin-right: 5vmax;
+        transform: rotate(-30deg);
+        display: flex;
+    }
 }
+
 .date{
     padding-top: 20px;
     color: var(--barra);
@@ -814,9 +919,17 @@ h4{
     font-weight: 900;
     font-family: 'Joan', serif;
 }
-.description{
-    padding: 15px;
+
+@media (min-width: 768px) {
+    .date{
+    padding-top: 20px;
+    color: var(--barra);
+    filter: drop-shadow(1px 5px 1px var(--negro));
+    font-weight: 900;
+    font-family: 'Joan', serif;
+    }
 }
+
 .main-concierto{
     flex-direction: column;
     display: flex;
@@ -828,6 +941,7 @@ h4{
     padding-top: 25px;
     font-family: 'Uchen', serif;
     margin-bottom: 30px;
+    margin-left: 30px;
     font-size: 35px;
     text-transform: uppercase;
     color: var(--barra);
@@ -854,8 +968,6 @@ h4{
     justify-content: center;
     flex-direction: column;
     contain: inherit;
-  
-
 }
 
 .texto_concierto {
@@ -865,7 +977,7 @@ h4{
     padding-left: 20px;
     color: var(--blanco2);
     text-align: justify;
-    width: 320px;
+    width: auto;
     margin: 0 auto;
     filter: drop-shadow(1px 5px 1px var(--fondo));
 }
@@ -873,15 +985,16 @@ h4{
 @media (min-width: 768px) {
     .texto_concierto{
     width: 600px;
-    filter: drop-shadow(1px 5px 1px var(--fondo));
+    filter: drop-shadow(1px 5px 1px var(--barra));
     font-size: 22px;
     }
     .imagen_contenedor{
-        height: 100vmin;
-        width: 50vmax;
+        width: 53.25vmax;
+        height: 30vmax;
     }
     .concierto-d{
-        font-size: 60px;
+        justify-content: center;
+        font-size: 55px;
     }
     h4{
         font-size: 50px;
@@ -902,19 +1015,20 @@ h4{
         contain: content;
     }
     .imagen_concierto{
-        height: 100vmin;
-        width: 50vmax;
+        width: 53.25vmax;
+        height: 30vmax;
     }
     .imagen_contenedor{
         flex-wrap: nowrap;
         padding-left: 10px;
+        contain: content;
     }
     .texto_concierto{
-        height: 100vmin;
+        height: auto;
         width: 50vmax;
         filter: drop-shadow(1px 5px 1px var(--fondo));
         font-size: 28px;
-        padding-top: 10px;
+        contain: content;
         }
     h4{
         font-size: 80px;
@@ -933,7 +1047,25 @@ h4{
         filter: grayscale(0);
     }
     .contenedor-ciudad{
-        padding-top: 2vmax;
+        padding-top: 1vmax;
+    }
+}
+@media (min-width: 1080px) {
+    .place.h3-imagen{
+        font-size: 70px;
+        background-color: transparent;
+    }
+    .place{
+        font-size: 70px;
+    }
+    .description{
+        margin-top: 1vmax;
+        display: flex;
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding: 5px;
+        max-height: 15vmax;
+        content: contain;
     }
 }
 
@@ -1057,6 +1189,12 @@ button{
     text-decoration: none;
     color: var(--barra);
 }
+.h2-eve{
+    color: var(--barra);
+    font-size: var( --h1-font-size);
+    font-family: 'Uchen', serif;
+    text-shadow: 1px 1px 1px var(--fondo);
+}
 
 .body-f i{
     color: var(--barra);
@@ -1115,12 +1253,16 @@ button{
         color: var(--blanco1);
     }
 
-    .new-burger {
-
-    }
 }
 
+.price_event{
+    display: none;
+}
+
+
+
 /*js*/
+
 
 .pass-hidden{
     display: none;
@@ -1169,6 +1311,10 @@ button{
     color: var(--barra);
     font-size: 15px;
 }
+.cont_v{
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
 
 /*usuarioyaexiste*/
 .imgYaExiste{
@@ -1177,4 +1323,137 @@ button{
     border: 2px solid var(--barra);
     width: auto;
     height: 60vh;
+}
+
+@media (max-width: 768px) {
+    .contenedor-eventos{
+        display: flex;
+        flex-direction: column;
+        height: 100vmax;
+    }
+    .image.gris, .image{
+        display: flex;
+    }
+    .evento{
+        display: flex;
+        flex-direction: column;
+    }
+    .date{
+        display: block;
+    }
+    .boton.boton-eventos{
+        align-self: center;
+        right: 50px;
+        z-index: 3;
+        margin: 0 auto;
+        bottom: 111px;
+    }
+    p.description{
+        display: none;
+    }
+    .place.h3-imagen{
+        z-index: 4;
+        font-size: 40px;
+
+    }
+    .place{
+        color: whitesmoke;
+        font-size: 35px;
+        padding-right: 50px;
+        
+    }
+    span.agotado{
+        width: auto;
+        font: 40px;
+        font-family: 'Joan', serif;
+    }
+    .price_event{
+        padding-top: 50px;
+        display: block;
+        font-family: 'Joan', serif;
+    }
+}
+
+@media (min-width: 1080px) {
+    .agotado{
+        width: auto;
+        font-size: 50px;
+        font-family: 'Joan', serif;
+    }
+}
+
+@media (max-width: 426px) {
+    .contenedor-eventos{
+        display: flex;
+        flex-direction: column;
+        height: 50vmax;
+        contain: strict;
+    }
+    .image.gris, .image{
+        display: flex;
+    }
+    .evento{
+        display: flex;
+        flex-direction: column;
+    }
+    .date{
+        display: block;
+    }
+    .boton.boton-eventos{
+        align-self: center;
+        right: 2px;
+        z-index: 3;
+        display: none;
+    }
+    p.description{
+        display: none;
+    }
+    .place.h3-imagen{
+        z-index: 4;
+        font-size: 30px;
+        background: transparent;
+        margin-left: 50px;
+        text-decoration: underline;
+    }
+    .place{
+        color: whitesmoke;
+        font-size: 30px;
+        padding-right: 50px;
+        margin-left: 50px;
+        text-transform: uppercase;
+        
+    }
+    .agotado{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 10vmax;
+        justify-content: center;
+        width: 150px;
+        font-size: 25px;
+        font-family: 'Joan', serif;
+        height: 27px;
+        text-decoration: none;
+    }
+    span.agotado{
+        text-decoration: none;
+        margin: 0 auto;
+    }
+    .price_event{
+        padding-top: 50px;
+        display: block;
+        font-family: 'Joan', serif;
+    
+    }
+    .evento{
+        background-color: transparent;
+    }
+    h2.date{
+        color: var(--blanco1);
+    }
+    .image{
+        border-top: 5px solid var(--barra);
+    }
+    #ago{
+        text-decoration: none;
+    }
 }

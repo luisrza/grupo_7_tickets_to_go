@@ -8,56 +8,56 @@
 </head>
 
 <body>
-  <%-include('../partials/header.ejs')%>
+  <%- include('../partials/header.ejs')%>
     <main class="main-concierto">
       <div class="titulo-d">
         <h1 class="concierto-d"><%= evento.city +', '+ evento.country%></h1>
       </div>
-    <section class="contenedor-concierto">
+    <section class="fecha_conciertoh2">
       <div class="imagen_contenedor">
-          <img src="/img/<%=evento.image%>" class="imagen_concierto" alt="">
+          <img src="/img/<%=evento.image%>" class="imagen_concierto" alt="imagen_concierto">
       </div>
       <div class="texto_concierto">
-          <h2><%=evento.date%></h2>
+          <h2 class="h2-eve"><%=evento.date%></h2>
             <br>
-          <p>   <%=evento.description%> </p>
+          <p class="texto_detalles">   <%=evento.description%> </p>
             <br>
-          <h2><%=evento.currency%> <%=evento.price%></h2>
+          <h2 class="h2-eve">Precio: <%=evento.currency%> <%=evento.price%></h2>
             <br>
         <div class="contenedor-ciudad">
         <% if (evento.agotado == 0){%> 
           <% if (locals.isLogged){%>
             <form id='carrito'>   
               <label>Cantidad de Tickets </label>
-
               <input id='nro_tickets' name="nro_tickets" type='number'>
-              <input type="submit" class="boton editar" value="Agregar a Carrito">
-              
+              <p class="cont_v vali_hidden">La cantidad de tickets no puede estar vacío</p>
+              <button type="submit" id="detalles" class="boton editar" value="Agregar a Carrito">Agregar a Carrito</button>
               <input type="hidden" id='id_evento' name="id_evento" value="<%=evento.id%>"/>
               <input type="hidden" id='fecha_evento' name="fecha_evento" value="<%=evento.date%>"/>
               <input type="hidden" id='ciudad_evento' name="ciudad_evento" value="<%=evento.city%>"/>
-            </form>
+              <!-- <input type="hidden" id='ciudad_imagen' name="ciudad_imagen" value="<%=evento.imagen%>"/> -->
             <%}else{%>
-              <a type="button" href="/users/login" class="boton">Para Comprar debe estar logueado</a>  
+              <a id="detalles" type="button" href="/users/login" class="boton btn-regis">Para Comprar debe estar logueado</a>  
             <%}%>
-           
         <%}else{%>
-          <a type="button" href="/products/eventos" class="boton bot-agoado">AGOTADO</a>
+          <a type="button" id="detalles" href="/products/eventos" class="boton btn-regis red">AGOTADO</a>
         <%}%>
+      </form>
       
         </div>
       </div>
-  </section>
+
 <% if (locals.isLogged && userLogged.admin == 1){ %> 
 
     <form action="/products/editarEvento/<%=evento.id%>" method="GET">   
-      <input type="submit" class="boton editar" value="Editar Evento">
+      <button id="detalles" type="submit" class="boton btn-regis editar" value="Editar Evento">Editar Evento</button>
     </form>
-
+    <br>
     <form action="/products/eliminarEvento/<%=evento.id%>?_method=DELETE" method="POST">   
-      <input type="submit" class="boton editar" value="Eliminar Evento">
+      <button id="detalles" type="submit" class="boton btn-regis editar" value="Eliminar Evento">Eliminar Evento</button>
     </form>
 <%}%>
+</section>
     </main>
 
   
@@ -87,6 +87,7 @@
     </div>
     </div>
     <script type="text/javascript" src="/js/cargaCarrito.js"></script>
+    <script type="text/javascript" src="/js/validacinCarrito.js"></script>
   </footer>
 
 </body>

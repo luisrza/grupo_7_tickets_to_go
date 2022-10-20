@@ -31,14 +31,14 @@
                     value = '<%= locals.errors && oldData.city ? oldData.city : ''%>'
                     />
                         <br>
-                        <p class="ciudad_v vali_hidden">El campo ciudad no puede estar vacio</p>
+                        <p class="ciudad_v vali_hidden">El campo ciudad no puede estar vacío</p>
                     <div class="danger">
                     <% if (locals.errors && errors.city) {%>
                         <%=errors.city.msg%>
                     <%}%>
                     </div>
                 <br>
-                <label>Pais:</label>
+                    <label>País:</label>
                 <br>
                     <input 
                     id="pais"
@@ -49,7 +49,7 @@
                     value = '<%= locals.errors && oldData.country ? oldData.country : ''%>'
                     />  
                         <br>
-                        <p class="pais_v vali_hidden">El campo pais no puede estar vacio</p>
+                        <p class="pais_v vali_hidden">El campo país no puede estar vacío</p>
                     <div class="danger">
                         <% if (locals.errors && errors.country) {%>
                             <%=errors.country.msg%>
@@ -140,7 +140,8 @@
                 <div class="botones-registro">
                     <input type="reset" class="botones btn-regis" value="Borrar" />
                     <input type="submit" class="botones btn-regis" value="Enviar" />
-                </div>     
+                </div>
+                <br>   
         </form>
     </main>
     <script type="text/javascript" src="/js/validaciones_evento.js"></script>
