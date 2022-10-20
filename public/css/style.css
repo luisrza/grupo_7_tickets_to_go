@@ -339,13 +339,14 @@ p{
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-
+   
 }
 
 @media (min-width: 1080px) {
     .lista-servicios{
         align-items: top;
         flex-direction: row;
+        margin-left: 15vmax
     }
 }
 
