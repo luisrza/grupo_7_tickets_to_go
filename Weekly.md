@@ -1,14 +1,10 @@
 ## Conclusiones de la weekly sprint 6
 
-Se completó el sprint 5.
+Se completó el sprint 7.
 
-En este sprint se logró programar las distintas vistas para los 3 tipos de usuarios:
-
-  Registrados
-  No Registrados
-  Administradores
+Pudimos lograr las validaciones dentro del back como en le front.
   
-Dejamos pendiente para el proximo sprint la base de datos en el carrito.
+Dejamos pendiente la creación del carrito.
 
 
 
