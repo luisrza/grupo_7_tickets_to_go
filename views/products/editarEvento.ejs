@@ -19,6 +19,7 @@
             <h1 class="titulo">Editar Evento</h2>
 
                 <form
+                class="divEditar"
                 action="/products/editarEvento/<%=eventoToEdit.id ?? ''%>?_method=PUT"
                 method="POST"
                 enctype="multipart/form-data"
@@ -105,11 +106,10 @@
                         
                         </select>
                 </div>
-    
-                <div class="contenedor-boton">
+                <br>
                     <input
-                        type="submit" class="boton" value="Editar" />
-                </div>
+                        type="submit" class="boton btn-regis" value="Editar" />
+                <br>
     
                 </form>
 

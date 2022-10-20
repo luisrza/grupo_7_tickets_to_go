@@ -142,7 +142,7 @@ span{
 }
 
 #detalles{
-    width: 35vmax;
+    width: 30vmax;
 }
 @media (min-width: 768px) {
     #detalles{
@@ -1345,6 +1345,18 @@ button{
     height: 60vh;
 }
 
+.divEditar, .divEditar div{
+    display: flex;
+    padding: 10px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+.divEditar div input{
+    margin-top: 10px;
+    display: flex;
+}
+
+
 @media (max-width: 768px) {
     .contenedor-eventos{
         display: flex;
@@ -1476,4 +1488,12 @@ button{
     #ago{
         text-decoration: none;
     }
+}
+li{
+    color: var(--blanco1);
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+    display: flex;
+
+    justify-content: center;
 }
